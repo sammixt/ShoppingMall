@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservice.outflow.nip.unionbank.com/" targetNamespace="http://webservice.outflow.nip.unionbank.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="NipSingleDirectCreditFundsTransfer" type="tns:NipSingleDirectCreditFundsTransfer" />
+  <xs:element name="NipSingleDirectCreditFundsTransferResponse" type="tns:NipSingleDirectCreditFundsTransferResponse" />
+  <xs:element name="NipTankedSingleDirectCreditFundsTransfer" type="tns:NipTankedSingleDirectCreditFundsTransfer" />
+  <xs:element name="NipTankedSingleDirectCreditFundsTransferResponse" type="tns:NipTankedSingleDirectCreditFundsTransferResponse" />
+  <xs:element name="NipTransactionStatusInquiry" type="tns:NipTransactionStatusInquiry" />
+  <xs:element name="NipTransactionStatusInquiryResponse" type="tns:NipTransactionStatusInquiryResponse" />
+  <xs:element name="holdFunds" type="tns:holdFunds" />
+  <xs:element name="holdFundsResponse" type="tns:holdFundsResponse" />
+  <xs:element name="isTankedTransactionSuccessful" type="tns:isTankedTransactionSuccessful" />
+  <xs:element name="isTankedTransactionSuccessfulResponse" type="tns:isTankedTransactionSuccessfulResponse" />
+  <xs:element name="neftTransactionEnquiry" type="tns:neftTransactionEnquiry" />
+  <xs:element name="neftTransactionEnquiryResponse" type="tns:neftTransactionEnquiryResponse" />
+  <xs:element name="nipNameInquiry" type="tns:nipNameInquiry" />
+  <xs:element name="nipNameInquiryResponse" type="tns:nipNameInquiryResponse" />
+  <xs:element name="onlineCbaNcrPosting" type="tns:onlineCbaNcrPosting" />
+  <xs:element name="onlineCbaNcrPostingGL" type="tns:onlineCbaNcrPostingGL" />
+  <xs:element name="onlineCbaNcrPostingGLResponse" type="tns:onlineCbaNcrPostingGLResponse" />
+  <xs:element name="onlineCbaNcrPostingResponse" type="tns:onlineCbaNcrPostingResponse" />
+  <xs:element name="onlineCbaPosting" type="tns:onlineCbaPosting" />
+  <xs:element name="onlineCbaPostingResponse" type="tns:onlineCbaPostingResponse" />
+  <xs:element name="onlineCbaPostingSync" type="tns:onlineCbaPostingSync" />
+  <xs:element name="onlineCbaPostingSyncResponse" type="tns:onlineCbaPostingSyncResponse" />
+  <xs:element name="onlineGefuCbaPosting" type="tns:onlineGefuCbaPosting" />
+  <xs:element name="onlineGefuCbaPostingResponse" type="tns:onlineGefuCbaPostingResponse" />
+  <xs:element name="onlineGefuNipPosting" type="tns:onlineGefuNipPosting" />
+  <xs:element name="onlineGefuNipPostingResponse" type="tns:onlineGefuNipPostingResponse" />
+  <xs:element name="onlineMultipleCbaPosting" type="tns:onlineMultipleCbaPosting" />
+  <xs:element name="onlineMultipleCbaPostingResponse" type="tns:onlineMultipleCbaPostingResponse" />
+  <xs:element name="remitaPaymentDetailsLookup" type="tns:remitaPaymentDetailsLookup" />
+  <xs:element name="remitaPaymentDetailsLookupResponse" type="tns:remitaPaymentDetailsLookupResponse" />
+  <xs:element name="remitaSendPaymentNotification" type="tns:remitaSendPaymentNotification" />
+  <xs:element name="remitaSendPaymentNotificationResponse" type="tns:remitaSendPaymentNotificationResponse" />
+  <xs:element name="removeFunds" type="tns:removeFunds" />
+  <xs:element name="removeFundsResponse" type="tns:removeFundsResponse" />
+  <xs:element name="tankedTransactionsTransfer" type="tns:tankedTransactionsTransfer" />
+  <xs:element name="tankedTransactionsTransferResponse" type="tns:tankedTransactionsTransferResponse" />
+  <xs:element name="QTsendBillPaymentTransaction" type="tns:QTsendBillPaymentTransaction" />
+  <xs:element name="QTsendBillPaymentTransactionResponse" type="tns:QTsendBillPaymentTransactionResponse" />
+  <xs:complexType name="NipSingleDirectCreditFundsTransfer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:nipFundsTransferCreditData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nipFundsTransferCreditData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accountName" type="xs:string" />
+      <xs:element minOccurs="0" name="accountNumber" type="xs:string" />
+      <xs:element name="amount" type="xs:double" />
+      <xs:element minOccurs="0" name="bankVerificationNumber" type="xs:string" />
+      <xs:element name="channelCode" type="xs:int" />
+      <xs:element minOccurs="0" name="destinationBankCode" type="xs:string" />
+      <xs:element minOccurs="0" name="kycLevel" type="xs:string" />
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element minOccurs="0" name="nameEnquirySessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="narration" type="xs:string" />
+      <xs:element minOccurs="0" name="originatorAccountNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="originatorBankVerificationNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="originatorKycLevel" type="xs:string" />
+      <xs:element minOccurs="0" name="originatorName" type="xs:string" />
+      <xs:element minOccurs="0" name="paymentReference" type="xs:string" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionLocation" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NipSingleDirectCreditFundsTransferResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:nipFundsTransferCreditData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineCbaPosting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:cbaPostingData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cbaPostingData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="creditAccountBranchCode" type="xs:string" />
+      <xs:element minOccurs="0" name="creditAccountNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="creditAccountType" type="xs:string" />
+      <xs:element minOccurs="0" name="currency" type="xs:string" />
+      <xs:element minOccurs="0" name="debitAccountBranchCode" type="xs:string" />
+      <xs:element minOccurs="0" name="debitAccountNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="debitAccountType" type="xs:string" />
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element minOccurs="0" name="narration" type="xs:string" />
+      <xs:element minOccurs="0" name="paymentReference" type="xs:string" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineCbaPostingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cbaPostingData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineCbaPostingSync">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:cbaPostingData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineCbaPostingSyncResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cbaPostingData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NipTankedSingleDirectCreditFundsTransfer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="dataObject" nillable="true" type="tns:tankedTransactionsData" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tankedTransactionsData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accountName" type="xs:string" />
+      <xs:element minOccurs="0" name="amount" type="xs:decimal" />
+      <xs:element name="channelCode" type="xs:int" />
+      <xs:element minOccurs="0" name="creditAccountBranchCode" type="xs:string" />
+      <xs:element minOccurs="0" name="creditAccountNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="creditAccountType" type="xs:string" />
+      <xs:element minOccurs="0" name="debitAccountBranchCode" type="xs:string" />
+      <xs:element minOccurs="0" name="debitAccountNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="debitAccountType" type="xs:string" />
+      <xs:element minOccurs="0" name="destinationBankCode" type="xs:string" />
+      <xs:element minOccurs="0" name="feeAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element minOccurs="0" name="narration" type="xs:string" />
+      <xs:element minOccurs="0" name="originatorName" type="xs:string" />
+      <xs:element minOccurs="0" name="paymentReference" type="xs:string" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NipTankedSingleDirectCreditFundsTransferResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="tns:tankedTransactionsData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="holdFunds">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:holdFundsRequestData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="holdFundsRequestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accountNo" type="xs:string" />
+      <xs:element minOccurs="0" name="amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="holdReferenceNo" type="xs:string" />
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element name="requestId" type="xs:long" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="holdFundsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:holdFundsResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="holdFundsResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="referenceNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="neftTransactionEnquiry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="requestData" type="tns:neftTransactionEnquiryData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="neftTransactionEnquiryData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="batchId" type="xs:string" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+      <xs:element minOccurs="0" name="tranId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="neftTransactionEnquiryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:neftTransactionEnquiryData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineMultipleCbaPosting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:cbaMultiplePostingData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cbaMultiplePostingData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="creditAccountBranchCode" type="xs:string" />
+      <xs:element minOccurs="0" name="creditAccountNumber1" type="xs:string" />
+      <xs:element minOccurs="0" name="creditAccountNumber2" type="xs:string" />
+      <xs:element minOccurs="0" name="creditAccountNumber3" type="xs:string" />
+      <xs:element minOccurs="0" name="creditAccountNumber4" type="xs:string" />
+      <xs:element minOccurs="0" name="creditAccountNumber5" type="xs:string" />
+      <xs:element minOccurs="0" name="creditAccountType" type="xs:string" />
+      <xs:element minOccurs="0" name="creditAmount1" type="xs:decimal" />
+      <xs:element minOccurs="0" name="creditAmount2" type="xs:decimal" />
+      <xs:element minOccurs="0" name="creditAmount3" type="xs:decimal" />
+      <xs:element minOccurs="0" name="creditAmount4" type="xs:decimal" />
+      <xs:element minOccurs="0" name="creditAmount5" type="xs:decimal" />
+      <xs:element minOccurs="0" name="debitAccountBranchCode" type="xs:string" />
+      <xs:element minOccurs="0" name="debitAccountNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="debitAccountType" type="xs:string" />
+      <xs:element minOccurs="0" name="debitAccountnarration" type="xs:string" />
+      <xs:element minOccurs="0" name="debitAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element minOccurs="0" name="narration1" type="xs:string" />
+      <xs:element minOccurs="0" name="narration2" type="xs:string" />
+      <xs:element minOccurs="0" name="narration3" type="xs:string" />
+      <xs:element minOccurs="0" name="narration4" type="xs:string" />
+      <xs:element minOccurs="0" name="narration5" type="xs:string" />
+      <xs:element minOccurs="0" name="paymentReference" type="xs:string" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineMultipleCbaPostingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cbaMultiplePostingData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nipNameInquiry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:nipNameInquiryData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nipNameInquiryData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accountName" type="xs:string" />
+      <xs:element minOccurs="0" name="accountNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="bankVerificationNumber" type="xs:string" />
+      <xs:element name="channelCode" type="xs:int" />
+      <xs:element minOccurs="0" name="destinationBankCode" type="xs:string" />
+      <xs:element minOccurs="0" name="kycLevel" type="xs:string" />
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nipNameInquiryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:nipNameInquiryData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="remitaSendPaymentNotification">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:remitaPaymentNotificationRequestData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="remitaPaymentNotificationRequestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element minOccurs="0" name="paymentAuthorizationCode" type="xs:string" />
+      <xs:element minOccurs="0" name="paymentLookupTransactionId" type="xs:string" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="remitaSendPaymentNotificationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:remitaBasePaymentResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="remitaBasePaymentResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseId" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineGefuNipPosting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:nipGefuTransactionsRequestData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nipGefuTransactionsRequestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="batchId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gefuDebitBatchItemsDataList" nillable="true" type="tns:gefuBatchItemsData" />
+      <xs:element minOccurs="0" name="initiatingBranch" type="xs:string" />
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element minOccurs="0" name="nipCreditBatchItemData" type="tns:nipBatchItemsData" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionCurrency" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gefuBatchItemsData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="acccountNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="branchCode" type="xs:string" />
+      <xs:element minOccurs="0" name="debitCreditIndicator" type="xs:string" />
+      <xs:element minOccurs="0" name="glCasaIndicator" type="xs:string" />
+      <xs:element minOccurs="0" name="instrumentNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="mnemonic" type="xs:string" />
+      <xs:element minOccurs="0" name="narration" type="xs:string" />
+      <xs:element minOccurs="0" name="paymentReference" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nipBatchItemsData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accountName" type="xs:string" />
+      <xs:element minOccurs="0" name="accountNumber" type="xs:string" />
+      <xs:element name="amount" type="xs:double" />
+      <xs:element name="channelCode" type="xs:int" />
+      <xs:element minOccurs="0" name="destinationBankCode" type="xs:string" />
+      <xs:element minOccurs="0" name="narration" type="xs:string" />
+      <xs:element minOccurs="0" name="originatorName" type="xs:string" />
+      <xs:element minOccurs="0" name="paymentReference" type="xs:string" />
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineGefuNipPostingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:nipGefuTransactionsResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nipGefuTransactionsResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="batchId" type="xs:string" />
+      <xs:element minOccurs="0" name="cbaBatchNo" type="xs:string" />
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineCbaNcrPosting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:ncrPostingRequestData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ncrPostingRequestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accountNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="authorizerId" type="xs:string" />
+      <xs:element minOccurs="0" name="batchNo" type="xs:string" />
+      <xs:element minOccurs="0" name="clearingBranchCode" type="xs:string" />
+      <xs:element minOccurs="0" name="draweeBankCode" type="xs:string" />
+      <xs:element minOccurs="0" name="endpointCode" type="xs:string" />
+      <xs:element minOccurs="0" name="floatInstrument" type="xs:string" />
+      <xs:element minOccurs="0" name="instrumentNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element minOccurs="0" name="outwardChequeAccountNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+      <xs:element minOccurs="0" name="routingNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="serialNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="transactionCurrencyCode" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="transactionDescription" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionLimitAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="transactionReferenceNo" type="xs:string" />
+      <xs:element minOccurs="0" name="userId" type="xs:string" />
+      <xs:element minOccurs="0" name="userReferenceNo" type="xs:string" />
+      <xs:element minOccurs="0" name="valueDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineCbaNcrPostingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ncrPostingResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ncrPostingResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionReferenceNo" type="xs:string" />
+      <xs:element minOccurs="0" name="userReferenceNo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NipTransactionStatusInquiry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:transactionStatusQueryData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="transactionStatusQueryData">
+    <xs:sequence>
+      <xs:element name="channelCode" type="xs:int" />
+      <xs:element minOccurs="0" name="destinationBankCode" type="xs:string" />
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NipTransactionStatusInquiryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:transactionStatusQueryData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tankedTransactionsTransfer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:tankedTransactionsData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tankedTransactionsTransferResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:tankedTransactionsData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineGefuCbaPosting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:gefuTransactionsRequestData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gefuTransactionsRequestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="batchId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="gefuBatchItemsDataList" nillable="true" type="tns:gefuBatchItemsData" />
+      <xs:element minOccurs="0" name="initiatingBranch" type="xs:string" />
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionCurrency" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineGefuCbaPostingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:gefuTransactionsResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gefuTransactionsResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="batchId" type="xs:string" />
+      <xs:element minOccurs="0" name="cbaBatchNo" type="xs:string" />
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="isTankedTransactionSuccessful">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="paymentReference" type="xs:string" />
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="isTankedTransactionSuccessfulResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:tankedProcessingResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tankedProcessingResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+      <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+      <xs:element minOccurs="0" name="tankStatus" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeFunds">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:holdFundsRequestData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeFundsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:holdFundsResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineCbaNcrPostingGL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:ncrPostingRequestData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="onlineCbaNcrPostingGLResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ncrPostingResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QTsendBillPaymentTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:quickTellerBillsPaymentData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="quickTellerBillsPaymentData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" type="xs:string" />
+      <xs:element minOccurs="0" name="customerEmail" type="xs:string" />
+      <xs:element minOccurs="0" name="customerId" type="xs:string" />
+      <xs:element minOccurs="0" name="customerMobile" type="xs:string" />
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element minOccurs="0" name="paymentCode" type="xs:string" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+      <xs:element minOccurs="0" name="requestReference" type="xs:string" />
+      <xs:element minOccurs="0" name="responseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="responseMessage" type="xs:string" />
+      <xs:element minOccurs="0" name="terminalId" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionRef" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="QTsendBillPaymentTransactionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:quickTellerBillsPaymentData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="remitaPaymentDetailsLookup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="data" type="tns:remitaPaymentLookupRequestData" />
+      <xs:element minOccurs="0" name="messageHash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="remitaPaymentLookupRequestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="moduleCredentials" type="xs:string" />
+      <xs:element minOccurs="0" name="remitaRetrievalReference" type="xs:string" />
+      <xs:element minOccurs="0" name="requestModule" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="remitaPaymentDetailsLookupResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:remitaPaymentLookUpResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="remitaPaymentLookUpResponseData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:remitaBasePaymentResponseData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="remitaPaymentDetailData" type="tns:remitaPaymentDetailData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="remitaPaymentDetailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="remitaRetrievalReference" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="transactionDescription" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionId" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionName" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

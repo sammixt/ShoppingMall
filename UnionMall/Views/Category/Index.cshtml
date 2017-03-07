@@ -1,0 +1,154 @@
+﻿@model IEnumerable<UnionMall.ViewModels.CategoryViewModel>
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    var count = 0;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <a href="#"id="addCat" data-toggle="modal" data-target="#addCatModal" class="pull-left btn btn-md btn-success">Add Category</a>
+        <div class="clearfix"></div>
+    </div>
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title ubn-color">Catgories</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>S/N</th>
+                                <th>Category</th>
+                                <th>Active</th>
+                                <th>Deleted</th>
+                                <th>&nbsp;</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null) { 
+                            foreach (var item in Model)
+                            {
+                                count++;
+                                <tr>
+                                    <td>@count</td>
+                                    <td align="center"><input id="catVal_@Html.DisplayFor(modelItem => item.CategoryId)" class="catName" type="text" value="@Html.DisplayFor(modelItem => item.CategoryName)" disabled /><br/> 
+                                        <span id="errormsg_@Html.DisplayFor(modelItem => item.CategoryId)" class="text-danger"></span>
+                                    </td>
+                                    <td>@ShowActiveState(item.IsActive,item.CategoryId)</td>
+                                    <td>@ShowDeleteState(item.IsDelete, item.CategoryId)</td>
+                                    <td>
+                                        <a href="#" id="enabler_@Html.DisplayFor(modelItem => item.CategoryId)" onclick="enabler('@Html.DisplayFor(modelItem => item.CategoryId)')" class="pull-left btn btn-md btn-primary"><i class="fa fa-edit"></i></a>
+                                        <a href="#" id="updater_@Html.DisplayFor(modelItem => item.CategoryId)" onclick="updater('@Html.DisplayFor(modelItem => item.CategoryId)')" class="updater pull-left btn btn-md btn-success"><i class="fa fa-save"></i></a>
+                                    </td>
+                                    <td>@CheckDeleteState(item.IsDelete, item.CategoryId)</td>
+                                </tr>
+                            }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="4" class="text-center">No Item To Display</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="addCatModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header ubn-color-bg text-center">
+                <h4 class="modal-title ubn-color-bg"><strong>Add New Category</strong></h4>
+            </div>
+            <div class="modal-body">
+               <div class="form-group col-md-6 col-md-offset-3">
+                        <input id="CatValue" type="text" class="form-control" name="CategoryName" />
+                        <span id="ErrorMsg" class="text-danger"></span>
+                    </div>
+                    <div class="clearfix"></div>   
+            </div>
+            <div class="modal-footer">
+                <button id="submit" class="btn btn-md btn-success">Add</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    thead tr th, tbody tr td {
+        text-align:center;
+    }
+    #addCat{
+        margin-bottom:2%;
+    }
+    .catName, .activeName, .deleteName {
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: inherit;
+        border: none;
+    }
+    .updater{
+        display:none;
+    }
+</style>
+@section scripts
+    {
+       <script type="text/javascript" src="~/Scripts/Category.js"></script>
+    }
+@helper ShowActiveState(string activestate,int id)
+{
+    if(String.Equals(activestate,"1"))
+    {
+        <input id="activeVal_@id" class="activeName" type="text" value="true" disabled /><br/>
+        <span id="activeValerrormsg_@id" class="text-danger"></span>
+    }
+    else
+    {
+       <input id="activeVal_@id" class="activeName" type="text" value="false" disabled /><br/>
+        <span id="activeValerrormsg_@id" class="text-danger"></span> 
+    }
+   
+
+}
+
+@helper ShowDeleteState(string activestate, int id)
+{
+    if (String.Equals(activestate, "1"))
+    {
+        <input id="deleteVal_@id" class="deleteName" type="text" value="true" disabled /><br />
+        <span id="deleteValerrormsg_@id" class="text-danger"></span>
+    }
+    else
+    {
+        <input id="deleteVal_@id" class="deleteName" type="text" value="false" disabled /><br />
+        <span id="deleteValerrormsg_@id" class="text-danger"></span>
+    }
+
+
+}
+
+@helper CheckDeleteState(string activestate, int id)
+{
+    if (String.Equals(activestate, "1"))
+    {
+        <a href="#" onclick="reAddCart('@id')" class="pull-left btn btn-md btn-success" title="ReActivate Category"><i class="fa fa-plus-square-o"></i></a>
+    }
+    else
+    {
+        <a href="#" onclick="delCart('@id')" class="pull-left btn btn-md btn-danger" title="Delete Category"><i class="fa fa-trash-o"></i></a>
+    }
+
+
+}

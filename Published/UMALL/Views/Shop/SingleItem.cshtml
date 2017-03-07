@@ -1,0 +1,234 @@
+﻿@model UnionMall.ViewModels.ProductViewModel
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.ImagePath = "~/UploadedFiles/";
+    string sep = "/";
+}
+<div class="single">
+
+    <div class="container">
+        <div class="col-md-9">
+            <div class="col-md-5 grid">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="@Url.Content(ViewBag.ImagePath + Model.ProductName + sep + Model.MainImage)">
+                            <div class="thumb-image">
+                                <img src="@Url.Content(ViewBag.ImagePath + Model.ProductName + sep + Model.MainImage)"  class="img-responsive" /></div>
+                        </li>
+                        <li data-thumb="@Url.Content(ViewBag.ImagePath + Model.ProductName + sep + Model.SubImage)">
+                            <div class="thumb-image"> <img src="@Url.Content(ViewBag.ImagePath + Model.ProductName + sep + Model.SubImage)"  class="img-responsive"> </div>
+                        </li>
+                        <li data-thumb="@Url.Content(ViewBag.ImagePath + Model.ProductName + sep + Model.SubImageII)">
+                            <div class="thumb-image"> <img src="@Url.Content(ViewBag.ImagePath + Model.ProductName + sep + Model.SubImageII)" class="img-responsive"> </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-7 single-top-in">
+                <div class="span_2_of_a1 simpleCart_shelfItem">
+                    <h3>@Model.ProductName</h3>
+                    <div class="price_single">
+                        <span class="reducedfrom item_price">NGN @Model.Price</span>
+                        
+                        <div class="clearfix"></div>
+                    </div>
+                    <h4 class="quick">Quick Overview:</h4>
+                    <p class="quick_desc"> @quickDesc(Model.Description)</p>
+                    <div class="wish-list">
+                        <ul>
+                            <li class="wish"><a href="#"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Quantities Available</a></li>
+                            <li class="compare"><a href="#"><span class="" aria-hidden="true"></span>@Model.Quantity</a></li>
+                        </ul>
+                    </div>
+                    <div class="quantity">
+                        <div class="quantity-select">
+                            <div class="entry value-minus">&nbsp;</div>
+                            <div class="entry value"><span>1</span></div>
+                            <div class="entry value-plus active">&nbsp;</div>
+                        </div>
+                    </div>
+                    <!--quantity-->
+                    <script>
+                        $('.value-plus').on('click', function () {
+                            var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) + 1;
+                            divUpd.text(newVal);
+                        });
+
+                        $('.value-minus').on('click', function () {
+                            var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) - 1;
+                            if (newVal >= 1) divUpd.text(newVal);
+                        });
+                    </script>
+                    <!--quantity-->
+                    @CheckActive(Model.IsActive, Model.ProductId)
+                    <div class="clearfix"> </div>
+                </div>
+
+            </div>
+            <div class="clearfix"> </div>
+            <!---->
+            <div class="tab-head">
+                <nav class="nav-sidebar">
+                    <ul class="nav tabs">
+                        <li class="active"><a href="#tab1" data-toggle="tab">Product Description</a></li>
+                        <li class=""><a href="#tab2" data-toggle="tab">Additional Information</a></li>
+                    </ul>
+                </nav>
+                <div class="tab-content one">
+                    <div class="tab-pane active text-style" id="tab1">
+                        <div class="facts">
+                            @Html.Raw(Model.Description)
+                        </div>
+
+                    </div>
+                    <div class="tab-pane text-style" id="tab2">
+
+                        <div class="facts">
+                            @Html.Raw(Model.AdditionalInfo)
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3 product-bottom product-at">
+            <!--categories-->
+            <div class=" rsidebar span_1_of_left">
+                <h4 class="cate">Categories</h4>
+                <ul class="list list-unstyled ">
+                    <li class="list">
+                        <a href="@Url.Action("Index", "Shop")">ALL </a>
+                    </li>
+                    @foreach (var item in ViewBag.Category)
+                    {
+                        <li class="item1">
+                            <a href="@Url.Action("Index", "Shop", new { category = item.CategoryId })">@item.CategoryName </a>
+                        </li>
+                    }
+
+                </ul>
+            </div>
+            <!--initiate accordion-->
+            
+            <!--//menu-->
+            
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+
+    <!--brand-->
+    <div class="container">
+        <div class="brand">
+            <div class="col-md-3 brand-grid">
+                <img src="~/Content/Template/images/ic.png" class="img-responsive" alt="" />
+            </div>
+            <div class="col-md-3 brand-grid">
+                <img src="~/Content/Template/images/ic1.png" class="img-responsive" alt="" />
+            </div>
+            <div class="col-md-3 brand-grid">
+                <img src="~/Content/Template/images/ic2.png" class="img-responsive" alt="" />
+            </div>
+            <div class="col-md-3 brand-grid">
+                <img src="~/Content/Template/images/ic3.png" class="img-responsive" alt="" />
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--//brand-->
+</div>
+<!--//content-->
+
+<script src="~/Content/Template/js/imagezoom.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="~/Content/Template/js/jquery.flexslider.js"></script>
+<link href="~/Content/Template/css/flexslider.css" rel="stylesheet" />
+<script>
+    // Can also be used with $(document).ready()
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails"
+        });
+    });
+</script>
+
+<script src="~/Content/Template/js/simpleCart.min.js"></script>
+<!-- <script src="~/Content/Template/js/bootstrap.min.js"></script> -->
+<!-- slide -->
+<script type="text/javascript">
+    $(function () {
+        var menu_ul = $('.menu-drop > li > ul'),
+               menu_a = $('.menu-drop > li > a');
+        menu_ul.hide();
+        menu_a.click(function (e) {
+            e.preventDefault();
+            if (!$(this).hasClass('active')) {
+                menu_a.removeClass('active');
+                menu_ul.filter(':visible').slideUp('normal');
+                $(this).addClass('active').next().stop(true, true).slideDown('normal');
+            } else {
+                $(this).removeClass('active');
+                $(this).next().stop(true, true).slideUp('normal');
+            }
+        });
+    });
+    
+    function AddToCart(id) {
+        var CartViewModel = {
+            ProductId: id,
+            ProductName:'@Model.ProductName',
+            UnitPrice:'@Model.Price',
+            Quantity: $('.value').text(),
+            MainImage: '@Model.MainImage'
+        }
+        
+        $.ajax({
+            url: '/Cart/AddToCart',
+            contentType: 'application/json; charset=utf-8',
+            type: 'POST',
+            data: JSON.stringify(CartViewModel)
+
+        })
+            .success(function (result) {
+                if (result == true) {
+                    window.location.reload();
+                } else {
+                    $("#ErrorMsg").text("An Error Occured")
+                }
+            })
+            .error(function (xhr, status) {
+                $('#count').text('0');
+            })
+    }
+
+</script>
+@helper CheckActive(bool Active, int id)
+{
+    if (Active == false)
+    {
+        <a href="#" class="add-to item_add hvr-skew-backward">Out of Stock</a>
+    }
+    else
+    {
+        <a href="#" onclick="AddToCart(id)" class="add-to item_add hvr-skew-backward">Add to cart</a>
+    }
+}
+
+@helper quickDesc(string desc) 
+{ 
+    string myString = desc.Substring(0, 170);
+
+    int index = myString.LastIndexOf(' ');
+
+    string outputString = myString.Substring(0, index); 
+    
+    <em>@Html.Raw(outputString)...</em>
+}
+
+
+    

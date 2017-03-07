@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N0:definitions xmlns:WL5G3N2="http://www.unionbank.com.ng/utilities/Header/v1_0/UBNHeader" xmlns:WL5G3N1="http://webservice.outflow.nip.unionbank.com/" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/" name="UBNMiddleWareWebServiceService" targetNamespace="http://webservice.outflow.nip.unionbank.com/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservice.outflow.nip.unionbank.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:ubn="http://www.unionbank.com.ng/utilities/Header/v1_0/UBNHeader" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="http://osbdev1:8001/CentralOperations/CentralPosting?SCHEMA%2FOperations+IT+And+Services%2FCentral+Operations%2FWSDLs%2FUBNMiddleWareWebServiceService_schema1" namespace="http://webservice.outflow.nip.unionbank.com/" />
+      <xsd:import schemaLocation="http://osbdev1:8001/CentralOperations/CentralPosting?SCHEMA%2FOperations+IT+And+Services%2FInformation+Technology%2FUtilities%2FLogging%2FAudit%2Fv1_0%2FArtifacts%2FUBNHeader" namespace="http://www.unionbank.com.ng/utilities/Header/v1_0/UBNHeader" />
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="nipNameInquiry">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:nipNameInquiry" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="UBNHeaderMessage">
+    <WL5G3N0:part name="UBNHeader" element="WL5G3N2:UBNHeader" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="nipNameInquiryResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:nipNameInquiryResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="NipTransactionStatusInquiry">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:NipTransactionStatusInquiry" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="NipTransactionStatusInquiryResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:NipTransactionStatusInquiryResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="NipSingleDirectCreditFundsTransfer">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:NipSingleDirectCreditFundsTransfer" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="NipSingleDirectCreditFundsTransferResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:NipSingleDirectCreditFundsTransferResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="NipTankedSingleDirectCreditFundsTransfer">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:NipTankedSingleDirectCreditFundsTransfer" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="NipTankedSingleDirectCreditFundsTransferResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:NipTankedSingleDirectCreditFundsTransferResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="neftTransactionEnquiry">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:neftTransactionEnquiry" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="neftTransactionEnquiryResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:neftTransactionEnquiryResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="Exception">
+    <WL5G3N0:part name="fault" element="WL5G3N1:Exception" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="tankedTransactionsTransfer">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:tankedTransactionsTransfer" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="tankedTransactionsTransferResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:tankedTransactionsTransferResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="onlineCbaPosting">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:onlineCbaPosting" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="onlineCbaPostingResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:onlineCbaPostingResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="onlineCbaNcrPosting">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:onlineCbaNcrPosting" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="onlineCbaNcrPostingResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:onlineCbaNcrPostingResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="onlineMultipleCbaPosting">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:onlineMultipleCbaPosting" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="onlineMultipleCbaPostingResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:onlineMultipleCbaPostingResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="onlineGefuCbaPosting">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:onlineGefuCbaPosting" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="onlineGefuCbaPostingResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:onlineGefuCbaPostingResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="isTankedTransactionSuccessful">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:isTankedTransactionSuccessful" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="isTankedTransactionSuccessfulResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:isTankedTransactionSuccessfulResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="holdFunds">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:holdFunds" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="holdFundsResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:holdFundsResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="removeFunds">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:removeFunds" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="removeFundsResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:removeFundsResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="onlineCbaPostingSync">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:onlineCbaPostingSync" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="onlineCbaPostingSyncResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:onlineCbaPostingSyncResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="onlineCbaNcrPostingGL">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:onlineCbaNcrPostingGL" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="onlineCbaNcrPostingGLResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:onlineCbaNcrPostingGLResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="UBNMiddleWareWebService">
+    <WL5G3N0:operation name="nipNameInquiry">
+      <WL5G3N0:input message="WL5G3N1:nipNameInquiry" />
+      <WL5G3N0:output message="WL5G3N1:nipNameInquiryResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="NipTransactionStatusInquiry">
+      <WL5G3N0:input message="WL5G3N1:NipTransactionStatusInquiry" />
+      <WL5G3N0:output message="WL5G3N1:NipTransactionStatusInquiryResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="NipSingleDirectCreditFundsTransfer">
+      <WL5G3N0:input message="WL5G3N1:NipSingleDirectCreditFundsTransfer" />
+      <WL5G3N0:output message="WL5G3N1:NipSingleDirectCreditFundsTransferResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="NipTankedSingleDirectCreditFundsTransfer">
+      <WL5G3N0:input message="WL5G3N1:NipTankedSingleDirectCreditFundsTransfer" />
+      <WL5G3N0:output message="WL5G3N1:NipTankedSingleDirectCreditFundsTransferResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="neftTransactionEnquiry">
+      <WL5G3N0:input message="WL5G3N1:neftTransactionEnquiry" />
+      <WL5G3N0:output message="WL5G3N1:neftTransactionEnquiryResponse" />
+      <WL5G3N0:fault name="Exception" message="WL5G3N1:Exception" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="tankedTransactionsTransfer">
+      <WL5G3N0:input message="WL5G3N1:tankedTransactionsTransfer" />
+      <WL5G3N0:output message="WL5G3N1:tankedTransactionsTransferResponse" />
+      <WL5G3N0:fault name="Exception" message="WL5G3N1:Exception" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="onlineCbaPosting">
+      <WL5G3N0:input message="WL5G3N1:onlineCbaPosting" />
+      <WL5G3N0:output message="WL5G3N1:onlineCbaPostingResponse" />
+      <WL5G3N0:fault name="Exception" message="WL5G3N1:Exception" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="onlineCbaNcrPosting">
+      <WL5G3N0:input message="WL5G3N1:onlineCbaNcrPosting" />
+      <WL5G3N0:output message="WL5G3N1:onlineCbaNcrPostingResponse" />
+      <WL5G3N0:fault name="Exception" message="WL5G3N1:Exception" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="onlineMultipleCbaPosting">
+      <WL5G3N0:input message="WL5G3N1:onlineMultipleCbaPosting" />
+      <WL5G3N0:output message="WL5G3N1:onlineMultipleCbaPostingResponse" />
+      <WL5G3N0:fault name="Exception" message="WL5G3N1:Exception" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="onlineGefuCbaPosting">
+      <WL5G3N0:input message="WL5G3N1:onlineGefuCbaPosting" />
+      <WL5G3N0:output message="WL5G3N1:onlineGefuCbaPostingResponse" />
+      <WL5G3N0:fault name="Exception" message="WL5G3N1:Exception" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="isTankedTransactionSuccessful">
+      <WL5G3N0:input message="WL5G3N1:isTankedTransactionSuccessful" />
+      <WL5G3N0:output message="WL5G3N1:isTankedTransactionSuccessfulResponse" />
+      <WL5G3N0:fault name="Exception" message="WL5G3N1:Exception" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="holdFunds">
+      <WL5G3N0:input message="WL5G3N1:holdFunds" />
+      <WL5G3N0:output message="WL5G3N1:holdFundsResponse" />
+      <WL5G3N0:fault name="Exception" message="WL5G3N1:Exception" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="removeFunds">
+      <WL5G3N0:input message="WL5G3N1:removeFunds" />
+      <WL5G3N0:output message="WL5G3N1:removeFundsResponse" />
+      <WL5G3N0:fault name="Exception" message="WL5G3N1:Exception" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="onlineCbaPostingSync">
+      <WL5G3N0:input message="WL5G3N1:onlineCbaPostingSync" />
+      <WL5G3N0:output message="WL5G3N1:onlineCbaPostingSyncResponse" />
+      <WL5G3N0:fault name="Exception" message="WL5G3N1:Exception" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="onlineCbaNcrPostingGL">
+      <WL5G3N0:input message="WL5G3N1:onlineCbaNcrPostingGL" />
+      <WL5G3N0:output message="WL5G3N1:onlineCbaNcrPostingGLResponse" />
+      <WL5G3N0:fault name="Exception" message="WL5G3N1:Exception" />
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="UBNMiddleWareWebServicePortBinding" type="WL5G3N1:UBNMiddleWareWebService">
+    <WL5G3N3:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WL5G3N0:operation name="nipNameInquiry">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="NipTransactionStatusInquiry">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="NipSingleDirectCreditFundsTransfer">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="NipTankedSingleDirectCreditFundsTransfer">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="neftTransactionEnquiry">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N3:fault use="literal" name="Exception" namespace="" />
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="tankedTransactionsTransfer">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N3:fault use="literal" name="Exception" namespace="" />
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="onlineCbaPosting">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N3:fault use="literal" name="Exception" namespace="" />
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="onlineCbaNcrPosting">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N3:fault use="literal" name="Exception" namespace="" />
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="onlineMultipleCbaPosting">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N3:fault use="literal" name="Exception" namespace="" />
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="onlineGefuCbaPosting">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N3:fault use="literal" name="Exception" namespace="" />
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="isTankedTransactionSuccessful">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N3:fault use="literal" name="Exception" namespace="" />
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="holdFunds">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N3:fault use="literal" name="Exception" namespace="" />
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="removeFunds">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N3:fault use="literal" name="Exception" namespace="" />
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="onlineCbaPostingSync">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N3:fault use="literal" name="Exception" namespace="" />
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="onlineCbaNcrPostingGL">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="Exception">
+        <WL5G3N3:fault use="literal" name="Exception" namespace="" />
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="UBNMiddleWareWebServicePortBindingQSService">
+    <WL5G3N0:port name="UBNMiddleWareWebServicePortBindingQSPort" binding="WL5G3N1:UBNMiddleWareWebServicePortBinding">
+      <WL5G3N3:address location="http://OSBDEV1:8001/CentralOperations/CentralPosting" />
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

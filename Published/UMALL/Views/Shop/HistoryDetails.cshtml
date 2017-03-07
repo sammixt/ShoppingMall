@@ -1,0 +1,124 @@
+﻿@model IEnumerable<UnionMall.ViewModels.CartViewModel>
+@{
+    ViewBag.Title = "History";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.ImagePath = "~/UploadedFiles/";
+    string sep = "/";
+}
+
+<div class="container">
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-header with-border" style="padding-top:2%">
+                @if (ViewBag.Name != null) { 
+                <h5 class="box-title ubn-color">
+                    Order Details for
+                    @ViewBag.Name.Name, Order ID: @ViewBag.Name.OrderId <br /><br />
+                    Branch: @ViewBag.Name.Branch, Pick up location: @ViewBag.Name.PickUpBranch <br /><br />
+                    <small>Order Date: @ViewBag.Name.OrderDate.ToShortDateString()</small>
+                    
+                </h5>
+                }
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Item</th>
+
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Subtotal</th>
+                        </tr>
+                        @if (Model != null)
+                        {
+                            foreach (var item in Model)
+                            {
+
+                                <tr class="cart-header">
+
+                                    <td class="ring-in">
+                                        <a href="#" class="at-in"><img src="@Url.Content("~/UploadedFiles/")@item.ProductName/@item.MainImage" class="img-responsive" alt="" style="width:120px;height:120px"></a>
+                                        <div class="sed">
+                                            <h5><a href="#">@item.ProductName</a></h5>
+                                        </div>
+                                        <div class="clearfix"> </div>
+                                    </td>
+                                    <td>
+                                        @item.Quantity
+                                    </td>
+                                    <td>NGN @item.UnitPrice</td>
+                                    <td class="item_price">NGN @item.ItemTotal</td>
+
+                                </tr>
+                            }
+                             if (ViewBag.Name != null) { 
+                            <tr class="cart-header">
+                                <td colspan="3" align="right"><strong>Total</strong></td>
+                                <td>NGN <span class="totals"> @ViewBag.Name.Amount</span></td>
+                            </tr>
+                        }
+                        }
+                        else
+                        {
+                            <tr class="cart-header1">
+                                <td class="ring-in" colspan="4" align="center">
+                                    <strong class="text-center text-uppercase">The are no items in your cart</strong>
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                    <div class="col-md-4 col-md-offset-6">
+                        @if (ViewBag.Name != null) { 
+                        <a href="@Url.Action("History", "Shop", new { order = @ViewBag.Name.OrderId })" class="btn btn-md btn-primary">Back</a>
+                        }
+                        else
+                        {
+                          <a href="@Url.Action("History", "Shop")" class="btn btn-md btn-primary">Back</a>  
+                        }
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</div>
+
+
+<!--brand-->
+<div class="container">
+    <div class="brand">
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic1.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic2.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic3.png" class="img-responsive" alt="" />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+
+<!--//brand-->
+<link href="~/Content/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/sweetalert-min.js"></script>
+
+@helper selection()
+{
+    int i = 11;
+    for (int j = 1; j < i; j++)
+    {
+        <option value="@j">@j</option>
+    }
+}
+
+

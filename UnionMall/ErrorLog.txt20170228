@@ -1,0 +1,33 @@
+DEBUG 2017-02-28 16:23:37,928 - Index was outside the bounds of the array.+ -------------------------------- +    at UnionMall.Models.PendingOrdersModel.UpdateAdminStatRefund(String stat, PendingViewModel order) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\PendingOrdersModel.cs:line 179
+DEBUG 2017-02-28 16:46:37,492 - ORA-06550: line 1, column 15:
+PLS-00201: identifier 'FCUBSLIVE.UMALL_SLTALLORDII' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored+ -------------------------------- +    at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at UnionMall.Models.PendingOrdersModel.selectAllOrders(String startdate, String enddate) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\PendingOrdersModel.cs:line 220
+DEBUG 2017-02-28 16:46:51,843 - ORA-06550: line 1, column 15:
+PLS-00201: identifier 'FCUBSLIVE.UMALL_SLTALLORDII' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored+ -------------------------------- +    at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at UnionMall.Models.PendingOrdersModel.selectAllOrders(String startdate, String enddate) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\PendingOrdersModel.cs:line 220
+DEBUG 2017-02-28 16:47:04,246 - ORA-06550: line 1, column 15:
+PLS-00201: identifier 'FCUBSLIVE.UMALL_SLTALLORDII' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored+ -------------------------------- +    at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at UnionMall.Models.PendingOrdersModel.selectAllOrders(String startdate, String enddate) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\PendingOrdersModel.cs:line 220
+DEBUG 2017-02-28 16:47:15,020 - ORA-06550: line 1, column 15:
+PLS-00201: identifier 'FCUBSLIVE.UMALL_SLTALLORDII' must be declared
+ORA-06550: line 1, column 7:
+PL/SQL: Statement ignored+ -------------------------------- +    at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at UnionMall.Models.PendingOrdersModel.selectAllOrders(String startdate, String enddate) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\PendingOrdersModel.cs:line 220

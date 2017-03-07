@@ -1,0 +1,111 @@
+﻿<!--//footer-->
+<div class="footer">
+    <div class="footer-middle">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="col-md-3 footer-middle-in">
+                    <h6><small>ABOUT UBN</small></h6>
+                    <ul class=" in">
+                        <li><a href="https://www.unionbankng.com/who-we-are/">Who We Are</a></li>
+                        <li><a href="https://www.unionbankng.com/investor-relations/">Investor Relations</a></li>
+                        <li><a href="https://www.unionbankng.com/media-and-news/">Media &amp; News</a></li>
+                        <li><a href="https://www.unionbankng.com/careers/">Careers</a></li>
+                        <li><a href="https://www.unionbankng.com/citizenship/">Citizenship</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 footer-middle-in">
+                    <h6><small>INDIVIDUAL BANKING</small></h6>
+                    <ul class=" in">
+                        <li><a href="https://www.unionbankng.com/individual/current-accounts/">Current Accounts</a></li>
+                        <li><a href="https://www.unionbankng.com/individual/savings-accounts/">Savings Accounts</a></li>
+                        <li><a href="https://www.unionbankng.com/individual/personal-loans/">Personal Loans</a></li>
+                        <li><a href="https://www.unionbankng.com/individual/term-deposits/">Term Deposits</a></li>
+                        <li><a href="https://www.unionbankng.com/individual/e-channels/">E-Channels</a></li>
+                        <li><a href="https://www.unionbankng.com/individual/e-channels/bvn-submission/">BVN</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-middle-in">
+                    <h6><small>BUSINESS BANKING</small></h6>
+                    <ul class="in">
+                        <li><a href="https://www.unionbankng.com/business/business-current-accounts/">Current Accounts</a></li>
+                        <li><a href="https://www.unionbankng.com/business/loans-and-overdrafts/">Loans and Overdrafts</a></li>
+                        <li><a href="https://www.unionbankng.com/business/point-of-sale-pos/">POS</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-middle-in">
+                    <h6><small>CORPORATE BANKING</small></h6>
+                    <ul class="in">
+                        <li><a href="https://www.unionbankng.com/corporate/cash-management/">Cash Management</a></li>
+                        <li><a href="https://www.unionbankng.com/corporate/trade-finance/">Trade Finance</a></li>
+                        <li><a href="https://www.unionbankng.com/corporate/credit-solutions/">Credit Solutions</a></li>
+                        <li><a href="https://www.unionbankng.com/corporate/treasury-solutions/">Treasury Solutions</a></li>
+                        <li><a href="https://tradeconnect.unionbankng.com/gtp/screen/GTPLogin">Trade Portal</a></li>
+                        <li><a href="https://unionone.unionbankng.com/unionone">Union One</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-sm-12 header-social">
+                <ul class="pull-right">
+                    <li><a href="https://twitter.com/unionbank_ng"><i></i></a></li>
+                    <li><a href="https://www.facebook.com/Unionbankng/"><i class="ic1"></i></a></li>
+                    <li><a href="https://instagram.com/unionbankng/"><i class="ic2"></i></a></li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="footer-class">Copyright &copy; @DateTime.Now.Year Union Bank of Nigeria Plc. All Rights Reserved</p>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--//footer-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            url: '/Cart/CountCartQty',
+            contentType: 'application/json; charset=utf-8',
+            type: 'GET'
+        })
+                 .success(function (result) {
+                     if (result != '') {
+                         $('.total_items_incart').text(result);
+                     } else {
+                         $('.total_items_incart').text('0');
+                     }
+                 })
+                 .error(function (xhr, status) {
+                     $('.total_items_incart').text('0');
+                 });
+
+        $(".empty_cart").click(function () {
+            $.ajax({
+                url: '/Cart/ClearCart',
+                contentType: 'application/json; charset=utf-8',
+                type: 'GET'
+            })
+                 .success(function (result) {
+                     if (result != '') {
+                         window.location.reload();
+                     } else {
+                         
+                     }
+                 })
+                 .error(function (xhr, status) {
+                     
+                 });
+        });
+
+        }
+
+        
+
+    )
+</script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+

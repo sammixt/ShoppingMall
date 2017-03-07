@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d932a7be-389f-429f-a535-fa8693d1d6ee" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://OSBDEV1:8001/CentralOperations/AccountEnquiry?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EnquiryServiceService.wsdl" MetadataType="Wsdl" ID="57e2c514-47c6-43da-98c9-f0556709babb" SourceId="1" SourceUrl="http://osbdev1:8001/CentralOperations/AccountEnquiry?wsdl" />
+    <MetadataFile FileName="AccountEnquiry.xsd" MetadataType="Schema" ID="2eab55b2-09a9-43ab-aada-7fef87309fbd" SourceId="1" SourceUrl="http://osbdev1:8001/CentralOperations/AccountEnquiry?SCHEMA%2FOperations+IT+And+Services%2FInformation+Technology%2FUtilities%2FCommon%2FHeader%2Fv1_0%2FArtifacts%2FUBNHeader" />
+    <MetadataFile FileName="AccountEnquiry1.xsd" MetadataType="Schema" ID="eb59effa-9f01-4773-8f6e-566ba72cd3fa" SourceId="1" SourceUrl="http://osbdev1:8001/CentralOperations/AccountEnquiry?SCHEMA%2FOperations+IT+And+Services%2FCentral+Operations%2FWSDLs%2FEnquiryServiceService_schema1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

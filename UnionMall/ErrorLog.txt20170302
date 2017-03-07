@@ -1,0 +1,12 @@
+DEBUG 2017-03-02 07:41:51,861 - Input string was not in a correct format.+ -------------------------------- +    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at UnionMall.Models.AuditLogModels.displayPostingLogCr(String start_date, String end_date, String reqid) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\AuditLogModels.cs:line 91
+DEBUG 2017-03-02 07:42:00,625 - Input string was not in a correct format.+ -------------------------------- +    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at UnionMall.Models.AuditLogModels.displayPostingLogDr(String start_date, String end_date, String reqid) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\AuditLogModels.cs:line 170
+DEBUG 2017-03-02 08:05:15,315 - Input string was not in a correct format.+ -------------------------------- +    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at UnionMall.Models.AuditLogModels.displayPostingLogDr(String start_date, String end_date, String reqid) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\AuditLogModels.cs:line 169

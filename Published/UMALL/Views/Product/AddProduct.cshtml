@@ -1,0 +1,221 @@
+﻿@model UnionMall.ViewModels.ProductViewModel
+
+@{
+    ViewBag.Title = "Add New Product";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <a href="@Url.Action("Index","Product")" id="addProduct" class="pull-left btn btn-md btn-success">Products List</a>
+        <div class="clearfix"></div>
+    </div>
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title ubn-color">@ViewBag.Title</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                @using (Html.BeginForm("InsertProduct","Product",FormMethod.Post, new {enctype="multipart/form-data",@class="col-md-12" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true)
+
+                       <div class="col-md-12">
+                           <div class="form-group col-md-4">
+                               @Html.LabelFor(model => model.ProductName, new { @class = "control-label col-md-4" })
+                               <div class="col-md-8">
+                                   @Html.EditorFor(model => model.ProductName)
+                                   @Html.ValidationMessageFor(model => model.ProductName)
+                               </div>
+                           </div>
+                           <div class="form-group col-md-4">
+                               @Html.LabelFor(model => model.Category, new { @class = "control-label col-md-4" })
+                               <div class="col-md-8">
+                                   @Html.DropDownListFor(m => m.CategoryId, Model.Categories, "Select Category", new { @class = "form-control", @required = "required" })
+                                   @Html.ValidationMessageFor(model => model.Category)
+                               </div>
+                           </div>
+                           <div class="form-group col-md-4">
+                                    @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-4" })
+                               <div class="col-md-8">  
+                                   @Html.EditorFor(model => model.Price)
+                                   @Html.ValidationMessageFor(model => model.Price)
+                               </div>
+                           </div>
+                       </div>
+                        <div class="col-md-12">
+                            <div class="form-group col-md-4">
+                                @Html.LabelFor(model => model.Quantity, new { @class = "control-label col-md-4" })
+                                <div class="col-md-8">
+                                    @Html.EditorFor(model => model.Quantity)
+                                    @Html.ValidationMessageFor(model => model.Quantity)
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                @Html.LabelFor(model => model.IsActive, new { @class = "control-label col-md-4" })
+                                <div class="col-md-8">
+                                    @Html.CheckBoxFor(model => model.IsActive)
+                                    @Html.ValidationMessageFor(model => model.IsActive)
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                @Html.LabelFor(model => model.IsFeatured, new { @class = "control-label col-md-4" })
+                                <div class="col-md-8">
+                                    @Html.CheckBoxFor(model => model.IsFeatured)
+                                    @Html.ValidationMessageFor(model => model.IsFeatured)
+                                </div>
+                            </div>
+
+                        </div>
+                            <div class="col-md-12">
+                                <div class="form-group col-md-6">
+                                    <div class="col-md-12">
+                                        @Html.LabelFor(model => model.Description, new { @class = "control-label" })
+                                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = "7" })
+                                        @Html.ValidationMessageFor(model => model.Description)
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="col-md-12">
+                                        @Html.LabelFor(model => model.AdditionalInfo, new { @class = "control-label",})
+                                        @Html.TextAreaFor(model => model.AdditionalInfo, new { @class = "form-control", rows = "7" })
+                                        @Html.ValidationMessageFor(model => model.AdditionalInfo)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="col-md-3">
+                                    <img class="img-bordered" id="MainImage" style="display:none" />
+                                        <label>Main Image</label><br />
+                                    <div class="btn btn-default btn-file">
+                                        <i class="fa fa-paperclip"></i> Attachment
+                                        @Html.TextBoxFor(model => model.MainImage, new { type = "file", required = "required", onchange = "readURL(this,'MainImage')" })
+                                        @Html.ValidationMessageFor(model => model.MainImage)
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="img-bordered" id="SubImage" style="display:none" />
+                                        <label>Sub Image One</label><br />
+                                    <div class="btn btn-default btn-file">
+                                        <i class="fa fa-paperclip"></i> Attachment
+                                        @Html.TextBoxFor(model => model.SubImage, new { type = "file", required = "required", onchange = "readURL(this,'SubImage')" })
+                                        @Html.ValidationMessageFor(model => model.MainImage)
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="img-bordered" id="SubImageII" style="display:none" />
+                                        <label>Sub Image Two</label><br />
+                                    <div class="btn btn-default btn-file">
+                                        <i class="fa fa-paperclip"></i> Attachment
+                                        @Html.TextBoxFor(model => model.SubImageII, new { type = "file", required = "required", onchange = "readURL(this,'SubImageII')" })
+                                        @Html.ValidationMessageFor(model => model.MainImage)
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <img class="img-bordered" id="SubImageIII" style="display:none" />
+                                    <label>Sub Image Three</label><br />
+                                    <div class="btn btn-default btn-file">
+                                        <i class="fa fa-paperclip"></i> Attachment
+                                        @Html.TextBoxFor(model => model.SubImageIII, new { type = "file", required = "required", onchange = "readURL(this,'SubImageIII')" })
+                                        @Html.ValidationMessageFor(model => model.MainImage)
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="col-md-offset-5 col-md-4" style="margin-top:3%">
+                                    <input type="submit" id="submit" value="ADD PRODUCT" class="btn btn-md ubn-color-bg" />
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                }
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+<link href="~/Content/wysihtml5.css" rel="stylesheet" />
+<style type="text/css">
+    #addProduct {
+        margin-bottom: 1%;
+    }
+
+    .catName, .activeName, .deleteName {
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: inherit;
+        border: none;
+    }
+    .ubn-color-bg {
+        background-color: #00adef;
+        color:#FFF !important;
+    }
+    input[type=checkbox] {
+        -webkit-appearance: checkbox;
+    }
+</style>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+<script src="~/Content/js/plugins/bootstrap/wysihtml5.js"></script>
+<script type="text/javascript">
+    $(function () {        
+        $("#Description").wysihtml5();
+        $("#AdditionalInfo").wysihtml5();
+
+        $("#IsActive").css("opacity", "1"); 
+        $("#IsFeatured").css("opacity", "1"); 
+    });
+
+    function readURL(input, id) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                var img = new Image;
+                img.src = reader.result;
+                img.onload = function () {
+                    if ((img.height < "590" || img.height > "590") || (img.width < "426" || img.width > "426")) {
+                        alert("The width of the image must be " + img.width + "px. and Height: " + img.height+"px");
+                        $("#submit").attr("disabled", true);
+                    } else {
+                        $("#submit").attr("disabled", false);
+                        $('#' + id).css("display", "block");
+                        $('#' + id)
+                    .attr('src', img.src)
+                    .width(150)
+                    .height(180);
+                    }
+                };
+                img.onerror = function () {
+                    alert("not a valid file: " + file.type);
+                }
+                
+            };
+            reader.readAsDataURL(input.files[0]);          
+        }
+    }
+    $(function () {
+        
+
+        setInterval(function () {
+            var src_i = $("#MainImage").prop('src');
+            var src_ii = $("#SubImage").prop('src');
+            var src_iii = $("#SubImageII").prop('src');
+            var src_iv = $("#SubImageIII").prop('src');
+            if (src_i == "" || src_ii == "" || src_iii == "" || src_iv == "") {
+                $("#submit").attr("disabled", true);
+            } else {
+                $("#submit").attr("disabled", false);
+            }
+        }, 1000)
+    })
+</script>
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ef6ac283-fe2a-4e52-a93a-d319674b1259" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ubniisapps:8141/EmailService/Service1.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="0c11e6ad-f4d4-4f7f-9fad-2861022ae35a" SourceId="1" SourceUrl="http://ubniisapps:8141/EmailService/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="6289ddf8-38c6-4413-9cfd-db8e20d81637" SourceId="1" SourceUrl="http://ubniisapps:8141/EmailService/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="2a1524ae-f489-411d-bc40-1d54a6cd5d8d" SourceId="1" SourceUrl="http://ubniisapps:8141/EmailService/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="1820f82c-f726-4cb5-af7e-8a43d61e37f5" SourceId="1" SourceUrl="http://ubniisapps:8141/EmailService/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="06160ee4-f953-4d8c-bb43-9db9911fdf06" SourceId="1" SourceUrl="http://ubniisapps:8141/EmailService/Service1.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service14.xsd" MetadataType="Schema" ID="13b67834-47de-4595-b4fa-dbcb7e9af08c" SourceId="1" SourceUrl="http://ubniisapps:8141/EmailService/Service1.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

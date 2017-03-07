@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ubn.Services.EmailService.Cls" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ubn.Services.EmailService.Cls" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ubniisapps:8141/EmailService/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/EmailService.Cls" />
+  <xs:import schemaLocation="http://ubniisapps:8141/EmailService/Service1.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="EmailAlert.MsgDetails">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EmailService.Cls" minOccurs="0" name="Attachments" nillable="true" type="q1:ArrayOfMyAttachment" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="BccRecipientEmailCollection" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CcRecipientEmailCollection" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EmailService.Cls" minOccurs="0" name="InlineAttachment" nillable="true" type="q4:ArrayOfInlineAttachment" />
+      <xs:element minOccurs="0" name="Msg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Signature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ToRecipientEmailCollection" nillable="true" type="q5:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmailAlert.MsgDetails" nillable="true" type="tns:EmailAlert.MsgDetails" />
+</xs:schema>

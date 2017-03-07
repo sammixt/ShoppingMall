@@ -1,0 +1,144 @@
+﻿@model IEnumerable<UnionMall.ViewModels.PendingViewModel>
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Pending Orders";
+    ViewBag.Description = " awaiting processing";
+}
+<div class="row">
+    <div class="well form-inline col-md-12">
+        <fieldset>
+            @using (Html.BeginForm("AllOrders", "Home", FormMethod.Post, new { id = "sendform", role = "form", @class = "col-md-12" }))
+            {
+                <div class="form-group col-md-3">
+                    <label class="control-label">Start Date</label>
+                    <input type="text" name="SearchStartDate" class="form-control datepicker" required />
+                </div>
+                <div class="form-group col-md-3">
+                    <label class="control-label">End Date</label>
+                    <input type="text" name="SearchEndDate" class="form-control datepicker" required />
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="submit" value="Search" class="btn btn-md ubn-color-bg white-bar" />
+                </div>
+                <div class="clearfix"></div>
+            }
+        </fieldset>
+    </div>
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title ubn-color">Pending Request</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table class="table table-responsive">
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            Branch
+                        </th>
+                        <th>
+                            Delivery Location
+                        </th>
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Amount
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            &nbsp;
+                        </th>
+                    </tr>
+                    @if (Model != null)
+                    {
+                        foreach (var item in Model)
+                        {
+
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Branch)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PickUpBranch)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.OrderDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Amount)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.OrderStatus)
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("AllDetails", "Home", new {order = item.OrderId })" class="pull-left btn btn-md btn-primary">View Details</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="9" class="text-center"><strong>No Data To Display</strong></td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+
+<style type="text/css">
+    #addProduct {
+        margin-bottom: 1%;
+    }
+
+    .catName, .activeName, .deleteName {
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: inherit;
+        border: none;
+    }
+</style>
+<link href="~/Content/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/sweetalert-min.js"></script>
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(function () { // will trigger when the document is ready
+                $('.datepicker').datepicker(); //Initialise any date pickers
+            });
+        })
+    </script>
+}
+
+@helper checkCheckBox(bool checkstate)
+{
+    if (checkstate == true)
+    {
+        <strong>True</strong>
+    }
+    else
+    {
+        <strong>False</strong>
+    }
+}

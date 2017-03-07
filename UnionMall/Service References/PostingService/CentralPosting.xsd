@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:Q1="http://www.unionbank.com.ng/utilities/Header/v1_0/UBNHeader" xmlns:tns="http://www.unionbank.com.ng/utilities/Header/v1_0/UBNHeader" elementFormDefault="qualified" targetNamespace="http://www.unionbank.com.ng/utilities/Header/v1_0/UBNHeader" xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="UBNHeader" type="tns:UBNHeaderType" />
+  <complexType name="UBNHeaderType">
+    <sequence>
+      <element minOccurs="1" maxOccurs="1" name="MessageId" type="string">
+        <annotation>
+          <documentation>Clients message ID in order to track the message within unionbank.</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="1" maxOccurs="1" name="CorrelationId" type="string">
+        <annotation>
+          <documentation>Clients correlation ID in order to tie more than one message together. For example the customer or order number</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="0" maxOccurs="1" name="InternalMessageId" type="string">
+        <annotation>
+          <documentation>unionbanks Internal Unique message ID in order to track the message in unionbank.</documentation>
+        </annotation>
+      </element>
+      <element minOccurs="1" maxOccurs="1" name="ClientId" type="string" />
+      <element minOccurs="1" maxOccurs="1" name="Service" type="string" />
+      <element minOccurs="1" maxOccurs="1" name="Operation" type="string" />
+      <element minOccurs="1" maxOccurs="1" name="ClientIp" type="string" />
+      <element minOccurs="0" maxOccurs="1" name="UserId" type="string" />
+      <element minOccurs="1" maxOccurs="1" name="RequestedTimestamp" type="dateTime" />
+      <element minOccurs="0" maxOccurs="1" name="ResponseTimestamp" type="dateTime" />
+      <element minOccurs="0" maxOccurs="1" name="BusinessKeyPairs" type="tns:BusinessKeyPairs">
+        <annotation>
+          <documentation>Extensible custom meta data that might be required that is not part of the current elements</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="BusinessKeyPairs">
+    <sequence>
+      <element minOccurs="0" maxOccurs="unbounded" name="BusinessKey" type="tns:BusinessKeyType" />
+    </sequence>
+  </complexType>
+  <complexType name="BusinessKeyType">
+    <simpleContent>
+      <extension base="string">
+        <attribute name="name" type="string" />
+      </extension>
+    </simpleContent>
+  </complexType>
+</schema>

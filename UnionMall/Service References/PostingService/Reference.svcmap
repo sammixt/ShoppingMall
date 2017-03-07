@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="12223749-555b-474a-ae8b-bade4d920b44" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://OSBDEV1:8001/CentralOperations/CentralPosting?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UBNMiddleWareWebServiceService.wsdl" MetadataType="Wsdl" ID="6903c94a-bd3b-4c07-b78d-9947637e583d" SourceId="1" SourceUrl="http://osbdev1:8001/CentralOperations/CentralPosting?wsdl" />
+    <MetadataFile FileName="CentralPosting.xsd" MetadataType="Schema" ID="38a8e971-54b5-4935-bdf1-0a1ab8c0c714" SourceId="1" SourceUrl="http://osbdev1:8001/CentralOperations/CentralPosting?SCHEMA%2FOperations+IT+And+Services%2FInformation+Technology%2FUtilities%2FLogging%2FAudit%2Fv1_0%2FArtifacts%2FUBNHeader" />
+    <MetadataFile FileName="CentralPosting1.xsd" MetadataType="Schema" ID="b6ac8579-67df-479e-a812-39b238c8835e" SourceId="1" SourceUrl="http://osbdev1:8001/CentralOperations/CentralPosting?SCHEMA%2FOperations+IT+And+Services%2FCentral+Operations%2FWSDLs%2FUBNMiddleWareWebServiceService_schema1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://applications.unionbankng.com/ws" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UBN_SMS_Service" targetNamespace="http://applications.unionbankng.com/ws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://ubniisapps:8141/AppSmsService/Administration.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://applications.unionbankng.com/ws/Imports">
+      <xsd:import schemaLocation="http://ubniisapps:8141/AppSmsService/Administration.svc?xsd=xsd0" namespace="http://applications.unionbankng.com/ws" />
+      <xsd:import schemaLocation="http://ubniisapps:8141/AppSmsService/Administration.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ubniisapps:8141/AppSmsService/Administration.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/UBN.Security.Sms" />
+      <xsd:import schemaLocation="http://ubniisapps:8141/AppSmsService/Administration.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://ubniisapps:8141/AppSmsService/Administration.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/UBN.AuthenticationViaAD.Cls" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="UBN_SMS_Service_AdAuthenticate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdAuthenticate" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_AdAuthenticate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdAuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_Ad2xAuthenticate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ad2xAuthenticate" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_Ad2xAuthenticate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Ad2xAuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_TwoXtorAuth_InputMessage">
+    <wsdl:part name="parameters" element="tns:TwoXtorAuth" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_TwoXtorAuth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TwoXtorAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GenerateTwoXtorOtp_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateTwoXtorOtp" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GenerateTwoXtorOtp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateTwoXtorOtpResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetTwoXtorUserProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTwoXtorUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetTwoXtorUserProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTwoXtorUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_IsUserInRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserInRole" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_IsUserInRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserInRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_IsUserInAdRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserInAdRole" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_IsUserInAdRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserInAdRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_IsUserInCbaRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserInCbaRole" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_IsUserInCbaRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserInCbaRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_RoleExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleExist" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_RoleExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetRolesForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesForUser" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetRolesForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRolesForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetAdRolesForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdRolesForUser" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetAdRolesForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdRolesForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetCbaRolesForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCbaRolesForUser" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetCbaRolesForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCbaRolesForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetUsersInRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersInRole" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetUsersInRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersInRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_RemoveUserFromRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromRoles" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_RemoveUserFromRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveUserFromRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_AddUserToRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserToRole" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_AddUserToRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserToRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_AuthorizeUserRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizeUserRole" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_AuthorizeUserRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizeUserRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_CreateRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRole" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_CreateRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_DeleteRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRole" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_DeleteRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetUserProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetUserProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_SearchUserProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_SearchUserProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_IsUserExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserExist" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_IsUserExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUserExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetAllRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoles" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetAllRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_ChangeCustomerUserPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeCustomerUserPassword" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_ChangeCustomerUserPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeCustomerUserPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_ChangeCustomerUserStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeCustomerUserStatus" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_ChangeCustomerUserStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeCustomerUserStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_CreateCustomerUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomerUser" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_CreateCustomerUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomerUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_CustomAuthentication_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_CustomAuthentication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_IsCustomerUserExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsCustomerUserExist" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_IsCustomerUserExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsCustomerUserExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_UpdateUserProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserProfile" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_UpdateUserProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetModule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModule" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetModule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetModules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModules" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetModules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetBranchReportLine_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchReportLine" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetBranchReportLine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchReportLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_AddModule_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddModule" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_AddModule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_UpdateModule_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateModule" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_UpdateModule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateModuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_IsModuleExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsModuleExist" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_IsModuleExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsModuleExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_RequestRemoveUserFromRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:RequestRemoveUserFromRoles" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_RequestRemoveUserFromRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RequestRemoveUserFromRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetUserRoleEventStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRoleEventStatus" />
+  </wsdl:message>
+  <wsdl:message name="UBN_SMS_Service_GetUserRoleEventStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRoleEventStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UBN_SMS_Service">
+    <wsdl:operation name="AdAuthenticate">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/AdAuthenticate" message="tns:UBN_SMS_Service_AdAuthenticate_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/AdAuthenticateResponse" message="tns:UBN_SMS_Service_AdAuthenticate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ad2xAuthenticate">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/Ad2xAuthenticate" message="tns:UBN_SMS_Service_Ad2xAuthenticate_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/Ad2xAuthenticateResponse" message="tns:UBN_SMS_Service_Ad2xAuthenticate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TwoXtorAuth">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/TwoXtorAuth" message="tns:UBN_SMS_Service_TwoXtorAuth_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/TwoXtorAuthResponse" message="tns:UBN_SMS_Service_TwoXtorAuth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateTwoXtorOtp">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GenerateTwoXtorOtp" message="tns:UBN_SMS_Service_GenerateTwoXtorOtp_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GenerateTwoXtorOtpResponse" message="tns:UBN_SMS_Service_GenerateTwoXtorOtp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTwoXtorUserProfile">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetTwoXtorUserProfile" message="tns:UBN_SMS_Service_GetTwoXtorUserProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetTwoXtorUserProfileResponse" message="tns:UBN_SMS_Service_GetTwoXtorUserProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserInRole">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/IsUserInRole" message="tns:UBN_SMS_Service_IsUserInRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/IsUserInRoleResponse" message="tns:UBN_SMS_Service_IsUserInRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserInAdRole">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/IsUserInAdRole" message="tns:UBN_SMS_Service_IsUserInAdRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/IsUserInAdRoleResponse" message="tns:UBN_SMS_Service_IsUserInAdRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserInCbaRole">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/IsUserInCbaRole" message="tns:UBN_SMS_Service_IsUserInCbaRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/IsUserInCbaRoleResponse" message="tns:UBN_SMS_Service_IsUserInCbaRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleExist">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/RoleExist" message="tns:UBN_SMS_Service_RoleExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/RoleExistResponse" message="tns:UBN_SMS_Service_RoleExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesForUser">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetRolesForUser" message="tns:UBN_SMS_Service_GetRolesForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetRolesForUserResponse" message="tns:UBN_SMS_Service_GetRolesForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdRolesForUser">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetAdRolesForUser" message="tns:UBN_SMS_Service_GetAdRolesForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetAdRolesForUserResponse" message="tns:UBN_SMS_Service_GetAdRolesForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCbaRolesForUser">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetCbaRolesForUser" message="tns:UBN_SMS_Service_GetCbaRolesForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetCbaRolesForUserResponse" message="tns:UBN_SMS_Service_GetCbaRolesForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersInRole">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetUsersInRole" message="tns:UBN_SMS_Service_GetUsersInRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetUsersInRoleResponse" message="tns:UBN_SMS_Service_GetUsersInRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveUserFromRoles">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/RemoveUserFromRoles" message="tns:UBN_SMS_Service_RemoveUserFromRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/RemoveUserFromRolesResponse" message="tns:UBN_SMS_Service_RemoveUserFromRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUserToRole">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/AddUserToRole" message="tns:UBN_SMS_Service_AddUserToRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/AddUserToRoleResponse" message="tns:UBN_SMS_Service_AddUserToRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeUserRole">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/AuthorizeUserRole" message="tns:UBN_SMS_Service_AuthorizeUserRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/AuthorizeUserRoleResponse" message="tns:UBN_SMS_Service_AuthorizeUserRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRole">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/CreateRole" message="tns:UBN_SMS_Service_CreateRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/CreateRoleResponse" message="tns:UBN_SMS_Service_CreateRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/DeleteRole" message="tns:UBN_SMS_Service_DeleteRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/DeleteRoleResponse" message="tns:UBN_SMS_Service_DeleteRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserProfile">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetUserProfile" message="tns:UBN_SMS_Service_GetUserProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetUserProfileResponse" message="tns:UBN_SMS_Service_GetUserProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUserProfile">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/SearchUserProfile" message="tns:UBN_SMS_Service_SearchUserProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/SearchUserProfileResponse" message="tns:UBN_SMS_Service_SearchUserProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUserExist">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/IsUserExist" message="tns:UBN_SMS_Service_IsUserExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/IsUserExistResponse" message="tns:UBN_SMS_Service_IsUserExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoles">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetAllRoles" message="tns:UBN_SMS_Service_GetAllRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetAllRolesResponse" message="tns:UBN_SMS_Service_GetAllRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetAllUsers" message="tns:UBN_SMS_Service_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetAllUsersResponse" message="tns:UBN_SMS_Service_GetAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeCustomerUserPassword">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/ChangeCustomerUserPassword" message="tns:UBN_SMS_Service_ChangeCustomerUserPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/ChangeCustomerUserPasswordResponse" message="tns:UBN_SMS_Service_ChangeCustomerUserPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeCustomerUserStatus">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/ChangeCustomerUserStatus" message="tns:UBN_SMS_Service_ChangeCustomerUserStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/ChangeCustomerUserStatusResponse" message="tns:UBN_SMS_Service_ChangeCustomerUserStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerUser">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/CreateCustomerUser" message="tns:UBN_SMS_Service_CreateCustomerUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/CreateCustomerUserResponse" message="tns:UBN_SMS_Service_CreateCustomerUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomAuthentication">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/CustomAuthentication" message="tns:UBN_SMS_Service_CustomAuthentication_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/CustomAuthenticationResponse" message="tns:UBN_SMS_Service_CustomAuthentication_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCustomerUserExist">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/IsCustomerUserExist" message="tns:UBN_SMS_Service_IsCustomerUserExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/IsCustomerUserExistResponse" message="tns:UBN_SMS_Service_IsCustomerUserExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserProfile">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/UpdateUserProfile" message="tns:UBN_SMS_Service_UpdateUserProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/UpdateUserProfileResponse" message="tns:UBN_SMS_Service_UpdateUserProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModule">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetModule" message="tns:UBN_SMS_Service_GetModule_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetModuleResponse" message="tns:UBN_SMS_Service_GetModule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModules">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetModules" message="tns:UBN_SMS_Service_GetModules_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetModulesResponse" message="tns:UBN_SMS_Service_GetModules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchReportLine">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetBranchReportLine" message="tns:UBN_SMS_Service_GetBranchReportLine_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetBranchReportLineResponse" message="tns:UBN_SMS_Service_GetBranchReportLine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddModule">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/AddModule" message="tns:UBN_SMS_Service_AddModule_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/AddModuleResponse" message="tns:UBN_SMS_Service_AddModule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateModule">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/UpdateModule" message="tns:UBN_SMS_Service_UpdateModule_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/UpdateModuleResponse" message="tns:UBN_SMS_Service_UpdateModule_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsModuleExist">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/IsModuleExist" message="tns:UBN_SMS_Service_IsModuleExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/IsModuleExistResponse" message="tns:UBN_SMS_Service_IsModuleExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestRemoveUserFromRoles">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/RequestRemoveUserFromRoles" message="tns:UBN_SMS_Service_RequestRemoveUserFromRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/RequestRemoveUserFromRolesResponse" message="tns:UBN_SMS_Service_RequestRemoveUserFromRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRoleEventStatus">
+      <wsdl:input wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetUserRoleEventStatus" message="tns:UBN_SMS_Service_GetUserRoleEventStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://applications.unionbankng.com/ws/UBN_SMS_Service/GetUserRoleEventStatusResponse" message="tns:UBN_SMS_Service_GetUserRoleEventStatus_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="UBN_SMS_Service">
+    <wsdl:port name="BasicHttpBinding_UBN_SMS_Service" binding="i0:BasicHttpBinding_UBN_SMS_Service">
+      <soap:address location="http://ubniisapps:8141/AppSmsService/Administration.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,1495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:/UMALL</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/img/icheck/aero%402x.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/aero.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/blue%402x.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/blue.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/green%402x.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/green.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/grey%402x.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/grey.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/minimal%402x.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/minimal.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/orange%402x.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/orange.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/pink%402x.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/pink.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/purple%402x.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/purple.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/red%402x.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/red.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/yellow%402x.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/icheck/yellow.png">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="App_Data/img/stallion.png">
+      <publishTime>02/07/2017 18:18:44</publishTime>
+    </File>
+    <File Include="App_Data/img/stallion_main.png">
+      <publishTime>02/07/2017 18:24:09</publishTime>
+    </File>
+    <File Include="App_Data/img/user.jpg">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/10/2017 16:56:40</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>02/12/2017 15:10:08</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>02/12/2017 15:10:08</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>02/13/2017 11:03:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>02/10/2017 16:56:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>02/10/2017 16:56:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>02/10/2017 16:56:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>02/10/2017 16:56:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>02/10/2017 16:56:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>02/10/2017 16:56:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>02/10/2017 16:56:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>02/10/2017 16:56:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>02/10/2017 16:56:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>02/10/2017 16:56:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>02/10/2017 16:56:49</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>02/10/2017 16:56:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>02/10/2017 16:56:38</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>02/10/2017 16:56:39</publishTime>
+    </File>
+    <File Include="bin/Oracle.ManagedDataAccess.dll">
+      <publishTime>02/13/2017 10:16:36</publishTime>
+    </File>
+    <File Include="bin/Oracle.ManagedDataAccess.EntityFramework.dll">
+      <publishTime>02/13/2017 10:19:27</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>02/10/2017 16:56:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>02/10/2017 16:56:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>02/10/2017 16:56:38</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/10/2017 16:56:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>02/10/2017 16:56:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>02/10/2017 16:56:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>02/10/2017 16:56:37</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>02/10/2017 16:56:37</publishTime>
+    </File>
+    <File Include="bin/UnionMall.dll">
+      <publishTime>03/03/2017 18:36:37</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>02/10/2017 16:56:41</publishTime>
+    </File>
+    <File Include="Content/bootstrap-datepicker3.css">
+      <publishTime>02/17/2016 19:34:46</publishTime>
+    </File>
+    <File Include="Content/bootstrap-default.css">
+      <publishTime>02/03/2016 19:26:14</publishTime>
+    </File>
+    <File Include="Content/bootstrap-select.css">
+      <publishTime>02/17/2016 19:34:46</publishTime>
+    </File>
+    <File Include="Content/bootstrap-select.css.map">
+      <publishTime>02/17/2016 19:34:46</publishTime>
+    </File>
+    <File Include="Content/bootstrap-select.min.css">
+      <publishTime>02/17/2016 19:34:46</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css">
+      <publishTime>02/03/2016 19:26:13</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.css.map">
+      <publishTime>02/03/2016 19:26:13</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css">
+      <publishTime>02/03/2016 19:26:13</publishTime>
+    </File>
+    <File Include="Content/bootstrap-theme.min.css.map">
+      <publishTime>02/03/2016 19:26:13</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>04/28/2016 10:20:50</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css.map">
+      <publishTime>02/03/2016 19:26:13</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>02/03/2016 19:26:13</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css.map">
+      <publishTime>02/03/2016 19:26:13</publishTime>
+    </File>
+    <File Include="Content/buttons.dataTables.min.css">
+      <publishTime>03/16/2016 13:03:10</publishTime>
+    </File>
+    <File Include="Content/css/AdminLTE.css">
+      <publishTime>02/10/2017 18:32:40</publishTime>
+    </File>
+    <File Include="Content/css/AdminLTE.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.css.map">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css.map">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/datepicker3.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/font-awesome.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/aero.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/aero.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/blue.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/blue.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/green.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/green.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/grey.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/grey.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/minimal.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/minimal.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/orange.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/orange.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/pink.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/pink.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/purple.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/purple.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/red.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/red.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/yellow.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/icheck/yellow.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/select2.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/select2.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-black-light.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-black-light.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-black.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-black.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-blue-light.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-blue-light.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-blue.css">
+      <publishTime>02/10/2017 18:27:07</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-blue.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-green-light.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-green-light.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-green.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-green.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-purple-light.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-purple-light.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-purple.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-purple.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-red-light.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-red-light.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-red.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-red.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-yellow-light.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-yellow-light.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-yellow.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/skin-yellow.min.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/_all-skins.css">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/css/skins/_all-skins.min.css">
+      <publishTime>02/10/2017 18:31:03</publishTime>
+    </File>
+    <File Include="Content/dataTables.bootstrap.min.css">
+      <publishTime>03/15/2016 17:34:48</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.eot">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.svg">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.ttf">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.woff">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/fonts/fontawesome-webfont.woff2">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/fonts/FontAwesome.otf">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/Images/cart.jpg">
+      <publishTime>02/10/2017 10:44:41</publishTime>
+    </File>
+    <File Include="Content/js/app.js">
+      <publishTime>02/10/2017 15:13:35</publishTime>
+    </File>
+    <File Include="Content/js/app.min.js">
+      <publishTime>02/10/2017 15:13:35</publishTime>
+    </File>
+    <File Include="Content/js/init.js">
+      <publishTime>02/10/2017 15:13:35</publishTime>
+    </File>
+    <File Include="Content/js/plugins/bootstrap/bootstrap.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/bootstrap/bootstrap.min.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/bootstrap/wysihtml5.js">
+      <publishTime>02/14/2017 12:34:43</publishTime>
+    </File>
+    <File Include="Content/js/plugins/datepicker/bootstrap-datepicker.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/fastclick/fastclick.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/fastclick/fastclick.min.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/icheck/icheck.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/icheck/icheck.min.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/inputmask/jquery.inputmask.bundle.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/inputmask/jquery.inputmask.bundle.min.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/jquery/jquery-2.2.4.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/jquery/jquery-2.2.4.min.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/moment/moment.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/moment/moment.min.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/select2/i18n/en.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/select2/select2.full.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/select2/select2.full.min.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/select2/select2.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/select2/select2.min.js">
+      <publishTime>02/10/2017 15:13:34</publishTime>
+    </File>
+    <File Include="Content/js/plugins/slimscroll/jquery.slimscroll.js">
+      <publishTime>02/10/2017 15:13:35</publishTime>
+    </File>
+    <File Include="Content/js/plugins/slimscroll/jquery.slimscroll.min.js">
+      <publishTime>02/10/2017 15:13:35</publishTime>
+    </File>
+    <File Include="Content/js/plugins/validator/validator.js">
+      <publishTime>02/10/2017 15:13:35</publishTime>
+    </File>
+    <File Include="Content/js/plugins/validator/validator.min.js">
+      <publishTime>02/10/2017 15:13:35</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>02/14/2017 15:35:42</publishTime>
+    </File>
+    <File Include="Content/sweetalert.css">
+      <publishTime>02/15/2017 10:16:03</publishTime>
+    </File>
+    <File Include="Content/Template/css/bootstrap.css">
+      <publishTime>02/16/2017 08:55:29</publishTime>
+    </File>
+    <File Include="Content/Template/css/chocolat.css">
+      <publishTime>02/15/2017 15:39:42</publishTime>
+    </File>
+    <File Include="Content/Template/css/flexslider.css">
+      <publishTime>02/15/2017 15:39:42</publishTime>
+    </File>
+    <File Include="Content/Template/css/form.css">
+      <publishTime>02/16/2017 08:54:44</publishTime>
+    </File>
+    <File Include="Content/Template/css/jstarbox.css">
+      <publishTime>02/16/2017 08:54:27</publishTime>
+    </File>
+    <File Include="Content/Template/css/popuo-box.css">
+      <publishTime>02/15/2017 15:39:42</publishTime>
+    </File>
+    <File Include="Content/Template/css/style.css">
+      <publishTime>03/02/2017 09:50:00</publishTime>
+    </File>
+    <File Include="Content/Template/css/style4.css">
+      <publishTime>02/16/2017 08:46:05</publishTime>
+    </File>
+    <File Include="Content/Template/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>02/15/2017 15:39:40</publishTime>
+    </File>
+    <File Include="Content/Template/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/fonts/Oxygen-Bold.ttf">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/fonts/Oxygen-Regular.ttf">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/fonts/Ubuntu-Bold.ttf">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/fonts/Ubuntu-Regular.ttf">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/b-arrow.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/ba11.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/back.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/ca.png">
+      <publishTime>02/16/2017 09:48:30</publishTime>
+    </File>
+    <File Include="Content/Template/images/cart.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/ch.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/ch1.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/ch2.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/close.png">
+      <publishTime>02/16/2017 09:53:10</publishTime>
+    </File>
+    <File Include="Content/Template/images/f1.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/f2.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/f3.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/ic.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/ic1.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/ic2.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/ic3.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/img-sprite.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/log.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/logo.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/me.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/me1.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/pc.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/pc1.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/pc2.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/pc3.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/pc4.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/pc5.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/pc6.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/pc7.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/pi.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/pi1.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/pi2.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/pi3.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/search.png">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/si.jpg">
+      <publishTime>02/15/2017 15:39:41</publishTime>
+    </File>
+    <File Include="Content/Template/images/si1.jpg">
+      <publishTime>02/15/2017 15:39:42</publishTime>
+    </File>
+    <File Include="Content/Template/images/si2.jpg">
+      <publishTime>02/15/2017 15:39:42</publishTime>
+    </File>
+    <File Include="Content/Template/images/stallion.png">
+      <publishTime>02/16/2017 09:29:34</publishTime>
+    </File>
+    <File Include="Content/Template/images/tick.png">
+      <publishTime>02/15/2017 15:39:42</publishTime>
+    </File>
+    <File Include="Content/Template/images/tick1.png">
+      <publishTime>02/15/2017 15:39:42</publishTime>
+    </File>
+    <File Include="Content/Template/js/bootstrap.min.js">
+      <publishTime>02/15/2017 15:39:58</publishTime>
+    </File>
+    <File Include="Content/Template/js/classie.js">
+      <publishTime>02/15/2017 15:39:58</publishTime>
+    </File>
+    <File Include="Content/Template/js/imagezoom.js">
+      <publishTime>02/15/2017 15:39:58</publishTime>
+    </File>
+    <File Include="Content/Template/js/jquery.chocolat.js">
+      <publishTime>02/15/2017 15:39:58</publishTime>
+    </File>
+    <File Include="Content/Template/js/jquery.flexslider.js">
+      <publishTime>02/15/2017 15:39:58</publishTime>
+    </File>
+    <File Include="Content/Template/js/jquery.magnific-popup.js">
+      <publishTime>02/15/2017 15:39:58</publishTime>
+    </File>
+    <File Include="Content/Template/js/jquery.min.js">
+      <publishTime>02/15/2017 15:39:58</publishTime>
+    </File>
+    <File Include="Content/Template/js/jstarbox.js">
+      <publishTime>02/15/2017 15:39:58</publishTime>
+    </File>
+    <File Include="Content/Template/js/modernizr.custom.72111.js">
+      <publishTime>02/15/2017 15:39:58</publishTime>
+    </File>
+    <File Include="Content/Template/js/simpleCart.min.js">
+      <publishTime>02/15/2017 15:39:59</publishTime>
+    </File>
+    <File Include="Content/Template/js/uisearch.js">
+      <publishTime>02/15/2017 15:39:59</publishTime>
+    </File>
+    <File Include="Content/wysihtml5.css">
+      <publishTime>02/14/2017 12:33:20</publishTime>
+    </File>
+    <File Include="ErrorLog.txt">
+      <publishTime>03/03/2017 11:19:22</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>06/28/2016 13:19:54</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>02/10/2017 16:56:30</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>02/10/2017 16:56:30</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>02/10/2017 16:56:30</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>02/10/2017 16:56:30</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/10/2017 16:56:27</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>02/13/2017 11:03:19</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>02/10/2017 16:56:30</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>02/10/2017 16:56:29</publishTime>
+    </File>
+    <File Include="Scripts/Category.js">
+      <publishTime>02/13/2017 18:14:43</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>02/10/2017 16:56:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>02/10/2017 16:56:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>02/10/2017 16:56:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>02/10/2017 16:56:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>02/10/2017 16:56:50</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>02/10/2017 16:56:51</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>02/10/2017 16:56:51</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>02/10/2017 16:56:39</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>02/10/2017 16:56:41</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>02/10/2017 16:56:41</publishTime>
+    </File>
+    <File Include="Scripts/sweetalert-dev.js">
+      <publishTime>02/15/2017 10:14:27</publishTime>
+    </File>
+    <File Include="Scripts/sweetalert-min.js">
+      <publishTime>02/15/2017 10:15:20</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>02/15/2017 15:40:00</publishTime>
+    </File>
+    <File Include="Service References/ADServiceRef/UnionMall.ADServiceRef.BranchReportLine.datasource">
+      <publishTime>02/10/2017 17:04:32</publishTime>
+    </File>
+    <File Include="Service References/ADServiceRef/UnionMall.ADServiceRef.Module.datasource">
+      <publishTime>02/10/2017 17:04:32</publishTime>
+    </File>
+    <File Include="Service References/ADServiceRef/UnionMall.ADServiceRef.Response.datasource">
+      <publishTime>02/10/2017 17:04:32</publishTime>
+    </File>
+    <File Include="Service References/ADServiceRef/UnionMall.ADServiceRef.UserProfile.datasource">
+      <publishTime>02/10/2017 17:04:32</publishTime>
+    </File>
+    <File Include="Service References/ADServiceRef/UnionMall.ADServiceRef.UserRoleEventStatus.datasource">
+      <publishTime>02/10/2017 17:04:32</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.accountMemoInfo.datasource">
+      <publishTime>02/21/2017 13:26:24</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.AccountSearchByAcctTitleAndBranchCodeResponse.datasource">
+      <publishTime>02/21/2017 13:26:27</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.accountSearchInfo.datasource">
+      <publishTime>02/21/2017 13:26:24</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.auditInformation.datasource">
+      <publishTime>02/21/2017 13:26:24</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.branchList.datasource">
+      <publishTime>02/21/2017 13:26:24</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.clientDetails.datasource">
+      <publishTime>02/21/2017 13:26:25</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.createLogResponse.datasource">
+      <publishTime>02/21/2017 13:26:27</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.customerAcctsDetail.datasource">
+      <publishTime>02/21/2017 13:26:25</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.customerAcctsInfo.datasource">
+      <publishTime>02/21/2017 13:26:25</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.customerAcctsWithTranInfoWithBranchGeneric.datasource">
+      <publishTime>02/21/2017 13:26:24</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.customerAcctsWithTransactionInfoWithBranch.datasource">
+      <publishTime>02/21/2017 13:26:25</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getAccounMemoInfoResponse.datasource">
+      <publishTime>02/21/2017 13:26:27</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getAccountSerachByAccountNumberResponse.datasource">
+      <publishTime>02/21/2017 13:26:27</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getAccountSerachByAccountTitleResponse.datasource">
+      <publishTime>02/21/2017 13:26:27</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getAccountSummaryANDTransactionsResponse.datasource">
+      <publishTime>02/21/2017 13:26:27</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getAccountSummaryANDTxnGenericResponse.datasource">
+      <publishTime>02/21/2017 13:26:27</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getAccountSummaryByCustomerIDResponse.datasource">
+      <publishTime>02/21/2017 13:26:25</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getAccountSummaryResponse.datasource">
+      <publishTime>02/21/2017 13:26:25</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getActivityLogResponse.datasource">
+      <publishTime>02/21/2017 13:26:28</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getActivityLogSpecificResponse.datasource">
+      <publishTime>02/21/2017 13:26:28</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getBranchListResponse.datasource">
+      <publishTime>02/21/2017 13:26:28</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getChequeNumberInquiryResponse.datasource">
+      <publishTime>02/21/2017 13:26:26</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getcicRecordResponse.datasource">
+      <publishTime>02/21/2017 13:26:28</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getCustomerAcctsDetailResponse.datasource">
+      <publishTime>02/21/2017 13:26:26</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getCustomerDetailsbyPhoneNumberResponse.datasource">
+      <publishTime>02/21/2017 13:26:26</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getCustomerDetailsbyShortNameResponse.datasource">
+      <publishTime>02/21/2017 13:26:26</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getCustomerDetailsResponse.datasource">
+      <publishTime>02/21/2017 13:26:25</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getCustomerDetailsWithAcctNumberResponse.datasource">
+      <publishTime>02/21/2017 13:26:26</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getCustomerDetailswithFirstandLastResponse.datasource">
+      <publishTime>02/21/2017 13:26:26</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getGlForTerminalResponse.datasource">
+      <publishTime>02/21/2017 13:26:28</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getLoanListResponse.datasource">
+      <publishTime>02/21/2017 13:26:28</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getMangersChequeStatusInfoResponse.datasource">
+      <publishTime>02/21/2017 13:26:26</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getMangersChequeStatusResponse.datasource">
+      <publishTime>02/21/2017 13:26:26</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getOverDraftListResponse.datasource">
+      <publishTime>02/21/2017 13:26:28</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.getSingleTransactionDetailsResponse.datasource">
+      <publishTime>02/21/2017 13:26:27</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.glTerminalDetails.datasource">
+      <publishTime>02/21/2017 13:26:23</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.loanList.datasource">
+      <publishTime>02/21/2017 13:26:24</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.managersChequeDetails.datasource">
+      <publishTime>02/21/2017 13:26:25</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.NameEnquiryResponse.datasource">
+      <publishTime>02/21/2017 13:26:26</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.nameEnquiryResponses.datasource">
+      <publishTime>02/21/2017 13:26:25</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.overdraftList.datasource">
+      <publishTime>02/21/2017 13:26:24</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.singleTransactionDetails.datasource">
+      <publishTime>02/21/2017 13:26:24</publishTime>
+    </File>
+    <File Include="Service References/FcubsGetService/UnionMall.FcubsGetService.UBNHeaderType.datasource">
+      <publishTime>02/21/2017 13:26:23</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.cbaMultiplePostingData.datasource">
+      <publishTime>02/23/2017 17:13:08</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.cbaPostingData.datasource">
+      <publishTime>02/23/2017 17:13:08</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.gefuTransactionsResponseData.datasource">
+      <publishTime>02/23/2017 17:13:09</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.holdFundsResponse.datasource">
+      <publishTime>02/23/2017 17:13:09</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.holdFundsResponseData.datasource">
+      <publishTime>02/23/2017 17:13:09</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.isTankedTransactionSuccessfulResponse.datasource">
+      <publishTime>02/23/2017 17:13:09</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.ncrPostingResponseData.datasource">
+      <publishTime>02/23/2017 17:13:08</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.neftTransactionEnquiryData.datasource">
+      <publishTime>02/23/2017 17:13:05</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.neftTransactionEnquiryResponse.datasource">
+      <publishTime>02/23/2017 17:13:08</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.nipFundsTransferCreditData.datasource">
+      <publishTime>02/23/2017 17:13:06</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.nipNameInquiryData.datasource">
+      <publishTime>02/23/2017 17:13:06</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.nipNameInquiryResponse.datasource">
+      <publishTime>02/23/2017 17:13:07</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.NipSingleDirectCreditFundsTransferResponse.datasource">
+      <publishTime>02/23/2017 17:13:07</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.NipTankedSingleDirectCreditFundsTransferResponse.datasource">
+      <publishTime>02/23/2017 17:13:07</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.NipTransactionStatusInquiryResponse.datasource">
+      <publishTime>02/23/2017 17:13:07</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.onlineCbaNcrPostingGLResponse.datasource">
+      <publishTime>02/23/2017 17:13:10</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.onlineCbaNcrPostingResponse.datasource">
+      <publishTime>02/23/2017 17:13:08</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.onlineCbaPostingResponse.datasource">
+      <publishTime>02/23/2017 17:13:08</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.onlineCbaPostingSyncResponse.datasource">
+      <publishTime>02/23/2017 17:13:10</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.onlineGefuCbaPostingResponse.datasource">
+      <publishTime>02/23/2017 17:13:09</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.onlineMultipleCbaPostingResponse.datasource">
+      <publishTime>02/23/2017 17:13:09</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.removeFundsResponse.datasource">
+      <publishTime>02/23/2017 17:13:10</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.tankedProcessingResponseData.datasource">
+      <publishTime>02/23/2017 17:13:09</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.tankedTransactionsData.datasource">
+      <publishTime>02/23/2017 17:13:05</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.tankedTransactionsTransferResponse.datasource">
+      <publishTime>02/23/2017 17:13:08</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.transactionStatusQueryData.datasource">
+      <publishTime>02/23/2017 17:13:06</publishTime>
+    </File>
+    <File Include="Service References/PostingService/UnionMall.PostingService.UBNHeaderType.datasource">
+      <publishTime>02/23/2017 17:13:06</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.accountListDao.datasource">
+      <publishTime>02/23/2017 14:56:20</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.accountOpeningWithIDResponse.datasource">
+      <publishTime>02/23/2017 14:56:17</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.accountProductList.datasource">
+      <publishTime>02/23/2017 14:56:19</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.activateDebitCardResponse.datasource">
+      <publishTime>02/23/2017 14:56:28</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.bankData.datasource">
+      <publishTime>02/23/2017 14:56:22</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.branchData.datasource">
+      <publishTime>02/23/2017 14:56:21</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.cancelScheduleItemResponse.datasource">
+      <publishTime>02/23/2017 14:56:19</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.cancelScheduleSummaryResponse.datasource">
+      <publishTime>02/23/2017 14:56:19</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.cardServiceRequestData.datasource">
+      <publishTime>02/23/2017 14:56:27</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.checkUserProfileResponse.datasource">
+      <publishTime>02/23/2017 14:56:25</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.chequeData.datasource">
+      <publishTime>02/23/2017 14:56:27</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.ciuRequestData.datasource">
+      <publishTime>02/23/2017 14:56:31</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.clientDetails.datasource">
+      <publishTime>02/23/2017 14:56:28</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.countryData.datasource">
+      <publishTime>02/23/2017 14:56:23</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.createTdRequestResponse.datasource">
+      <publishTime>02/23/2017 14:56:22</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.currencyData.datasource">
+      <publishTime>02/23/2017 14:56:22</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.customerAccts.datasource">
+      <publishTime>02/23/2017 14:56:20</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.CustomerloginResponse.datasource">
+      <publishTime>02/23/2017 14:56:20</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.customerQTDetails.datasource">
+      <publishTime>02/23/2017 14:56:32</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.customerTransactionInfo.datasource">
+      <publishTime>02/23/2017 14:56:21</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.deactivateDebitCardResponse.datasource">
+      <publishTime>02/23/2017 14:56:28</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.deleteBenefciaryResponse.datasource">
+      <publishTime>02/23/2017 14:56:23</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.deleteUnionBenefciaryResponse.datasource">
+      <publishTime>02/23/2017 14:56:31</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.fetchAccountProductListResponse.datasource">
+      <publishTime>02/23/2017 14:56:20</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.fetchAllSavedBeneficiariesByUserNameResponse.datasource">
+      <publishTime>02/23/2017 14:56:26</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.fetchCIUDataByAccountNumberResponse.datasource">
+      <publishTime>02/23/2017 14:56:31</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.FetchQuicktelerDetailsByUsernameAndBillerIDResponse.datasource">
+      <publishTime>02/23/2017 14:56:32</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.fetchSavedBeneficiariesByBeneficiaryIdResponse.datasource">
+      <publishTime>02/23/2017 14:56:26</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.fetchSavedBeneficiariesByUserNameResponse.datasource">
+      <publishTime>02/23/2017 14:56:26</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.fetchSavedFxBeneficiariesByUserNameResponse.datasource">
+      <publishTime>02/23/2017 14:56:26</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.fetchscheduledGefuTransactionByIdResponse.datasource">
+      <publishTime>02/23/2017 14:56:25</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.fetchscheduledGefuTransactionByUserNameResponse.datasource">
+      <publishTime>02/23/2017 14:56:25</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.fetchScheduledListResponse.datasource">
+      <publishTime>02/23/2017 14:56:19</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.fetchUnionSavedBeneficiariesByBeneficiaryIdResponse.datasource">
+      <publishTime>02/23/2017 14:56:26</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.fetchUnionSavedBeneficiariesByUserNameResponse.datasource">
+      <publishTime>02/23/2017 14:56:26</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.gefuTransactionsResponseData.datasource">
+      <publishTime>02/23/2017 14:56:20</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.generateOTPResponse.datasource">
+      <publishTime>02/23/2017 14:56:24</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.generateOTPSelfEnroledResponse.datasource">
+      <publishTime>02/23/2017 14:56:18</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getAccountListResponse.datasource">
+      <publishTime>02/23/2017 14:56:20</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getAccountNameResponse.datasource">
+      <publishTime>02/23/2017 14:56:18</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getAccountRMResponse.datasource">
+      <publishTime>02/23/2017 14:56:32</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getAccountSummaryResponse.datasource">
+      <publishTime>02/23/2017 14:56:27</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getAcctStatementResponse.datasource">
+      <publishTime>02/23/2017 14:56:21</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getAuthenticationTypeResponse.datasource">
+      <publishTime>02/23/2017 14:56:31</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getBillerDetailsResponse.datasource">
+      <publishTime>02/23/2017 14:56:24</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getBillersResponse.datasource">
+      <publishTime>02/23/2017 14:56:20</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getCustomerDetailsWithAcctNumberResponse.datasource">
+      <publishTime>02/23/2017 14:56:29</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getCustomerFewDetailsResponse.datasource">
+      <publishTime>02/23/2017 14:56:27</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getEBillPayUrlResponse.datasource">
+      <publishTime>02/23/2017 14:56:24</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getLoanDetailsResponse.datasource">
+      <publishTime>02/23/2017 14:56:23</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getLoanScheduleResponse.datasource">
+      <publishTime>02/23/2017 14:56:21</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getMiniStatementResponse.datasource">
+      <publishTime>02/23/2017 14:56:21</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getSessionActivityByUserByRangeResponse.datasource">
+      <publishTime>02/23/2017 14:56:30</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getSessionActivityByUserResponse.datasource">
+      <publishTime>02/23/2017 14:56:30</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getTransactionHistoryResponse.datasource">
+      <publishTime>02/23/2017 14:56:30</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.getTransferLimitByUserNameResponse.datasource">
+      <publishTime>02/23/2017 14:56:31</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.hotlistDebitCardResponse.datasource">
+      <publishTime>02/23/2017 14:56:21</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.initiateCardRequestResponse.datasource">
+      <publishTime>02/23/2017 14:56:28</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.initiateInternationalTransferRequestResponse.datasource">
+      <publishTime>02/23/2017 14:56:27</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.internationalFundsTransferData.datasource">
+      <publishTime>02/23/2017 14:56:27</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.investmentRequestData.datasource">
+      <publishTime>02/23/2017 14:56:29</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.isAccountExistOnNIBResponse.datasource">
+      <publishTime>02/23/2017 14:56:19</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.isUserNameExistOnNIBResponse.datasource">
+      <publishTime>02/23/2017 14:56:19</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.loadBanksResponse.datasource">
+      <publishTime>02/23/2017 14:56:22</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.loadBranchesResponse.datasource">
+      <publishTime>02/23/2017 14:56:21</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.loadCountriesResponse.datasource">
+      <publishTime>02/23/2017 14:56:24</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.loadCurrencyResponse.datasource">
+      <publishTime>02/23/2017 14:56:23</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.loadTransactionHistoryByTxnRefResponse.datasource">
+      <publishTime>02/23/2017 14:56:29</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.loadTransactionHistoryResponse.datasource">
+      <publishTime>02/23/2017 14:56:29</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.loanData.datasource">
+      <publishTime>02/23/2017 14:56:23</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.lookupRemitaBillsPaymentTransactionResponse.datasource">
+      <publishTime>02/23/2017 14:56:26</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.makeChequeBookRequestResponse.datasource">
+      <publishTime>02/23/2017 14:56:28</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.makeInvestmentRequestResponse.datasource">
+      <publishTime>02/23/2017 14:56:29</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.miniStatement.datasource">
+      <publishTime>02/23/2017 14:56:21</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.modifyBenefciaryResponse.datasource">
+      <publishTime>02/23/2017 14:56:23</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.modifyUnionBenefciaryResponse.datasource">
+      <publishTime>02/23/2017 14:56:30</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.nipNameEnquiryResponse.datasource">
+      <publishTime>02/23/2017 14:56:24</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.nipNameInquiryRequestData.datasource">
+      <publishTime>02/23/2017 14:56:24</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.notifyQuickTellerBillsPaymentTransactionResponse.datasource">
+      <publishTime>02/23/2017 14:56:32</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.openAccountWithExistingCustomerIDResponse.datasource">
+      <publishTime>02/23/2017 14:56:18</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.openTargetSavingsAccountResponse.datasource">
+      <publishTime>02/23/2017 14:56:18</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.postGefuTransactionResponse.datasource">
+      <publishTime>02/23/2017 14:56:27</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.postNipTransactionResponse.datasource">
+      <publishTime>02/23/2017 14:56:28</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.postQuickTellerBillsPaymentTransactionResponse.datasource">
+      <publishTime>02/23/2017 14:56:25</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.postRemitaBillsPaymentSendNotificationTransactionResponse.datasource">
+      <publishTime>02/23/2017 14:56:20</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.profileCustomerResponse.datasource">
+      <publishTime>02/23/2017 14:56:32</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.quickTellerBillerDetailsData.datasource">
+      <publishTime>02/23/2017 14:56:24</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.quickTellerBillersData.datasource">
+      <publishTime>02/23/2017 14:56:20</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.remitaPaymentLookupResponse.datasource">
+      <publishTime>02/23/2017 14:56:25</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.saveBenefciaryResponse.datasource">
+      <publishTime>02/23/2017 14:56:23</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.savedBeneficiariesData.datasource">
+      <publishTime>02/23/2017 14:56:23</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.saveFxBenefciaryResponse.datasource">
+      <publishTime>02/23/2017 14:56:23</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.saveQuicktelerDetailsResponse.datasource">
+      <publishTime>02/23/2017 14:56:32</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.saveSessionActivityData.datasource">
+      <publishTime>02/23/2017 14:56:30</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.saveSessionActivityResponse.datasource">
+      <publishTime>02/23/2017 14:56:30</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.saveUnionBenefciaryResponse.datasource">
+      <publishTime>02/23/2017 14:56:30</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.scheduledGefuTransactionResponse.datasource">
+      <publishTime>02/23/2017 14:56:28</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.scheduledNipTransferResponse.datasource">
+      <publishTime>02/23/2017 14:56:28</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.schGefuTransactionsRequestData.datasource">
+      <publishTime>02/23/2017 14:56:19</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.stopChequeRequestResponse.datasource">
+      <publishTime>02/23/2017 14:56:29</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.tdBookingResponse.datasource">
+      <publishTime>02/23/2017 14:56:22</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.tdDetails.datasource">
+      <publishTime>02/23/2017 14:56:22</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.transactionHistoryData.datasource">
+      <publishTime>02/23/2017 14:56:29</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.twoFactorOjects.datasource">
+      <publishTime>02/23/2017 14:56:18</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.TwoXFactorObjResponse.datasource">
+      <publishTime>02/23/2017 14:56:19</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.TwoXFactorResponse.datasource">
+      <publishTime>02/23/2017 14:56:25</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.updateCIUDataByAccountNumberResponse.datasource">
+      <publishTime>02/23/2017 14:56:32</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.updatescheduledGefuTransactionResponse.datasource">
+      <publishTime>02/23/2017 14:56:27</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.updateSecurityWordResponse.datasource">
+      <publishTime>02/23/2017 14:56:31</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.updateTransferLimitByAccountNumberResponse.datasource">
+      <publishTime>02/23/2017 14:56:27</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.updateUserPasswordResponse.datasource">
+      <publishTime>02/23/2017 14:56:31</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.validateAccountAndSecurityWordResponse.datasource">
+      <publishTime>02/23/2017 14:56:31</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.validateOTPResponse.datasource">
+      <publishTime>02/23/2017 14:56:24</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.validateOTPSelfEnResponse.datasource">
+      <publishTime>02/23/2017 14:56:18</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.validateUserIdResponse.datasource">
+      <publishTime>02/23/2017 14:56:24</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.verifyTokenResponse.datasource">
+      <publishTime>02/23/2017 14:56:25</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.viewTdDetailsListResponse.datasource">
+      <publishTime>02/23/2017 14:56:29</publishTime>
+    </File>
+    <File Include="Service References/Token/UnionMall.Token.viewTdDetailsResponse.datasource">
+      <publishTime>02/23/2017 14:56:22</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>02/10/2017 16:56:43</publishTime>
+    </File>
+    <File Include="Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>02/10/2017 16:56:43</publishTime>
+    </File>
+    <File Include="Views/Account/Login.cshtml">
+      <publishTime>02/10/2017 16:56:43</publishTime>
+    </File>
+    <File Include="Views/Account/Manage.cshtml">
+      <publishTime>02/10/2017 16:56:43</publishTime>
+    </File>
+    <File Include="Views/Account/Register.cshtml">
+      <publishTime>02/10/2017 16:56:43</publishTime>
+    </File>
+    <File Include="Views/Account/_ChangePasswordPartial.cshtml">
+      <publishTime>02/10/2017 16:56:43</publishTime>
+    </File>
+    <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>02/10/2017 16:56:43</publishTime>
+    </File>
+    <File Include="Views/Account/_RemoveAccountPartial.cshtml">
+      <publishTime>02/10/2017 16:56:43</publishTime>
+    </File>
+    <File Include="Views/Account/_SetPasswordPartial.cshtml">
+      <publishTime>02/10/2017 16:56:43</publishTime>
+    </File>
+    <File Include="Views/AuditLog/Detail.cshtml">
+      <publishTime>03/01/2017 17:56:22</publishTime>
+    </File>
+    <File Include="Views/AuditLog/EventLog.cshtml">
+      <publishTime>03/01/2017 17:53:07</publishTime>
+    </File>
+    <File Include="Views/AuditLog/LoginLog.cshtml">
+      <publishTime>03/01/2017 16:32:30</publishTime>
+    </File>
+    <File Include="Views/AuditLog/PostingLog.cshtml">
+      <publishTime>03/02/2017 08:12:28</publishTime>
+    </File>
+    <File Include="Views/Cart/Index.cshtml">
+      <publishTime>03/01/2017 08:53:08</publishTime>
+    </File>
+    <File Include="Views/Category/Index.cshtml">
+      <publishTime>02/16/2017 12:55:24</publishTime>
+    </File>
+    <File Include="Views/Home/Admin.cshtml">
+      <publishTime>02/28/2017 18:43:24</publishTime>
+    </File>
+    <File Include="Views/Home/AllOrders.cshtml">
+      <publishTime>02/22/2017 20:18:41</publishTime>
+    </File>
+    <File Include="Views/Home/Detail.cshtml">
+      <publishTime>03/01/2017 17:55:38</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>02/10/2017 20:20:20</publishTime>
+    </File>
+    <File Include="Views/Home/Login.cshtml">
+      <publishTime>03/03/2017 18:47:11</publishTime>
+    </File>
+    <File Include="Views/Index/Login.cshtml">
+      <publishTime>03/03/2017 18:47:55</publishTime>
+    </File>
+    <File Include="Views/Payment/Payment.cshtml">
+      <publishTime>03/02/2017 17:45:08</publishTime>
+    </File>
+    <File Include="Views/Payment/PaymentSuccess.cshtml">
+      <publishTime>02/22/2017 07:39:25</publishTime>
+    </File>
+    <File Include="Views/Product/AddProduct.cshtml">
+      <publishTime>03/02/2017 16:36:11</publishTime>
+    </File>
+    <File Include="Views/Product/Edit.cshtml">
+      <publishTime>03/02/2017 16:39:14</publishTime>
+    </File>
+    <File Include="Views/Product/Index.cshtml">
+      <publishTime>02/20/2017 14:05:57</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>02/10/2017 16:56:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_ControlSidebar.cshtml">
+      <publishTime>03/02/2017 08:21:47</publishTime>
+    </File>
+    <File Include="Views/Shared/_Footer.cshtml">
+      <publishTime>03/02/2017 09:29:31</publishTime>
+    </File>
+    <File Include="Views/Shared/_Header.cshtml">
+      <publishTime>03/02/2017 09:52:44</publishTime>
+    </File>
+    <File Include="Views/Shared/_HeaderA.cshtml">
+      <publishTime>03/02/2017 16:44:08</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>02/16/2017 19:18:59</publishTime>
+    </File>
+    <File Include="Views/Shared/_LayoutAdmin.cshtml">
+      <publishTime>03/01/2017 10:04:32</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>02/10/2017 16:56:43</publishTime>
+    </File>
+    <File Include="Views/Shared/_Sidebar.cshtml">
+      <publishTime>03/02/2017 08:14:09</publishTime>
+    </File>
+    <File Include="Views/Shop/History.cshtml">
+      <publishTime>03/02/2017 09:51:24</publishTime>
+    </File>
+    <File Include="Views/Shop/HistoryDetails.cshtml">
+      <publishTime>03/01/2017 08:44:11</publishTime>
+    </File>
+    <File Include="Views/Shop/Index.cshtml">
+      <publishTime>03/02/2017 09:51:29</publishTime>
+    </File>
+    <File Include="Views/Shop/SingleItem.cshtml">
+      <publishTime>03/01/2017 09:44:12</publishTime>
+    </File>
+    <File Include="Views/User/Index.cshtml">
+      <publishTime>02/13/2017 20:37:12</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>02/10/2017 16:56:27</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>02/10/2017 16:56:27</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/03/2017 17:42:52</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

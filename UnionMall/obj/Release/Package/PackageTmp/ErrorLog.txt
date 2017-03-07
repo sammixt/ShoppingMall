@@ -1,0 +1,8 @@
+DEBUG 2017-03-03 10:53:02,855 - Unable to find specified column in result set+ -------------------------------- +    at OracleInternal.ServiceObjects.OracleDataReaderImpl.GetColumnOrdinal(String colName)
+   at Oracle.ManagedDataAccess.Client.OracleDataReader.GetOrdinal(String name)
+   at Oracle.ManagedDataAccess.Client.OracleDataReader.get_Item(String columnName)
+   at UnionMall.Models.HomeModels.GetAcctForRefund(PendingViewModel model) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\HomeModels.cs:line 163
+DEBUG 2017-03-03 11:15:03,858 - Unable to find specified column in result set+ -------------------------------- +    at OracleInternal.ServiceObjects.OracleDataReaderImpl.GetColumnOrdinal(String colName)
+   at Oracle.ManagedDataAccess.Client.OracleDataReader.GetOrdinal(String name)
+   at Oracle.ManagedDataAccess.Client.OracleDataReader.get_Item(String columnName)
+   at UnionMall.Models.HomeModels.GetAcctForRefund(PendingViewModel model) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\HomeModels.cs:line 163

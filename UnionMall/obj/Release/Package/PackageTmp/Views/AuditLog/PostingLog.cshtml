@@ -1,0 +1,240 @@
+﻿@model IEnumerable<UnionMall.ViewModels.PostingViewModel>
+
+@{
+    ViewBag.Title = "AuditLog";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+}
+
+<div class="row">
+    
+        <div class="well form-inline col-md-12">
+            <fieldset>
+                @using (Html.BeginForm("PostingLog", "AuditLog", FormMethod.Post, new { id = "sendform", role = "form", @class = "col-md-12" }))
+                {
+                    <div class="form-group col-md-3">
+                        <label class="control-label">Start Date</label>
+                        <input type="text" name="SearchStartDate" class="form-control datepicker" required />
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label class="control-label">End Date</label>
+                        <input type="text" name="SearchEndDate" class="form-control datepicker" required />
+                    </div>
+                    <div class="form-group col-md-3">
+                        <input type="submit" value="Search" class="btn btn-md ubn-color-bg white-bar" />
+                    </div>
+                    <div class="clearfix"></div>
+                }
+            </fieldset>
+        </div>
+    
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-header with-border">
+                <h4>Posting Transactions</h4>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#home">Credit Transactions</a></li>
+                    <li><a data-toggle="tab" href="#menu1">Debit Transactions</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active" style="padding-top:1%">
+                        <table id="credit" class="table table-bordered table-responsive">
+                            <thead>
+                                <tr class="ubn-color-bg white-bar title">
+                                    <th>
+                                        Payment Ref
+                                    </th>
+                                    <th>
+                                        Date
+                                    </th>
+                                    <th>
+                                        Account Number
+                                    </th>
+                                    <th>
+                                        Amount
+                                    </th>
+                                    <th>
+                                        Currency
+                                    </th>
+                                    <th>
+                                        Narration
+                                    </th>
+                                    <th>
+                                        Initiating Branch
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                    <th>
+                                        GLCASAIndicator
+                                    </th>
+                                    <th>
+                                        Response Code
+                                    </th>
+                                    <th>
+                                        Response Message
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.paymentReference)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.transactionDate)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.accountNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.amount)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.currency)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.narration)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.branchCode)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.status)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.glCasaIndicator)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.responseCode)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.responseMsg)
+                                        </td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <table id="debit" class="table table-bordered table-responsive">
+                            <thead>
+                                <tr class="ubn-color-bg white-bar title">
+                                    <th>
+                                        Payment Ref
+                                    </th>
+                                    <th>
+                                        Date
+                                    </th>
+                                    <th>
+                                        Account Number
+                                    </th>
+                                    <th>
+                                        Amount
+                                    </th>
+                                    <th>
+                                        Currency
+                                    </th>
+                                    <th>
+                                        Narration
+                                    </th>
+                                    <th>
+                                        Initiating Branch
+                                    </th>
+                                    <th>
+                                        Status
+                                    </th>
+                                    <th>
+                                        GLCASAIndicator
+                                    </th>
+                                    <th>
+                                        Response Code
+                                    </th>
+                                    <th>
+                                        Response Message
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var items in ViewBag.DebitLogDetails)
+                                {
+                                    <tr>
+                                        <td>
+                                            @items.paymentReference
+                                        </td>
+                                        <td>
+                                            @items.transactionDate
+                                        </td>
+                                        <td>
+                                            @items.accountNumber
+                                        </td>
+                                        <td>
+                                            @items.amount
+                                        </td>
+                                        <td>
+                                            @items.currency
+                                        </td>
+                                        <td>
+                                            @items.narration
+                                        </td>
+
+                                        <td>
+                                            @items.branchCode
+                                        </td>
+                                        <td>
+                                            @items.status
+                                        </td>
+                                        <td>
+                                            @items.glCasaIndicator
+                                        </td>
+                                        <td>
+                                            @items.responseCode
+                                        </td>
+                                        <td>
+                                            @items.responseMsg
+                                        </td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+
+<style type="text/css">
+    #addProduct {
+        margin-bottom: 1%;
+    }
+
+    .catName, .activeName, .deleteName {
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: inherit;
+        border: none;
+    }
+</style>
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            $(function () { // will trigger when the document is ready
+                $('.datepicker').datepicker(); //Initialise any date pickers
+            });
+        })
+</script>
+
+

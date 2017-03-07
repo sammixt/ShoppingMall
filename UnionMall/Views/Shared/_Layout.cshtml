@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title UNION MALL</title>
+    <link href="~/Content/Template/css/bootstrap.css" rel="stylesheet" media="all" />
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link href="~/Content/Template/css/style.css" rel="stylesheet" media="all" />
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--theme-style-->
+    <link href="~/Content/Template/css/style4.css" rel="stylesheet" media="all" />
+    <!--//theme-style-->
+    <script src="~/Content/Template/js/jquery.min.js"></script>
+    <!--- start-rate---->
+    <script src="~/Content/Template/js/jstarbox.js"></script>
+    <link href="~/Content/Template/css/jstarbox.css" rel="stylesheet" media="screen" charset="utf-8" />
+    <script type="text/javascript">
+        jQuery(function () {
+            jQuery('.starbox').each(function () {
+                var starbox = jQuery(this);
+                starbox.starbox({
+                    average: starbox.attr('data-start-value'),
+                    changeable: starbox.hasClass('unchangeable') ? false : starbox.hasClass('clickonce') ? 'once' : true,
+                    ghosting: starbox.hasClass('ghosting'),
+                    autoUpdateAverage: starbox.hasClass('autoupdate'),
+                    buttons: starbox.hasClass('smooth') ? false : starbox.attr('data-button-count') || 5,
+                    stars: starbox.attr('data-star-count') || 5
+                }).bind('starbox-value-changed', function (event, value) {
+                    if (starbox.hasClass('random')) {
+                        var val = Math.random();
+                        starbox.next().text(' ' + val);
+                        return val;
+                    }
+                })
+            });
+        });
+    </script>
+    <!---//End-rate---->
+    <link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+ @Html.Partial("_Header")
+ @RenderBody()
+ @Html.Partial("_Footer")
+ @RenderSection("scripts", required: false)
+</body>
+</html>

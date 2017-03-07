@@ -1,0 +1,168 @@
+﻿@model IEnumerable<UnionMall.ViewModels.PendingViewModel>
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Pending Orders";
+    ViewBag.Description = " awaiting processing";
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title ubn-color">Pending Request</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                @if (ViewBag.Posting != null)
+                    {
+                      <h4><strong class="text-danger">@ViewBag.Posting</strong></h4>
+                    }
+                <table class="table table-responsive">
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                        <th>
+                            Branch
+                        </th>
+                        <th>
+                            Delivery Location
+                        </th>
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Amount
+                        </th>
+                        <th>
+                            &nbsp;
+                        </th>
+                        <th>
+                            &nbsp;
+                        </th>
+                        <th>
+                            &nbsp;
+                        </th>
+                    </tr>
+                    @if (Model != null)
+                    {
+                        foreach (var item in Model)
+                        {
+                            
+                            <tr>
+                                <td>
+                                   @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td>
+                                   @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Branch)
+                                </td>
+                                <td>
+                                   @Html.DisplayFor(modelItem => item.PickUpBranch)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.OrderDate)
+                                </td>
+                                <td>
+                                   @Html.DisplayFor(modelItem => item.Amount)
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("Detail", "Home", new {order = item.OrderId })">View Details</a>
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("Process", "Home", new { order = item.OrderId })" class="pull-left btn btn-md btn-primary" title="Proceed">Proceed</a>
+                                </td>
+                                <td>
+                                    <a href="#" data-toggle="modal" data-target="#myModal" class="pull-left btn btn-md btn-danger" onclick="assignOrderId('@item.OrderId')" title="Refund">Refund</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="9" class="text-center"><strong>No Data To Display</strong></td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center"><strong>Enter reason for refund</strong></h4>
+            </div>
+            <div class="modal-body">
+                @using (Html.BeginForm("Refund", "Home", FormMethod.Post, new { @class = "" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="modal-body">
+
+        <div class="form-group">
+            <textarea cols="5" rows="4" class="form-control" name="Comment">
+
+            </textarea>
+            <input type="hidden" name="OrderId" id="OrderId" value="">
+        </div>
+    </div>
+    <div class="text-center" style="margin-bottom:3%">
+        <input type="submit" class="btn btn-primary" value="Refund" />
+    </div>
+}
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+<style type="text/css">
+    #addProduct {
+        margin-bottom: 1%;
+    }
+
+    .catName, .activeName, .deleteName {
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: inherit;
+        border: none;
+    }
+</style>
+<link href="~/Content/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/sweetalert-min.js"></script>
+@section scripts {
+    <script type="text/javascript">
+        function assignOrderId(ID) {
+            $("#OrderId").val(ID);
+            var out = $("#OrderId").val();
+            
+        }
+    </script>
+}
+
+@helper checkCheckBox(bool checkstate)
+{
+    if (checkstate == true)
+    {
+        <strong>True</strong>
+    }
+    else
+    {
+        <strong>False</strong>
+    }
+}

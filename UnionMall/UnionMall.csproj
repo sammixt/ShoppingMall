@@ -1,0 +1,1242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E34F85DD-FFEF-4B0B-B607-E345F8FE906C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnionMall</RootNamespace>
+    <AssemblyName>UnionMall</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.1.2400\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AuditLogController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LIB\AcountRetrievalServices.cs" />
+    <Compile Include="LIB\AuthenticationService.cs" />
+    <Compile Include="LIB\DbConnection.cs" />
+    <Compile Include="LIB\ErrorLog.cs" />
+    <Compile Include="LIB\PostingServices.cs" />
+    <Compile Include="LIB\SendEmail.cs" />
+    <Compile Include="LIB\TokenService.cs" />
+    <Compile Include="Models\AuditLogModels.cs" />
+    <Compile Include="Models\CartModels.cs" />
+    <Compile Include="Models\CategoryModels.cs" />
+    <Compile Include="Models\EmailModels.cs" />
+    <Compile Include="Models\HomeModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LogEventModels.cs" />
+    <Compile Include="Models\PendingOrdersModel.cs" />
+    <Compile Include="Models\PostingModel.cs" />
+    <Compile Include="Models\ProductModels.cs" />
+    <Compile Include="Models\ShopModels.cs" />
+    <Compile Include="Models\UserModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ADServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EmailServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FcubsGetService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PostingService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Token\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AuditLogViewModel.cs" />
+    <Compile Include="ViewModels\CartViewModel.cs" />
+    <Compile Include="ViewModels\CategoryViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\PostingViewModel.cs" />
+    <Compile Include="ViewModels\ProductViewModel.cs" />
+    <Compile Include="ViewModels\UserProfileViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-datepicker3.css" />
+    <Content Include="Content\bootstrap-default.css" />
+    <Content Include="Content\bootstrap-select.css" />
+    <Content Include="Content\bootstrap-select.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\buttons.dataTables.min.css" />
+    <Content Include="Content\css\AdminLTE.css" />
+    <Content Include="Content\css\AdminLTE.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\datepicker3.css" />
+    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\icheck\aero.css" />
+    <Content Include="Content\css\icheck\aero.min.css" />
+    <Content Include="Content\css\icheck\blue.css" />
+    <Content Include="Content\css\icheck\blue.min.css" />
+    <Content Include="Content\css\icheck\green.css" />
+    <Content Include="Content\css\icheck\green.min.css" />
+    <Content Include="Content\css\icheck\grey.css" />
+    <Content Include="Content\css\icheck\grey.min.css" />
+    <Content Include="Content\css\icheck\minimal.css" />
+    <Content Include="Content\css\icheck\minimal.min.css" />
+    <Content Include="Content\css\icheck\orange.css" />
+    <Content Include="Content\css\icheck\orange.min.css" />
+    <Content Include="Content\css\icheck\pink.css" />
+    <Content Include="Content\css\icheck\pink.min.css" />
+    <Content Include="Content\css\icheck\purple.css" />
+    <Content Include="Content\css\icheck\purple.min.css" />
+    <Content Include="Content\css\icheck\red.css" />
+    <Content Include="Content\css\icheck\red.min.css" />
+    <Content Include="Content\css\icheck\yellow.css" />
+    <Content Include="Content\css\icheck\yellow.min.css" />
+    <Content Include="Content\css\select2.css" />
+    <Content Include="Content\css\select2.min.css" />
+    <Content Include="Content\css\skins\skin-black-light.css" />
+    <Content Include="Content\css\skins\skin-black-light.min.css" />
+    <Content Include="Content\css\skins\skin-black.css" />
+    <Content Include="Content\css\skins\skin-black.min.css" />
+    <Content Include="Content\css\skins\skin-blue-light.css" />
+    <Content Include="Content\css\skins\skin-blue-light.min.css" />
+    <Content Include="Content\css\skins\skin-blue.css" />
+    <Content Include="Content\css\skins\skin-blue.min.css" />
+    <Content Include="Content\css\skins\skin-green-light.css" />
+    <Content Include="Content\css\skins\skin-green-light.min.css" />
+    <Content Include="Content\css\skins\skin-green.css" />
+    <Content Include="Content\css\skins\skin-green.min.css" />
+    <Content Include="Content\css\skins\skin-purple-light.css" />
+    <Content Include="Content\css\skins\skin-purple-light.min.css" />
+    <Content Include="Content\css\skins\skin-purple.css" />
+    <Content Include="Content\css\skins\skin-purple.min.css" />
+    <Content Include="Content\css\skins\skin-red-light.css" />
+    <Content Include="Content\css\skins\skin-red-light.min.css" />
+    <Content Include="Content\css\skins\skin-red.css" />
+    <Content Include="Content\css\skins\skin-red.min.css" />
+    <Content Include="Content\css\skins\skin-yellow-light.css" />
+    <Content Include="Content\css\skins\skin-yellow-light.min.css" />
+    <Content Include="Content\css\skins\skin-yellow.css" />
+    <Content Include="Content\css\skins\skin-yellow.min.css" />
+    <Content Include="Content\css\skins\_all-skins.css" />
+    <Content Include="Content\css\skins\_all-skins.min.css" />
+    <Content Include="Content\dataTables.bootstrap.min.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Images\cart.jpg" />
+    <Content Include="App_Data\img\icheck\aero%402x.png" />
+    <Content Include="App_Data\img\icheck\aero.png" />
+    <Content Include="App_Data\img\icheck\blue%402x.png" />
+    <Content Include="App_Data\img\icheck\blue.png" />
+    <Content Include="App_Data\img\icheck\green%402x.png" />
+    <Content Include="App_Data\img\icheck\green.png" />
+    <Content Include="App_Data\img\icheck\grey%402x.png" />
+    <Content Include="App_Data\img\icheck\grey.png" />
+    <Content Include="App_Data\img\icheck\minimal%402x.png" />
+    <Content Include="App_Data\img\icheck\minimal.png" />
+    <Content Include="App_Data\img\icheck\orange%402x.png" />
+    <Content Include="App_Data\img\icheck\orange.png" />
+    <Content Include="App_Data\img\icheck\pink%402x.png" />
+    <Content Include="App_Data\img\icheck\pink.png" />
+    <Content Include="App_Data\img\icheck\purple%402x.png" />
+    <Content Include="App_Data\img\icheck\purple.png" />
+    <Content Include="App_Data\img\icheck\red%402x.png" />
+    <Content Include="App_Data\img\icheck\red.png" />
+    <Content Include="App_Data\img\icheck\yellow%402x.png" />
+    <Content Include="App_Data\img\icheck\yellow.png" />
+    <Content Include="App_Data\img\stallion.png" />
+    <Content Include="App_Data\img\stallion_main.png" />
+    <Content Include="App_Data\img\user.jpg" />
+    <Content Include="Content\js\app.js" />
+    <Content Include="Content\js\app.min.js" />
+    <Content Include="Content\js\init.js" />
+    <Content Include="Content\js\plugins\bootstrap\bootstrap.js" />
+    <Content Include="Content\js\plugins\bootstrap\bootstrap.min.js" />
+    <Content Include="Content\js\plugins\bootstrap\wysihtml5.js" />
+    <Content Include="Content\js\plugins\datepicker\bootstrap-datepicker.js" />
+    <Content Include="Content\js\plugins\fastclick\fastclick.js" />
+    <Content Include="Content\js\plugins\fastclick\fastclick.min.js" />
+    <Content Include="Content\js\plugins\icheck\icheck.js" />
+    <Content Include="Content\js\plugins\icheck\icheck.min.js" />
+    <Content Include="Content\js\plugins\inputmask\jquery.inputmask.bundle.js" />
+    <Content Include="Content\js\plugins\inputmask\jquery.inputmask.bundle.min.js" />
+    <Content Include="Content\js\plugins\jquery\jquery-2.2.4.js" />
+    <Content Include="Content\js\plugins\jquery\jquery-2.2.4.min.js" />
+    <Content Include="Content\js\plugins\moment\moment.js" />
+    <Content Include="Content\js\plugins\moment\moment.min.js" />
+    <Content Include="Content\js\plugins\select2\i18n\en.js" />
+    <Content Include="Content\js\plugins\select2\select2.full.js" />
+    <Content Include="Content\js\plugins\select2\select2.full.min.js" />
+    <Content Include="Content\js\plugins\select2\select2.js" />
+    <Content Include="Content\js\plugins\select2\select2.min.js" />
+    <Content Include="Content\js\plugins\slimscroll\jquery.slimscroll.js" />
+    <Content Include="Content\js\plugins\slimscroll\jquery.slimscroll.min.js" />
+    <Content Include="Content\js\plugins\validator\validator.js" />
+    <Content Include="Content\js\plugins\validator\validator.min.js" />
+    <Content Include="Content\sweetalert.css" />
+    <Content Include="Content\Template\css\bootstrap.css" />
+    <Content Include="Content\Template\css\chocolat.css" />
+    <Content Include="Content\Template\css\flexslider.css" />
+    <Content Include="Content\Template\css\form.css" />
+    <Content Include="Content\Template\css\jstarbox.css" />
+    <Content Include="Content\Template\css\popuo-box.css" />
+    <Content Include="Content\Template\css\style.css" />
+    <Content Include="Content\Template\css\style4.css" />
+    <Content Include="Content\Template\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Template\images\b-arrow.png" />
+    <Content Include="Content\Template\images\ba11.jpg" />
+    <Content Include="Content\Template\images\back.jpg" />
+    <Content Include="Content\Template\images\ca.png" />
+    <Content Include="Content\Template\images\cart.png" />
+    <Content Include="Content\Template\images\ch.jpg" />
+    <Content Include="Content\Template\images\ch1.jpg" />
+    <Content Include="Content\Template\images\ch2.jpg" />
+    <Content Include="Content\Template\images\close.png" />
+    <Content Include="Content\Template\images\f1.png" />
+    <Content Include="Content\Template\images\f2.png" />
+    <Content Include="Content\Template\images\f3.png" />
+    <Content Include="Content\Template\images\ic.png" />
+    <Content Include="Content\Template\images\ic1.png" />
+    <Content Include="Content\Template\images\ic2.png" />
+    <Content Include="Content\Template\images\ic3.png" />
+    <Content Include="Content\Template\images\img-sprite.png" />
+    <Content Include="Content\Template\images\log.png" />
+    <Content Include="Content\Template\images\logo.png" />
+    <Content Include="Content\Template\images\me.png" />
+    <Content Include="Content\Template\images\me1.png" />
+    <Content Include="Content\Template\images\pc.jpg" />
+    <Content Include="Content\Template\images\pc1.jpg" />
+    <Content Include="Content\Template\images\pc2.jpg" />
+    <Content Include="Content\Template\images\pc3.jpg" />
+    <Content Include="Content\Template\images\pc4.jpg" />
+    <Content Include="Content\Template\images\pc5.jpg" />
+    <Content Include="Content\Template\images\pc6.jpg" />
+    <Content Include="Content\Template\images\pc7.jpg" />
+    <Content Include="Content\Template\images\pi.jpg" />
+    <Content Include="Content\Template\images\pi1.jpg" />
+    <Content Include="Content\Template\images\pi2.jpg" />
+    <Content Include="Content\Template\images\pi3.jpg" />
+    <Content Include="Content\Template\images\search.png" />
+    <Content Include="Content\Template\images\si.jpg" />
+    <Content Include="Content\Template\images\si1.jpg" />
+    <Content Include="Content\Template\images\si2.jpg" />
+    <Content Include="Content\Template\images\stallion.png" />
+    <Content Include="Content\Template\images\tick.png" />
+    <Content Include="Content\Template\images\tick1.png" />
+    <Content Include="Content\Template\js\bootstrap.min.js" />
+    <Content Include="Content\Template\js\classie.js" />
+    <Content Include="Content\Template\js\imagezoom.js" />
+    <Content Include="Content\Template\js\jquery.chocolat.js" />
+    <Content Include="Content\Template\js\jquery.flexslider.js" />
+    <Content Include="Content\Template\js\jquery.magnific-popup.js" />
+    <Content Include="Content\Template\js\jquery.min.js" />
+    <Content Include="Content\Template\js\jstarbox.js" />
+    <Content Include="Content\Template\js\modernizr.custom.72111.js" />
+    <Content Include="Content\Template\js\simpleCart.min.js" />
+    <Content Include="Content\Template\js\uisearch.js" />
+    <Content Include="Content\wysihtml5.css" />
+    <Content Include="ErrorLog.txt" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\bootstrap-select.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\css\bootstrap.min.css.map" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\Template\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Template\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Template\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Template\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\Template\fonts\Oxygen-Bold.ttf" />
+    <Content Include="Content\Template\fonts\Oxygen-Regular.ttf" />
+    <Content Include="Content\Template\fonts\Ubuntu-Bold.ttf" />
+    <Content Include="Content\Template\fonts\Ubuntu-Regular.ttf" />
+    <None Include="Properties\PublishProfiles\UMALL.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Category.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\sweetalert-dev.js" />
+    <Content Include="Scripts\sweetalert-min.js" />
+    <Content Include="Scripts\_references.js" />
+    <None Include="Service References\ADServiceRef\configuration91.svcinfo" />
+    <None Include="Service References\ADServiceRef\configuration.svcinfo" />
+    <None Include="Service References\ADServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EmailServiceReference\Service1.wsdl" />
+    <None Include="Service References\EmailServiceReference\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailServiceReference\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailServiceReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailServiceReference\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EmailServiceReference\Service14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FcubsGetService\configuration91.svcinfo" />
+    <None Include="Service References\FcubsGetService\configuration.svcinfo" />
+    <None Include="Service References\FcubsGetService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\EmailServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\EmailServiceReference\configuration.svcinfo" />
+    <None Include="Service References\EmailServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PostingService\CentralPosting.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostingService\CentralPosting1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostingService\UBNMiddleWareWebServiceService.wsdl" />
+    <Content Include="Service References\PostingService\UnionMall.PostingService.cbaMultiplePostingData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.cbaPostingData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.gefuTransactionsResponseData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.holdFundsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.holdFundsResponseData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.isTankedTransactionSuccessfulResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.ncrPostingResponseData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.neftTransactionEnquiryData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.neftTransactionEnquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.nipFundsTransferCreditData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.nipNameInquiryData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.nipNameInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.NipSingleDirectCreditFundsTransferResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.NipTankedSingleDirectCreditFundsTransferResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.NipTransactionStatusInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.onlineCbaNcrPostingGLResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.onlineCbaNcrPostingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.onlineCbaPostingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.onlineCbaPostingSyncResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.onlineGefuCbaPostingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.onlineMultipleCbaPostingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.removeFundsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.tankedProcessingResponseData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.tankedTransactionsData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.tankedTransactionsTransferResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.transactionStatusQueryData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\PostingService\UnionMall.PostingService.UBNHeaderType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\Token\configuration91.svcinfo" />
+    <None Include="Service References\Token\configuration.svcinfo" />
+    <None Include="Service References\Token\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PostingService\configuration91.svcinfo" />
+    <None Include="Service References\PostingService\configuration.svcinfo" />
+    <None Include="Service References\PostingService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <None Include="Service References\ADServiceRef\Administration.wsdl" />
+    <None Include="Service References\ADServiceRef\Administration.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ADServiceRef\Administration1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ADServiceRef\Administration2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ADServiceRef\Administration3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ADServiceRef\Administration4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ADServiceRef\UBN_SMS_Service.wsdl" />
+    <Content Include="Service References\ADServiceRef\UnionMall.ADServiceRef.BranchReportLine.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ADServiceRef\UnionMall.ADServiceRef.Module.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ADServiceRef\UnionMall.ADServiceRef.Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ADServiceRef\UnionMall.ADServiceRef.UserProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ADServiceRef\UnionMall.ADServiceRef.UserRoleEventStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Shared\_ControlSidebar.cshtml" />
+    <Content Include="Views\Shared\_HeaderA.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Shared\_Sidebar.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Product\AddProduct.cshtml" />
+    <Content Include="Views\Product\Edit.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shop\Index.cshtml" />
+    <Content Include="Views\Shop\SingleItem.cshtml" />
+    <Content Include="Views\Index\Login.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
+    <None Include="Service References\FcubsGetService\AccountEnquiry.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FcubsGetService\AccountEnquiry1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FcubsGetService\EnquiryServiceService.wsdl" />
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.accountMemoInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.AccountSearchByAcctTitleAndBranchCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.accountSearchInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.auditInformation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.branchList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.clientDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.createLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.customerAcctsDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.customerAcctsInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.customerAcctsWithTranInfoWithBranchGeneric.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.customerAcctsWithTransactionInfoWithBranch.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getAccounMemoInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getAccountSerachByAccountNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getAccountSerachByAccountTitleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getAccountSummaryANDTransactionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getAccountSummaryANDTxnGenericResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getAccountSummaryByCustomerIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getAccountSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getActivityLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getActivityLogSpecificResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getBranchListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getChequeNumberInquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getcicRecordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getCustomerAcctsDetailResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getCustomerDetailsbyPhoneNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getCustomerDetailsbyShortNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getCustomerDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getCustomerDetailsWithAcctNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getCustomerDetailswithFirstandLastResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getGlForTerminalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getLoanListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getMangersChequeStatusInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getMangersChequeStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getOverDraftListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.getSingleTransactionDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.glTerminalDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.loanList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.managersChequeDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.NameEnquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.nameEnquiryResponses.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.overdraftList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.singleTransactionDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FcubsGetService\UnionMall.FcubsGetService.UBNHeaderType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Views\Payment\PaymentSuccess.cshtml" />
+    <Content Include="Views\Home\Admin.cshtml" />
+    <Content Include="Views\Home\Detail.cshtml" />
+    <Content Include="Views\Home\AllOrders.cshtml" />
+    <Content Include="Views\Payment\Payment.cshtml" />
+    <None Include="Service References\Token\ServiceControllers.wsdl" />
+    <None Include="Service References\Token\ServiceControllers.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\Token\UnionMall.Token.accountListDao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.accountOpeningWithIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.accountProductList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.activateDebitCardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.bankData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.branchData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.cancelScheduleItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.cancelScheduleSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.cardServiceRequestData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.checkUserProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.chequeData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.ciuRequestData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.clientDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.countryData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.createTdRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.currencyData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.customerAccts.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.CustomerloginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.customerQTDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.customerTransactionInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.deactivateDebitCardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.deleteBenefciaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.deleteUnionBenefciaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.fetchAccountProductListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.fetchAllSavedBeneficiariesByUserNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.fetchCIUDataByAccountNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.FetchQuicktelerDetailsByUsernameAndBillerIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.fetchSavedBeneficiariesByBeneficiaryIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.fetchSavedBeneficiariesByUserNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.fetchSavedFxBeneficiariesByUserNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.fetchscheduledGefuTransactionByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.fetchscheduledGefuTransactionByUserNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.fetchScheduledListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.fetchUnionSavedBeneficiariesByBeneficiaryIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.fetchUnionSavedBeneficiariesByUserNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.gefuTransactionsResponseData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.generateOTPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.generateOTPSelfEnroledResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getAccountListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getAccountNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getAccountRMResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getAccountSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getAcctStatementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getAuthenticationTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getBillerDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getBillersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getCustomerDetailsWithAcctNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getCustomerFewDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getEBillPayUrlResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getLoanDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getLoanScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getMiniStatementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getSessionActivityByUserByRangeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getSessionActivityByUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getTransactionHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.getTransferLimitByUserNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.hotlistDebitCardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.initiateCardRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.initiateInternationalTransferRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.internationalFundsTransferData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.investmentRequestData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.isAccountExistOnNIBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.isUserNameExistOnNIBResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.loadBanksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.loadBranchesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.loadCountriesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.loadCurrencyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.loadTransactionHistoryByTxnRefResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.loadTransactionHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.loanData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.lookupRemitaBillsPaymentTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.makeChequeBookRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.makeInvestmentRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.miniStatement.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.modifyBenefciaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.modifyUnionBenefciaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.nipNameEnquiryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.nipNameInquiryRequestData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.notifyQuickTellerBillsPaymentTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.openAccountWithExistingCustomerIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.openTargetSavingsAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.postGefuTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.postNipTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.postQuickTellerBillsPaymentTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.postRemitaBillsPaymentSendNotificationTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.profileCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.quickTellerBillerDetailsData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.quickTellerBillersData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.remitaPaymentLookupResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.saveBenefciaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.savedBeneficiariesData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.saveFxBenefciaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.saveQuicktelerDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.saveSessionActivityData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.saveSessionActivityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.saveUnionBenefciaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.scheduledGefuTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.scheduledNipTransferResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.schGefuTransactionsRequestData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.stopChequeRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.tdBookingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.tdDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.transactionHistoryData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.twoFactorOjects.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.TwoXFactorObjResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.TwoXFactorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.updateCIUDataByAccountNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.updatescheduledGefuTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.updateSecurityWordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.updateTransferLimitByAccountNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.updateUserPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.validateAccountAndSecurityWordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.validateOTPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.validateOTPSelfEnResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.validateUserIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.verifyTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.viewTdDetailsListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\Token\UnionMall.Token.viewTdDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Views\Shop\History.cshtml" />
+    <Content Include="Views\Shop\HistoryDetails.cshtml" />
+    <Content Include="Views\AuditLog\LoginLog.cshtml" />
+    <Content Include="Views\AuditLog\EventLog.cshtml" />
+    <Content Include="Views\AuditLog\Detail.cshtml" />
+    <Content Include="Views\AuditLog\PostingLog.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UploadedFiles\" />
+    <Folder Include="Views\Orders\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ADServiceRef\" />
+    <WCFMetadataStorage Include="Service References\EmailServiceReference\" />
+    <WCFMetadataStorage Include="Service References\FcubsGetService\" />
+    <WCFMetadataStorage Include="Service References\PostingService\" />
+    <WCFMetadataStorage Include="Service References\Token\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63037</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:56430/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

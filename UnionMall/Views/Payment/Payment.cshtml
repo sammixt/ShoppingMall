@@ -1,0 +1,204 @@
+﻿
+@{
+    ViewBag.Title = "Payment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="login">
+        <p><strong>Payment for Transaction with ID @ViewBag.OrderId</strong></p><br/>
+        <div id ='loginform'>
+            <div class="col-md-6 login-do">
+                <form>
+                    <strong><span class="text text-danger"></span></strong>
+                <div class="login-mail">
+                    <input id="customerAcct" name="customerAcct" pattern="[0-9]{10}" type="text" placeholder="Enter Account Number" required="">
+                    <i class="fa fa-bank"></i>
+                </div> 
+                <div class="login-mail">
+                    <input id="shopAcct" name="shopAcct" type="text" value="@ViewBag.AcctNum" readonly>
+                    <i class="glyphicon glyphicon-lock"></i>
+                </div>
+                <div class="login-mail">
+                    <input id="Amount" name="Amount" type="text" value="@ViewBag.TotalAmount" readonly>
+                    <i class="glyphicon glyphicon-lock"></i>
+                </div>
+                <label class="hvr-skew-backward getTok">
+                    <input class="getTok" type="submit" value="Submit" id="btn" onsubmit="">
+                </label>
+                </form>
+                <div class="confirmtok login-do">
+                    <div class="login-mail confirmTok">
+                        <input class="confirmTok" id="token" name="Token" type="text" placeholder="Enter Token" required>
+                    </div>
+                    <label id="getTok" class="confirmTok hvr-skew-backward">
+                        <input class="confirmTok" type="submit" value="Submit" id="btn" onclick="genTok()">
+                    </label>
+                </div>
+            </div>
+            
+                <div class="col-md-6 login-right">
+                    <h3>Complete Payment</h3>
+
+                    <p>
+                        Please enter your UBN account number and the Token that was sent to you in order to complete payment, Ensure that the
+                        Limit on your account exceeds the total cost of items been purchased.
+                    </p>
+
+
+                </div>
+
+                <div class="clearfix"> </div>
+</div>
+    </div>
+
+</div>
+
+<!--brand-->
+<div class="container">
+    <div class="brand">
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic1.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic2.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic3.png" class="img-responsive" alt="" />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<!-- Modal -->
+
+<!--//brand-->
+<style type="text/css">
+    .confirmTok{
+        display:none;
+    }
+</style>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+        $("form").submit(function(event) {
+            event.preventDefault();
+            
+            var cAcctNum = $('#customerAcct').val();
+            var SAcctN = $('#shopAcct').val();
+            var Amt = $('#Amount').val();
+            $('#btn').attr('disabled', 'disabled');
+            $('#btn').val("Generating Token...");
+            var PaymentViewModel = {
+                CustomerAcctNum: cAcctNum,
+                ShopAcctNum: SAcctN,
+                AmountPaid: Amt
+            }
+
+            $.ajax({
+                url: '/Payment/GenerateToken',
+                contentType: 'application/json; charset=utf-8',
+                type: 'POST',
+                data: JSON.stringify(PaymentViewModel)
+
+            })
+                .success(function (result) {
+                    if (result == "success") {
+                        $('.confirmTok').css('display', 'block');
+                        $('.getTok').css('display', 'none'); customerAcct
+                        $('#customerAcct').prop('readonly', true);
+                        
+                    } else {
+                        $(".text-danger").text(result);
+                        $('#btn').removeAttr('disabled')
+                        $('#btn').val("Submit");
+                    }
+                })
+                .error(function (xhr, status) {
+                    $('#count').text('0');
+                })
+        });
+    })
+   
+
+    function genTok() {
+        var cAcctNum = $('#customerAcct').val();
+        var SAcctN = $('#shopAcct').val();
+        var Amt = $('#Amount').val(); 
+        var toks = $('#token').val(); 
+        var PaymentViewModel = {
+            CustomerAcctNum: cAcctNum,
+            ShopAcctNum: SAcctN,
+            AmountPaid: Amt,
+            paymentReference: '@ViewBag.OrderId',
+            Token: toks
+        }
+        $.ajax({
+            url: '/Payment/ValidateToken',
+            contentType: 'application/json; charset=utf-8',
+            type: 'POST',
+            data: JSON.stringify(PaymentViewModel)
+
+        })
+            .success(function (result) {
+                if (result == "SUCCESS") {
+                    window.location.href = "/Payment/PaymentSuccess";
+                } else if (result == "FAILED") {
+                    $(".text-danger").text("Transaction Failed, account could not be debited.");
+                } else { $(".text-danger").text("Invalid Token"); }
+            })
+            .error(function (xhr, status) {
+                $(".text-danger").text("Invalid Token");
+            })
+    }
+
+    function RemoveItem(id) {
+        var CartViewModel = {
+            ProductId: id,
+        }
+
+        $.ajax({
+            url: '/Cart/RemoveCart',
+            contentType: 'application/json; charset=utf-8',
+            type: 'POST',
+            data: JSON.stringify(CartViewModel)
+
+        })
+            .success(function (result) {
+                if (result == "Removed") {
+                    alert(result);
+                    window.location.reload();
+                } else {
+                    alert("Item Not Removed")
+                }
+            })
+            .error(function (xhr, status) {
+                alert("Item Not Removed")
+            })
+    }
+
+    $(document).ready(function () {
+        $.ajax({
+            url: '/Cart/SumTotal',
+            contentType: 'application/json; charset=utf-8',
+            type: 'GET'
+        })
+                 .success(function (result) {
+                     if (result != '') {
+                         $('.totals').text(result);
+                     } else {
+                         $('.totals').text('0');
+                     }
+                 })
+                 .error(function (xhr, status) {
+                     $('.totals').text('0');
+                 });
+    });
+</script>
+
+
+

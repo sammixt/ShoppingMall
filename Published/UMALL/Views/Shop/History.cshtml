@@ -1,0 +1,107 @@
+﻿@model IEnumerable<UnionMall.ViewModels.PendingViewModel>
+@{
+    ViewBag.Title = "History";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.ImagePath = "~/UploadedFiles/";
+    string sep = "/";
+}
+
+<div class="check-out">
+    <div class="container">
+
+        <div class="bs-example4" data-example-id="simple-responsive-table">
+            <div class="table-responsive">
+                <table class="table-heading simpleCart_shelfItem table-bordered">
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Pickup Branch</th>
+                        <th>Total</th>
+                        <th>Payment Status</th>
+                        <th>Order Status</th>
+                        <th>Ref Number</th>
+                    </tr>
+                    @if (Model != null)
+                    {
+                        foreach (var item in Model)
+                        {
+
+                            <tr class="cart-header">
+
+                                <td class="">
+                                    @item.OrderDate.ToShortDateString() <strong><small>@item.Time</small></strong>
+                                </td>
+                                <td>
+                                    @item.Name
+                                </td>
+                                <td>@item.PickUpBranch</td>
+                                <td class="item_price">NGN @item.Amount</td>
+                                <td class="i">@item.PaymentStatus</td>
+                                <td class="i"> @item.OrderStatus</td>
+                                <td class="i">@Html.ActionLink(item.OrderId, "History", new { orderid = item.OrderId })</td>
+
+
+                            </tr>
+                        }
+                        
+                    }
+                    else
+                    {
+                        <tr class="cart-header1">
+                            <td class="ring-in" colspan="7" align="center">
+                                <strong class="text-center text-uppercase">You are yet to Place an Order on this Platform</strong>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+        @if (Model != null)
+        {
+            <div class="produced">
+                <a href="@Url.Action("Index", "Shop")" class="hvr-skew-backward">Back To Shop</a>
+            </div>
+        }
+        else
+        {
+            <div class="produced">
+                <a href="@Url.Action("Index", "Shop")" class="hvr-skew-backward">Back To Shop</a>
+            </div>
+        }
+    </div>
+</div>
+
+<!--brand-->
+<div class="container">
+    <div class="brand">
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic1.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic2.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic3.png" class="img-responsive" alt="" />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+
+<!--//brand-->
+<link href="~/Content/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/sweetalert-min.js"></script>
+
+@helper selection()
+{
+    int i = 11;
+    for (int j = 1; j < i; j++)
+    {
+        <option value="@j">@j</option>
+    }
+}
+
+

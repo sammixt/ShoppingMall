@@ -1,0 +1,1969 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://controller.retail.channel.unionbank.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ServiceControllers" targetNamespace="http://controller.retail.channel.unionbank.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://appserver-iii:9080/UnionOnlineServices/ServiceControllers?xsd=1" namespace="http://controller.retail.channel.unionbank.com/" />
+    </xsd:schema>
+  </types>
+  <message name="openTargetSavingsAccount">
+    <part name="parameters" element="tns:openTargetSavingsAccount" />
+  </message>
+  <message name="openTargetSavingsAccountResponse">
+    <part name="parameters" element="tns:openTargetSavingsAccountResponse" />
+  </message>
+  <message name="getAccountName">
+    <part name="parameters" element="tns:getAccountName" />
+  </message>
+  <message name="getAccountNameResponse">
+    <part name="parameters" element="tns:getAccountNameResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="openAccountWithExistingCustomerID">
+    <part name="parameters" element="tns:openAccountWithExistingCustomerID" />
+  </message>
+  <message name="openAccountWithExistingCustomerIDResponse">
+    <part name="parameters" element="tns:openAccountWithExistingCustomerIDResponse" />
+  </message>
+  <message name="validateOTPSelfEn">
+    <part name="parameters" element="tns:validateOTPSelfEn" />
+  </message>
+  <message name="validateOTPSelfEnResponse">
+    <part name="parameters" element="tns:validateOTPSelfEnResponse" />
+  </message>
+  <message name="generateOTPSelfEnroled">
+    <part name="parameters" element="tns:generateOTPSelfEnroled" />
+  </message>
+  <message name="generateOTPSelfEnroledResponse">
+    <part name="parameters" element="tns:generateOTPSelfEnroledResponse" />
+  </message>
+  <message name="TwoXFactorObj">
+    <part name="parameters" element="tns:TwoXFactorObj" />
+  </message>
+  <message name="TwoXFactorObjResponse">
+    <part name="parameters" element="tns:TwoXFactorObjResponse" />
+  </message>
+  <message name="fetchScheduledList">
+    <part name="parameters" element="tns:fetchScheduledList" />
+  </message>
+  <message name="fetchScheduledListResponse">
+    <part name="parameters" element="tns:fetchScheduledListResponse" />
+  </message>
+  <message name="cancelScheduleSummary">
+    <part name="parameters" element="tns:cancelScheduleSummary" />
+  </message>
+  <message name="cancelScheduleSummaryResponse">
+    <part name="parameters" element="tns:cancelScheduleSummaryResponse" />
+  </message>
+  <message name="cancelScheduleItem">
+    <part name="parameters" element="tns:cancelScheduleItem" />
+  </message>
+  <message name="cancelScheduleItemResponse">
+    <part name="parameters" element="tns:cancelScheduleItemResponse" />
+  </message>
+  <message name="isUserNameExistOnNIB">
+    <part name="parameters" element="tns:isUserNameExistOnNIB" />
+  </message>
+  <message name="isUserNameExistOnNIBResponse">
+    <part name="parameters" element="tns:isUserNameExistOnNIBResponse" />
+  </message>
+  <message name="isAccountExistOnNIB">
+    <part name="parameters" element="tns:isAccountExistOnNIB" />
+  </message>
+  <message name="isAccountExistOnNIBResponse">
+    <part name="parameters" element="tns:isAccountExistOnNIBResponse" />
+  </message>
+  <message name="fetchAccountProductList">
+    <part name="parameters" element="tns:fetchAccountProductList" />
+  </message>
+  <message name="fetchAccountProductListResponse">
+    <part name="parameters" element="tns:fetchAccountProductListResponse" />
+  </message>
+  <message name="postRemitaBillsPaymentSendNotificationTransaction">
+    <part name="parameters" element="tns:postRemitaBillsPaymentSendNotificationTransaction" />
+  </message>
+  <message name="postRemitaBillsPaymentSendNotificationTransactionResponse">
+    <part name="parameters" element="tns:postRemitaBillsPaymentSendNotificationTransactionResponse" />
+  </message>
+  <message name="getBillers">
+    <part name="parameters" element="tns:getBillers" />
+  </message>
+  <message name="getBillersResponse">
+    <part name="parameters" element="tns:getBillersResponse" />
+  </message>
+  <message name="Customerlogin">
+    <part name="parameters" element="tns:Customerlogin" />
+  </message>
+  <message name="CustomerloginResponse">
+    <part name="parameters" element="tns:CustomerloginResponse" />
+  </message>
+  <message name="getAccountList">
+    <part name="parameters" element="tns:getAccountList" />
+  </message>
+  <message name="getAccountListResponse">
+    <part name="parameters" element="tns:getAccountListResponse" />
+  </message>
+  <message name="getMiniStatement">
+    <part name="parameters" element="tns:getMiniStatement" />
+  </message>
+  <message name="getMiniStatementResponse">
+    <part name="parameters" element="tns:getMiniStatementResponse" />
+  </message>
+  <message name="getAcctStatement">
+    <part name="parameters" element="tns:getAcctStatement" />
+  </message>
+  <message name="getAcctStatementResponse">
+    <part name="parameters" element="tns:getAcctStatementResponse" />
+  </message>
+  <message name="getLoanSchedule">
+    <part name="parameters" element="tns:getLoanSchedule" />
+  </message>
+  <message name="getLoanScheduleResponse">
+    <part name="parameters" element="tns:getLoanScheduleResponse" />
+  </message>
+  <message name="hotlistDebitCard">
+    <part name="parameters" element="tns:hotlistDebitCard" />
+  </message>
+  <message name="hotlistDebitCardResponse">
+    <part name="parameters" element="tns:hotlistDebitCardResponse" />
+  </message>
+  <message name="loadBranches">
+    <part name="parameters" element="tns:loadBranches" />
+  </message>
+  <message name="loadBranchesResponse">
+    <part name="parameters" element="tns:loadBranchesResponse" />
+  </message>
+  <message name="createTdRequest">
+    <part name="parameters" element="tns:createTdRequest" />
+  </message>
+  <message name="createTdRequestResponse">
+    <part name="parameters" element="tns:createTdRequestResponse" />
+  </message>
+  <message name="viewTdDetails">
+    <part name="parameters" element="tns:viewTdDetails" />
+  </message>
+  <message name="viewTdDetailsResponse">
+    <part name="parameters" element="tns:viewTdDetailsResponse" />
+  </message>
+  <message name="loadBanks">
+    <part name="parameters" element="tns:loadBanks" />
+  </message>
+  <message name="loadBanksResponse">
+    <part name="parameters" element="tns:loadBanksResponse" />
+  </message>
+  <message name="loadCurrency">
+    <part name="parameters" element="tns:loadCurrency" />
+  </message>
+  <message name="loadCurrencyResponse">
+    <part name="parameters" element="tns:loadCurrencyResponse" />
+  </message>
+  <message name="saveBenefciary">
+    <part name="parameters" element="tns:saveBenefciary" />
+  </message>
+  <message name="saveBenefciaryResponse">
+    <part name="parameters" element="tns:saveBenefciaryResponse" />
+  </message>
+  <message name="saveFxBenefciary">
+    <part name="parameters" element="tns:saveFxBenefciary" />
+  </message>
+  <message name="saveFxBenefciaryResponse">
+    <part name="parameters" element="tns:saveFxBenefciaryResponse" />
+  </message>
+  <message name="modifyBenefciary">
+    <part name="parameters" element="tns:modifyBenefciary" />
+  </message>
+  <message name="modifyBenefciaryResponse">
+    <part name="parameters" element="tns:modifyBenefciaryResponse" />
+  </message>
+  <message name="deleteBenefciary">
+    <part name="parameters" element="tns:deleteBenefciary" />
+  </message>
+  <message name="deleteBenefciaryResponse">
+    <part name="parameters" element="tns:deleteBenefciaryResponse" />
+  </message>
+  <message name="getLoanDetails">
+    <part name="parameters" element="tns:getLoanDetails" />
+  </message>
+  <message name="getLoanDetailsResponse">
+    <part name="parameters" element="tns:getLoanDetailsResponse" />
+  </message>
+  <message name="loadCountries">
+    <part name="parameters" element="tns:loadCountries" />
+  </message>
+  <message name="loadCountriesResponse">
+    <part name="parameters" element="tns:loadCountriesResponse" />
+  </message>
+  <message name="nipNameEnquiry">
+    <part name="parameters" element="tns:nipNameEnquiry" />
+  </message>
+  <message name="nipNameEnquiryResponse">
+    <part name="parameters" element="tns:nipNameEnquiryResponse" />
+  </message>
+  <message name="getBillerDetails">
+    <part name="parameters" element="tns:getBillerDetails" />
+  </message>
+  <message name="getBillerDetailsResponse">
+    <part name="parameters" element="tns:getBillerDetailsResponse" />
+  </message>
+  <message name="getEBillPayUrl">
+    <part name="parameters" element="tns:getEBillPayUrl" />
+  </message>
+  <message name="getEBillPayUrlResponse">
+    <part name="parameters" element="tns:getEBillPayUrlResponse" />
+  </message>
+  <message name="validateUserId">
+    <part name="parameters" element="tns:validateUserId" />
+  </message>
+  <message name="validateUserIdResponse">
+    <part name="parameters" element="tns:validateUserIdResponse" />
+  </message>
+  <message name="validateOTP">
+    <part name="parameters" element="tns:validateOTP" />
+  </message>
+  <message name="validateOTPResponse">
+    <part name="parameters" element="tns:validateOTPResponse" />
+  </message>
+  <message name="generateOTP">
+    <part name="parameters" element="tns:generateOTP" />
+  </message>
+  <message name="generateOTPResponse">
+    <part name="parameters" element="tns:generateOTPResponse" />
+  </message>
+  <message name="verifyToken">
+    <part name="parameters" element="tns:verifyToken" />
+  </message>
+  <message name="verifyTokenResponse">
+    <part name="parameters" element="tns:verifyTokenResponse" />
+  </message>
+  <message name="checkUserProfile">
+    <part name="parameters" element="tns:checkUserProfile" />
+  </message>
+  <message name="checkUserProfileResponse">
+    <part name="parameters" element="tns:checkUserProfileResponse" />
+  </message>
+  <message name="TwoXFactor">
+    <part name="parameters" element="tns:TwoXFactor" />
+  </message>
+  <message name="TwoXFactorResponse">
+    <part name="parameters" element="tns:TwoXFactorResponse" />
+  </message>
+  <message name="fetchscheduledGefuTransactionByUserName">
+    <part name="parameters" element="tns:fetchscheduledGefuTransactionByUserName" />
+  </message>
+  <message name="fetchscheduledGefuTransactionByUserNameResponse">
+    <part name="parameters" element="tns:fetchscheduledGefuTransactionByUserNameResponse" />
+  </message>
+  <message name="fetchscheduledGefuTransactionById">
+    <part name="parameters" element="tns:fetchscheduledGefuTransactionById" />
+  </message>
+  <message name="fetchscheduledGefuTransactionByIdResponse">
+    <part name="parameters" element="tns:fetchscheduledGefuTransactionByIdResponse" />
+  </message>
+  <message name="postQuickTellerBillsPaymentTransaction">
+    <part name="parameters" element="tns:postQuickTellerBillsPaymentTransaction" />
+  </message>
+  <message name="postQuickTellerBillsPaymentTransactionResponse">
+    <part name="parameters" element="tns:postQuickTellerBillsPaymentTransactionResponse" />
+  </message>
+  <message name="lookupRemitaBillsPaymentTransaction">
+    <part name="parameters" element="tns:lookupRemitaBillsPaymentTransaction" />
+  </message>
+  <message name="lookupRemitaBillsPaymentTransactionResponse">
+    <part name="parameters" element="tns:lookupRemitaBillsPaymentTransactionResponse" />
+  </message>
+  <message name="fetchSavedBeneficiariesByUserName">
+    <part name="parameters" element="tns:fetchSavedBeneficiariesByUserName" />
+  </message>
+  <message name="fetchSavedBeneficiariesByUserNameResponse">
+    <part name="parameters" element="tns:fetchSavedBeneficiariesByUserNameResponse" />
+  </message>
+  <message name="fetchSavedFxBeneficiariesByUserName">
+    <part name="parameters" element="tns:fetchSavedFxBeneficiariesByUserName" />
+  </message>
+  <message name="fetchSavedFxBeneficiariesByUserNameResponse">
+    <part name="parameters" element="tns:fetchSavedFxBeneficiariesByUserNameResponse" />
+  </message>
+  <message name="fetchAllSavedBeneficiariesByUserName">
+    <part name="parameters" element="tns:fetchAllSavedBeneficiariesByUserName" />
+  </message>
+  <message name="fetchAllSavedBeneficiariesByUserNameResponse">
+    <part name="parameters" element="tns:fetchAllSavedBeneficiariesByUserNameResponse" />
+  </message>
+  <message name="fetchUnionSavedBeneficiariesByUserName">
+    <part name="parameters" element="tns:fetchUnionSavedBeneficiariesByUserName" />
+  </message>
+  <message name="fetchUnionSavedBeneficiariesByUserNameResponse">
+    <part name="parameters" element="tns:fetchUnionSavedBeneficiariesByUserNameResponse" />
+  </message>
+  <message name="fetchSavedBeneficiariesByBeneficiaryId">
+    <part name="parameters" element="tns:fetchSavedBeneficiariesByBeneficiaryId" />
+  </message>
+  <message name="fetchSavedBeneficiariesByBeneficiaryIdResponse">
+    <part name="parameters" element="tns:fetchSavedBeneficiariesByBeneficiaryIdResponse" />
+  </message>
+  <message name="fetchUnionSavedBeneficiariesByBeneficiaryId">
+    <part name="parameters" element="tns:fetchUnionSavedBeneficiariesByBeneficiaryId" />
+  </message>
+  <message name="fetchUnionSavedBeneficiariesByBeneficiaryIdResponse">
+    <part name="parameters" element="tns:fetchUnionSavedBeneficiariesByBeneficiaryIdResponse" />
+  </message>
+  <message name="initiateInternationalTransferRequest">
+    <part name="parameters" element="tns:initiateInternationalTransferRequest" />
+  </message>
+  <message name="initiateInternationalTransferRequestResponse">
+    <part name="parameters" element="tns:initiateInternationalTransferRequestResponse" />
+  </message>
+  <message name="updateTransferLimitByAccountNumber">
+    <part name="parameters" element="tns:updateTransferLimitByAccountNumber" />
+  </message>
+  <message name="updateTransferLimitByAccountNumberResponse">
+    <part name="parameters" element="tns:updateTransferLimitByAccountNumberResponse" />
+  </message>
+  <message name="getAccountSummary">
+    <part name="parameters" element="tns:getAccountSummary" />
+  </message>
+  <message name="getAccountSummaryResponse">
+    <part name="parameters" element="tns:getAccountSummaryResponse" />
+  </message>
+  <message name="getCustomerFewDetails">
+    <part name="parameters" element="tns:getCustomerFewDetails" />
+  </message>
+  <message name="getCustomerFewDetailsResponse">
+    <part name="parameters" element="tns:getCustomerFewDetailsResponse" />
+  </message>
+  <message name="postGefuTransaction">
+    <part name="parameters" element="tns:postGefuTransaction" />
+  </message>
+  <message name="postGefuTransactionResponse">
+    <part name="parameters" element="tns:postGefuTransactionResponse" />
+  </message>
+  <message name="updatescheduledGefuTransaction">
+    <part name="parameters" element="tns:updatescheduledGefuTransaction" />
+  </message>
+  <message name="updatescheduledGefuTransactionResponse">
+    <part name="parameters" element="tns:updatescheduledGefuTransactionResponse" />
+  </message>
+  <message name="scheduledGefuTransaction">
+    <part name="parameters" element="tns:scheduledGefuTransaction" />
+  </message>
+  <message name="scheduledGefuTransactionResponse">
+    <part name="parameters" element="tns:scheduledGefuTransactionResponse" />
+  </message>
+  <message name="scheduledNipTransfer">
+    <part name="parameters" element="tns:scheduledNipTransfer" />
+  </message>
+  <message name="scheduledNipTransferResponse">
+    <part name="parameters" element="tns:scheduledNipTransferResponse" />
+  </message>
+  <message name="postNipTransaction">
+    <part name="parameters" element="tns:postNipTransaction" />
+  </message>
+  <message name="postNipTransactionResponse">
+    <part name="parameters" element="tns:postNipTransactionResponse" />
+  </message>
+  <message name="activateDebitCard">
+    <part name="parameters" element="tns:activateDebitCard" />
+  </message>
+  <message name="activateDebitCardResponse">
+    <part name="parameters" element="tns:activateDebitCardResponse" />
+  </message>
+  <message name="deactivateDebitCard">
+    <part name="parameters" element="tns:deactivateDebitCard" />
+  </message>
+  <message name="deactivateDebitCardResponse">
+    <part name="parameters" element="tns:deactivateDebitCardResponse" />
+  </message>
+  <message name="initiateCardRequest">
+    <part name="parameters" element="tns:initiateCardRequest" />
+  </message>
+  <message name="initiateCardRequestResponse">
+    <part name="parameters" element="tns:initiateCardRequestResponse" />
+  </message>
+  <message name="makeChequeBookRequest">
+    <part name="parameters" element="tns:makeChequeBookRequest" />
+  </message>
+  <message name="makeChequeBookRequestResponse">
+    <part name="parameters" element="tns:makeChequeBookRequestResponse" />
+  </message>
+  <message name="getCustomerDetailsWithAcctNumber">
+    <part name="parameters" element="tns:getCustomerDetailsWithAcctNumber" />
+  </message>
+  <message name="getCustomerDetailsWithAcctNumberResponse">
+    <part name="parameters" element="tns:getCustomerDetailsWithAcctNumberResponse" />
+  </message>
+  <message name="stopChequeRequest">
+    <part name="parameters" element="tns:stopChequeRequest" />
+  </message>
+  <message name="stopChequeRequestResponse">
+    <part name="parameters" element="tns:stopChequeRequestResponse" />
+  </message>
+  <message name="makeInvestmentRequest">
+    <part name="parameters" element="tns:makeInvestmentRequest" />
+  </message>
+  <message name="makeInvestmentRequestResponse">
+    <part name="parameters" element="tns:makeInvestmentRequestResponse" />
+  </message>
+  <message name="viewTdDetailsList">
+    <part name="parameters" element="tns:viewTdDetailsList" />
+  </message>
+  <message name="viewTdDetailsListResponse">
+    <part name="parameters" element="tns:viewTdDetailsListResponse" />
+  </message>
+  <message name="loadTransactionHistory">
+    <part name="parameters" element="tns:loadTransactionHistory" />
+  </message>
+  <message name="loadTransactionHistoryResponse">
+    <part name="parameters" element="tns:loadTransactionHistoryResponse" />
+  </message>
+  <message name="loadTransactionHistoryByTxnRef">
+    <part name="parameters" element="tns:loadTransactionHistoryByTxnRef" />
+  </message>
+  <message name="loadTransactionHistoryByTxnRefResponse">
+    <part name="parameters" element="tns:loadTransactionHistoryByTxnRefResponse" />
+  </message>
+  <message name="getTransactionHistory">
+    <part name="parameters" element="tns:getTransactionHistory" />
+  </message>
+  <message name="getTransactionHistoryResponse">
+    <part name="parameters" element="tns:getTransactionHistoryResponse" />
+  </message>
+  <message name="saveUnionBenefciary">
+    <part name="parameters" element="tns:saveUnionBenefciary" />
+  </message>
+  <message name="saveUnionBenefciaryResponse">
+    <part name="parameters" element="tns:saveUnionBenefciaryResponse" />
+  </message>
+  <message name="getSessionActivityByUserByRange">
+    <part name="parameters" element="tns:getSessionActivityByUserByRange" />
+  </message>
+  <message name="getSessionActivityByUserByRangeResponse">
+    <part name="parameters" element="tns:getSessionActivityByUserByRangeResponse" />
+  </message>
+  <message name="getSessionActivityByUser">
+    <part name="parameters" element="tns:getSessionActivityByUser" />
+  </message>
+  <message name="getSessionActivityByUserResponse">
+    <part name="parameters" element="tns:getSessionActivityByUserResponse" />
+  </message>
+  <message name="saveSessionActivity">
+    <part name="parameters" element="tns:saveSessionActivity" />
+  </message>
+  <message name="saveSessionActivityResponse">
+    <part name="parameters" element="tns:saveSessionActivityResponse" />
+  </message>
+  <message name="modifyUnionBenefciary">
+    <part name="parameters" element="tns:modifyUnionBenefciary" />
+  </message>
+  <message name="modifyUnionBenefciaryResponse">
+    <part name="parameters" element="tns:modifyUnionBenefciaryResponse" />
+  </message>
+  <message name="deleteUnionBenefciary">
+    <part name="parameters" element="tns:deleteUnionBenefciary" />
+  </message>
+  <message name="deleteUnionBenefciaryResponse">
+    <part name="parameters" element="tns:deleteUnionBenefciaryResponse" />
+  </message>
+  <message name="getTransferLimitByUserName">
+    <part name="parameters" element="tns:getTransferLimitByUserName" />
+  </message>
+  <message name="getTransferLimitByUserNameResponse">
+    <part name="parameters" element="tns:getTransferLimitByUserNameResponse" />
+  </message>
+  <message name="getAuthenticationType">
+    <part name="parameters" element="tns:getAuthenticationType" />
+  </message>
+  <message name="getAuthenticationTypeResponse">
+    <part name="parameters" element="tns:getAuthenticationTypeResponse" />
+  </message>
+  <message name="validateAccountAndSecurityWord">
+    <part name="parameters" element="tns:validateAccountAndSecurityWord" />
+  </message>
+  <message name="validateAccountAndSecurityWordResponse">
+    <part name="parameters" element="tns:validateAccountAndSecurityWordResponse" />
+  </message>
+  <message name="updateUserPassword">
+    <part name="parameters" element="tns:updateUserPassword" />
+  </message>
+  <message name="updateUserPasswordResponse">
+    <part name="parameters" element="tns:updateUserPasswordResponse" />
+  </message>
+  <message name="updateSecurityWord">
+    <part name="parameters" element="tns:updateSecurityWord" />
+  </message>
+  <message name="updateSecurityWordResponse">
+    <part name="parameters" element="tns:updateSecurityWordResponse" />
+  </message>
+  <message name="fetchCIUDataByAccountNumber">
+    <part name="parameters" element="tns:fetchCIUDataByAccountNumber" />
+  </message>
+  <message name="fetchCIUDataByAccountNumberResponse">
+    <part name="parameters" element="tns:fetchCIUDataByAccountNumberResponse" />
+  </message>
+  <message name="updateCIUDataByAccountNumber">
+    <part name="parameters" element="tns:updateCIUDataByAccountNumber" />
+  </message>
+  <message name="updateCIUDataByAccountNumberResponse">
+    <part name="parameters" element="tns:updateCIUDataByAccountNumberResponse" />
+  </message>
+  <message name="getAccountRM">
+    <part name="parameters" element="tns:getAccountRM" />
+  </message>
+  <message name="getAccountRMResponse">
+    <part name="parameters" element="tns:getAccountRMResponse" />
+  </message>
+  <message name="FetchQuicktelerDetailsByUsernameAndBillerID">
+    <part name="parameters" element="tns:FetchQuicktelerDetailsByUsernameAndBillerID" />
+  </message>
+  <message name="FetchQuicktelerDetailsByUsernameAndBillerIDResponse">
+    <part name="parameters" element="tns:FetchQuicktelerDetailsByUsernameAndBillerIDResponse" />
+  </message>
+  <message name="notifyQuickTellerBillsPaymentTransaction">
+    <part name="parameters" element="tns:notifyQuickTellerBillsPaymentTransaction" />
+  </message>
+  <message name="notifyQuickTellerBillsPaymentTransactionResponse">
+    <part name="parameters" element="tns:notifyQuickTellerBillsPaymentTransactionResponse" />
+  </message>
+  <message name="profileCustomer">
+    <part name="parameters" element="tns:profileCustomer" />
+  </message>
+  <message name="profileCustomerResponse">
+    <part name="parameters" element="tns:profileCustomerResponse" />
+  </message>
+  <message name="saveQuicktelerDetails">
+    <part name="parameters" element="tns:saveQuicktelerDetails" />
+  </message>
+  <message name="saveQuicktelerDetailsResponse">
+    <part name="parameters" element="tns:saveQuicktelerDetailsResponse" />
+  </message>
+  <portType name="ServiceControllers">
+    <operation name="openTargetSavingsAccount">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/openTargetSavingsAccountRequest" message="tns:openTargetSavingsAccount" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/openTargetSavingsAccountResponse" message="tns:openTargetSavingsAccountResponse" />
+    </operation>
+    <operation name="getAccountName">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAccountNameRequest" message="tns:getAccountName" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAccountNameResponse" message="tns:getAccountNameResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAccountName/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="openAccountWithExistingCustomerID">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/openAccountWithExistingCustomerIDRequest" message="tns:openAccountWithExistingCustomerID" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/openAccountWithExistingCustomerIDResponse" message="tns:openAccountWithExistingCustomerIDResponse" />
+    </operation>
+    <operation name="validateOTPSelfEn">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/validateOTPSelfEnRequest" message="tns:validateOTPSelfEn" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/validateOTPSelfEnResponse" message="tns:validateOTPSelfEnResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/validateOTPSelfEn/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="generateOTPSelfEnroled">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/generateOTPSelfEnroledRequest" message="tns:generateOTPSelfEnroled" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/generateOTPSelfEnroledResponse" message="tns:generateOTPSelfEnroledResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/generateOTPSelfEnroled/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="TwoXFactorObj">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/TwoXFactorObjRequest" message="tns:TwoXFactorObj" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/TwoXFactorObjResponse" message="tns:TwoXFactorObjResponse" />
+    </operation>
+    <operation name="fetchScheduledList">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchScheduledListRequest" message="tns:fetchScheduledList" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchScheduledListResponse" message="tns:fetchScheduledListResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchScheduledList/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="cancelScheduleSummary">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/cancelScheduleSummaryRequest" message="tns:cancelScheduleSummary" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/cancelScheduleSummaryResponse" message="tns:cancelScheduleSummaryResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/cancelScheduleSummary/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="cancelScheduleItem">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/cancelScheduleItemRequest" message="tns:cancelScheduleItem" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/cancelScheduleItemResponse" message="tns:cancelScheduleItemResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/cancelScheduleItem/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="isUserNameExistOnNIB">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/isUserNameExistOnNIBRequest" message="tns:isUserNameExistOnNIB" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/isUserNameExistOnNIBResponse" message="tns:isUserNameExistOnNIBResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/isUserNameExistOnNIB/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="isAccountExistOnNIB">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/isAccountExistOnNIBRequest" message="tns:isAccountExistOnNIB" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/isAccountExistOnNIBResponse" message="tns:isAccountExistOnNIBResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/isAccountExistOnNIB/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="fetchAccountProductList">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchAccountProductListRequest" message="tns:fetchAccountProductList" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchAccountProductListResponse" message="tns:fetchAccountProductListResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchAccountProductList/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="postRemitaBillsPaymentSendNotificationTransaction">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/postRemitaBillsPaymentSendNotificationTransactionRequest" message="tns:postRemitaBillsPaymentSendNotificationTransaction" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/postRemitaBillsPaymentSendNotificationTransactionResponse" message="tns:postRemitaBillsPaymentSendNotificationTransactionResponse" />
+    </operation>
+    <operation name="getBillers">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getBillersRequest" message="tns:getBillers" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getBillersResponse" message="tns:getBillersResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getBillers/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="Customerlogin">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/CustomerloginRequest" message="tns:Customerlogin" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/CustomerloginResponse" message="tns:CustomerloginResponse" />
+    </operation>
+    <operation name="getAccountList">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAccountListRequest" message="tns:getAccountList" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAccountListResponse" message="tns:getAccountListResponse" />
+    </operation>
+    <operation name="getMiniStatement">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getMiniStatementRequest" message="tns:getMiniStatement" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getMiniStatementResponse" message="tns:getMiniStatementResponse" />
+    </operation>
+    <operation name="getAcctStatement">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAcctStatementRequest" message="tns:getAcctStatement" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAcctStatementResponse" message="tns:getAcctStatementResponse" />
+    </operation>
+    <operation name="getLoanSchedule">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getLoanScheduleRequest" message="tns:getLoanSchedule" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getLoanScheduleResponse" message="tns:getLoanScheduleResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getLoanSchedule/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="hotlistDebitCard">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/hotlistDebitCardRequest" message="tns:hotlistDebitCard" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/hotlistDebitCardResponse" message="tns:hotlistDebitCardResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/hotlistDebitCard/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="loadBranches">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadBranchesRequest" message="tns:loadBranches" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadBranchesResponse" message="tns:loadBranchesResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadBranches/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="createTdRequest">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/createTdRequestRequest" message="tns:createTdRequest" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/createTdRequestResponse" message="tns:createTdRequestResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/createTdRequest/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="viewTdDetails">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/viewTdDetailsRequest" message="tns:viewTdDetails" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/viewTdDetailsResponse" message="tns:viewTdDetailsResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/viewTdDetails/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="loadBanks">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadBanksRequest" message="tns:loadBanks" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadBanksResponse" message="tns:loadBanksResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadBanks/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="loadCurrency">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadCurrencyRequest" message="tns:loadCurrency" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadCurrencyResponse" message="tns:loadCurrencyResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadCurrency/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="saveBenefciary">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveBenefciaryRequest" message="tns:saveBenefciary" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveBenefciaryResponse" message="tns:saveBenefciaryResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveBenefciary/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="saveFxBenefciary">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveFxBenefciaryRequest" message="tns:saveFxBenefciary" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveFxBenefciaryResponse" message="tns:saveFxBenefciaryResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveFxBenefciary/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="modifyBenefciary">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/modifyBenefciaryRequest" message="tns:modifyBenefciary" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/modifyBenefciaryResponse" message="tns:modifyBenefciaryResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/modifyBenefciary/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="deleteBenefciary">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/deleteBenefciaryRequest" message="tns:deleteBenefciary" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/deleteBenefciaryResponse" message="tns:deleteBenefciaryResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/deleteBenefciary/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getLoanDetails">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getLoanDetailsRequest" message="tns:getLoanDetails" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getLoanDetailsResponse" message="tns:getLoanDetailsResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getLoanDetails/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="loadCountries">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadCountriesRequest" message="tns:loadCountries" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadCountriesResponse" message="tns:loadCountriesResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadCountries/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="nipNameEnquiry">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/nipNameEnquiryRequest" message="tns:nipNameEnquiry" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/nipNameEnquiryResponse" message="tns:nipNameEnquiryResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/nipNameEnquiry/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getBillerDetails">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getBillerDetailsRequest" message="tns:getBillerDetails" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getBillerDetailsResponse" message="tns:getBillerDetailsResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getBillerDetails/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getEBillPayUrl">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getEBillPayUrlRequest" message="tns:getEBillPayUrl" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getEBillPayUrlResponse" message="tns:getEBillPayUrlResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getEBillPayUrl/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="validateUserId">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/validateUserIdRequest" message="tns:validateUserId" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/validateUserIdResponse" message="tns:validateUserIdResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/validateUserId/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="validateOTP">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/validateOTPRequest" message="tns:validateOTP" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/validateOTPResponse" message="tns:validateOTPResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/validateOTP/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="generateOTP">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/generateOTPRequest" message="tns:generateOTP" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/generateOTPResponse" message="tns:generateOTPResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/generateOTP/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="verifyToken">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/verifyTokenRequest" message="tns:verifyToken" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/verifyTokenResponse" message="tns:verifyTokenResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/verifyToken/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="checkUserProfile">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/checkUserProfileRequest" message="tns:checkUserProfile" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/checkUserProfileResponse" message="tns:checkUserProfileResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/checkUserProfile/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="TwoXFactor">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/TwoXFactorRequest" message="tns:TwoXFactor" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/TwoXFactorResponse" message="tns:TwoXFactorResponse" />
+    </operation>
+    <operation name="fetchscheduledGefuTransactionByUserName">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchscheduledGefuTransactionByUserNameRequest" message="tns:fetchscheduledGefuTransactionByUserName" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchscheduledGefuTransactionByUserNameResponse" message="tns:fetchscheduledGefuTransactionByUserNameResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchscheduledGefuTransactionByUserName/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="fetchscheduledGefuTransactionById">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchscheduledGefuTransactionByIdRequest" message="tns:fetchscheduledGefuTransactionById" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchscheduledGefuTransactionByIdResponse" message="tns:fetchscheduledGefuTransactionByIdResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchscheduledGefuTransactionById/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="postQuickTellerBillsPaymentTransaction">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/postQuickTellerBillsPaymentTransactionRequest" message="tns:postQuickTellerBillsPaymentTransaction" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/postQuickTellerBillsPaymentTransactionResponse" message="tns:postQuickTellerBillsPaymentTransactionResponse" />
+    </operation>
+    <operation name="lookupRemitaBillsPaymentTransaction">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/lookupRemitaBillsPaymentTransactionRequest" message="tns:lookupRemitaBillsPaymentTransaction" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/lookupRemitaBillsPaymentTransactionResponse" message="tns:lookupRemitaBillsPaymentTransactionResponse" />
+    </operation>
+    <operation name="fetchSavedBeneficiariesByUserName">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchSavedBeneficiariesByUserNameRequest" message="tns:fetchSavedBeneficiariesByUserName" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchSavedBeneficiariesByUserNameResponse" message="tns:fetchSavedBeneficiariesByUserNameResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchSavedBeneficiariesByUserName/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="fetchSavedFxBeneficiariesByUserName">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchSavedFxBeneficiariesByUserNameRequest" message="tns:fetchSavedFxBeneficiariesByUserName" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchSavedFxBeneficiariesByUserNameResponse" message="tns:fetchSavedFxBeneficiariesByUserNameResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchSavedFxBeneficiariesByUserName/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="fetchAllSavedBeneficiariesByUserName">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchAllSavedBeneficiariesByUserNameRequest" message="tns:fetchAllSavedBeneficiariesByUserName" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchAllSavedBeneficiariesByUserNameResponse" message="tns:fetchAllSavedBeneficiariesByUserNameResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchAllSavedBeneficiariesByUserName/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="fetchUnionSavedBeneficiariesByUserName">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchUnionSavedBeneficiariesByUserNameRequest" message="tns:fetchUnionSavedBeneficiariesByUserName" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchUnionSavedBeneficiariesByUserNameResponse" message="tns:fetchUnionSavedBeneficiariesByUserNameResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchUnionSavedBeneficiariesByUserName/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="fetchSavedBeneficiariesByBeneficiaryId">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchSavedBeneficiariesByBeneficiaryIdRequest" message="tns:fetchSavedBeneficiariesByBeneficiaryId" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchSavedBeneficiariesByBeneficiaryIdResponse" message="tns:fetchSavedBeneficiariesByBeneficiaryIdResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchSavedBeneficiariesByBeneficiaryId/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="fetchUnionSavedBeneficiariesByBeneficiaryId">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchUnionSavedBeneficiariesByBeneficiaryIdRequest" message="tns:fetchUnionSavedBeneficiariesByBeneficiaryId" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchUnionSavedBeneficiariesByBeneficiaryIdResponse" message="tns:fetchUnionSavedBeneficiariesByBeneficiaryIdResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchUnionSavedBeneficiariesByBeneficiaryId/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="initiateInternationalTransferRequest">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/initiateInternationalTransferRequestRequest" message="tns:initiateInternationalTransferRequest" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/initiateInternationalTransferRequestResponse" message="tns:initiateInternationalTransferRequestResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/initiateInternationalTransferRequest/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="updateTransferLimitByAccountNumber">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updateTransferLimitByAccountNumberRequest" message="tns:updateTransferLimitByAccountNumber" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updateTransferLimitByAccountNumberResponse" message="tns:updateTransferLimitByAccountNumberResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updateTransferLimitByAccountNumber/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getAccountSummary">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAccountSummaryRequest" message="tns:getAccountSummary" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAccountSummaryResponse" message="tns:getAccountSummaryResponse" />
+    </operation>
+    <operation name="getCustomerFewDetails">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getCustomerFewDetailsRequest" message="tns:getCustomerFewDetails" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getCustomerFewDetailsResponse" message="tns:getCustomerFewDetailsResponse" />
+    </operation>
+    <operation name="postGefuTransaction">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/postGefuTransactionRequest" message="tns:postGefuTransaction" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/postGefuTransactionResponse" message="tns:postGefuTransactionResponse" />
+    </operation>
+    <operation name="updatescheduledGefuTransaction">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updatescheduledGefuTransactionRequest" message="tns:updatescheduledGefuTransaction" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updatescheduledGefuTransactionResponse" message="tns:updatescheduledGefuTransactionResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updatescheduledGefuTransaction/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="scheduledGefuTransaction">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/scheduledGefuTransactionRequest" message="tns:scheduledGefuTransaction" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/scheduledGefuTransactionResponse" message="tns:scheduledGefuTransactionResponse" />
+    </operation>
+    <operation name="scheduledNipTransfer">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/scheduledNipTransferRequest" message="tns:scheduledNipTransfer" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/scheduledNipTransferResponse" message="tns:scheduledNipTransferResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/scheduledNipTransfer/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="postNipTransaction">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/postNipTransactionRequest" message="tns:postNipTransaction" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/postNipTransactionResponse" message="tns:postNipTransactionResponse" />
+    </operation>
+    <operation name="activateDebitCard">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/activateDebitCardRequest" message="tns:activateDebitCard" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/activateDebitCardResponse" message="tns:activateDebitCardResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/activateDebitCard/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="deactivateDebitCard">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/deactivateDebitCardRequest" message="tns:deactivateDebitCard" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/deactivateDebitCardResponse" message="tns:deactivateDebitCardResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/deactivateDebitCard/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="initiateCardRequest">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/initiateCardRequestRequest" message="tns:initiateCardRequest" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/initiateCardRequestResponse" message="tns:initiateCardRequestResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/initiateCardRequest/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="makeChequeBookRequest">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/makeChequeBookRequestRequest" message="tns:makeChequeBookRequest" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/makeChequeBookRequestResponse" message="tns:makeChequeBookRequestResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/makeChequeBookRequest/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getCustomerDetailsWithAcctNumber">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getCustomerDetailsWithAcctNumberRequest" message="tns:getCustomerDetailsWithAcctNumber" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getCustomerDetailsWithAcctNumberResponse" message="tns:getCustomerDetailsWithAcctNumberResponse" />
+    </operation>
+    <operation name="stopChequeRequest">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/stopChequeRequestRequest" message="tns:stopChequeRequest" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/stopChequeRequestResponse" message="tns:stopChequeRequestResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/stopChequeRequest/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="makeInvestmentRequest">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/makeInvestmentRequestRequest" message="tns:makeInvestmentRequest" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/makeInvestmentRequestResponse" message="tns:makeInvestmentRequestResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/makeInvestmentRequest/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="viewTdDetailsList">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/viewTdDetailsListRequest" message="tns:viewTdDetailsList" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/viewTdDetailsListResponse" message="tns:viewTdDetailsListResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/viewTdDetailsList/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="loadTransactionHistory">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadTransactionHistoryRequest" message="tns:loadTransactionHistory" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadTransactionHistoryResponse" message="tns:loadTransactionHistoryResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadTransactionHistory/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="loadTransactionHistoryByTxnRef">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadTransactionHistoryByTxnRefRequest" message="tns:loadTransactionHistoryByTxnRef" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadTransactionHistoryByTxnRefResponse" message="tns:loadTransactionHistoryByTxnRefResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/loadTransactionHistoryByTxnRef/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getTransactionHistory">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getTransactionHistoryRequest" message="tns:getTransactionHistory" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getTransactionHistoryResponse" message="tns:getTransactionHistoryResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getTransactionHistory/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="saveUnionBenefciary">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveUnionBenefciaryRequest" message="tns:saveUnionBenefciary" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveUnionBenefciaryResponse" message="tns:saveUnionBenefciaryResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveUnionBenefciary/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getSessionActivityByUserByRange">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getSessionActivityByUserByRangeRequest" message="tns:getSessionActivityByUserByRange" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getSessionActivityByUserByRangeResponse" message="tns:getSessionActivityByUserByRangeResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getSessionActivityByUserByRange/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getSessionActivityByUser">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getSessionActivityByUserRequest" message="tns:getSessionActivityByUser" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getSessionActivityByUserResponse" message="tns:getSessionActivityByUserResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getSessionActivityByUser/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="saveSessionActivity">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveSessionActivityRequest" message="tns:saveSessionActivity" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveSessionActivityResponse" message="tns:saveSessionActivityResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveSessionActivity/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="modifyUnionBenefciary">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/modifyUnionBenefciaryRequest" message="tns:modifyUnionBenefciary" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/modifyUnionBenefciaryResponse" message="tns:modifyUnionBenefciaryResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/modifyUnionBenefciary/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="deleteUnionBenefciary">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/deleteUnionBenefciaryRequest" message="tns:deleteUnionBenefciary" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/deleteUnionBenefciaryResponse" message="tns:deleteUnionBenefciaryResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/deleteUnionBenefciary/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getTransferLimitByUserName">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getTransferLimitByUserNameRequest" message="tns:getTransferLimitByUserName" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getTransferLimitByUserNameResponse" message="tns:getTransferLimitByUserNameResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getTransferLimitByUserName/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getAuthenticationType">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAuthenticationTypeRequest" message="tns:getAuthenticationType" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAuthenticationTypeResponse" message="tns:getAuthenticationTypeResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAuthenticationType/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="validateAccountAndSecurityWord">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/validateAccountAndSecurityWordRequest" message="tns:validateAccountAndSecurityWord" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/validateAccountAndSecurityWordResponse" message="tns:validateAccountAndSecurityWordResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/validateAccountAndSecurityWord/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="updateUserPassword">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updateUserPasswordRequest" message="tns:updateUserPassword" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updateUserPasswordResponse" message="tns:updateUserPasswordResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updateUserPassword/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="updateSecurityWord">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updateSecurityWordRequest" message="tns:updateSecurityWord" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updateSecurityWordResponse" message="tns:updateSecurityWordResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updateSecurityWord/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="fetchCIUDataByAccountNumber">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchCIUDataByAccountNumberRequest" message="tns:fetchCIUDataByAccountNumber" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchCIUDataByAccountNumberResponse" message="tns:fetchCIUDataByAccountNumberResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/fetchCIUDataByAccountNumber/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="updateCIUDataByAccountNumber">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updateCIUDataByAccountNumberRequest" message="tns:updateCIUDataByAccountNumber" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updateCIUDataByAccountNumberResponse" message="tns:updateCIUDataByAccountNumberResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/updateCIUDataByAccountNumber/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="getAccountRM">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAccountRMRequest" message="tns:getAccountRM" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAccountRMResponse" message="tns:getAccountRMResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/getAccountRM/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="FetchQuicktelerDetailsByUsernameAndBillerID">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/FetchQuicktelerDetailsByUsernameAndBillerIDRequest" message="tns:FetchQuicktelerDetailsByUsernameAndBillerID" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/FetchQuicktelerDetailsByUsernameAndBillerIDResponse" message="tns:FetchQuicktelerDetailsByUsernameAndBillerIDResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/FetchQuicktelerDetailsByUsernameAndBillerID/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="notifyQuickTellerBillsPaymentTransaction">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/notifyQuickTellerBillsPaymentTransactionRequest" message="tns:notifyQuickTellerBillsPaymentTransaction" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/notifyQuickTellerBillsPaymentTransactionResponse" message="tns:notifyQuickTellerBillsPaymentTransactionResponse" />
+    </operation>
+    <operation name="profileCustomer">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/profileCustomerRequest" message="tns:profileCustomer" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/profileCustomerResponse" message="tns:profileCustomerResponse" />
+    </operation>
+    <operation name="saveQuicktelerDetails">
+      <input wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveQuicktelerDetailsRequest" message="tns:saveQuicktelerDetails" />
+      <output wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveQuicktelerDetailsResponse" message="tns:saveQuicktelerDetailsResponse" />
+      <fault wsam:Action="http://controller.retail.channel.unionbank.com/ServiceControllers/saveQuicktelerDetails/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="ServiceControllersPortBinding" type="tns:ServiceControllers">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="openTargetSavingsAccount">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="openAccountWithExistingCustomerID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validateOTPSelfEn">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="generateOTPSelfEnroled">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="TwoXFactorObj">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="fetchScheduledList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="cancelScheduleSummary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="cancelScheduleItem">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="isUserNameExistOnNIB">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="isAccountExistOnNIB">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="fetchAccountProductList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="postRemitaBillsPaymentSendNotificationTransaction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getBillers">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="Customerlogin">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccountList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getMiniStatement">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAcctStatement">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getLoanSchedule">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="hotlistDebitCard">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="loadBranches">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="createTdRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="viewTdDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="loadBanks">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="loadCurrency">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="saveBenefciary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="saveFxBenefciary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="modifyBenefciary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteBenefciary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getLoanDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="loadCountries">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="nipNameEnquiry">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getBillerDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getEBillPayUrl">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="validateUserId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="validateOTP">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="generateOTP">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="verifyToken">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="checkUserProfile">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="TwoXFactor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="fetchscheduledGefuTransactionByUserName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="fetchscheduledGefuTransactionById">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="postQuickTellerBillsPaymentTransaction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="lookupRemitaBillsPaymentTransaction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="fetchSavedBeneficiariesByUserName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="fetchSavedFxBeneficiariesByUserName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="fetchAllSavedBeneficiariesByUserName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="fetchUnionSavedBeneficiariesByUserName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="fetchSavedBeneficiariesByBeneficiaryId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="fetchUnionSavedBeneficiariesByBeneficiaryId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="initiateInternationalTransferRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateTransferLimitByAccountNumber">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAccountSummary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCustomerFewDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="postGefuTransaction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updatescheduledGefuTransaction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="scheduledGefuTransaction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="scheduledNipTransfer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="postNipTransaction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="activateDebitCard">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deactivateDebitCard">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="initiateCardRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="makeChequeBookRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getCustomerDetailsWithAcctNumber">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="stopChequeRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="makeInvestmentRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="viewTdDetailsList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="loadTransactionHistory">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="loadTransactionHistoryByTxnRef">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getTransactionHistory">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="saveUnionBenefciary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getSessionActivityByUserByRange">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getSessionActivityByUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="saveSessionActivity">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="modifyUnionBenefciary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="deleteUnionBenefciary">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getTransferLimitByUserName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAuthenticationType">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="validateAccountAndSecurityWord">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateUserPassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateSecurityWord">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="fetchCIUDataByAccountNumber">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="updateCIUDataByAccountNumber">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getAccountRM">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="FetchQuicktelerDetailsByUsernameAndBillerID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="notifyQuickTellerBillsPaymentTransaction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="profileCustomer">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="saveQuicktelerDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="ServiceControllers">
+    <port name="ServiceControllersPort" binding="tns:ServiceControllersPortBinding">
+      <soap:address location="http://appserver-iii:9080/UnionOnlineServices/ServiceControllers" />
+    </port>
+  </service>
+</definitions>

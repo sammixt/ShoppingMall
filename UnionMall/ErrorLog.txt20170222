@@ -1,0 +1,24 @@
+DEBUG 2017-02-22 09:58:53,934 - ORA-01403: no data found
+ORA-06512: at "FCUBSLIVE.UMALL_SELLOGINAD", line 7
+ORA-06512: at line 1+ -------------------------------- +    at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean& hasMoreRowsInDB, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.VerifyExecution(OracleConnectionImpl connectionImpl, Int32& cursorId, Boolean bThrowArrayBindRelatedErrors, OracleException& exceptionForArrayBindDML, Boolean bFirstIterationDone)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at UnionMall.Models.HomeModels.CheckAdmin(String username, String empnum) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\HomeModels.cs:line 39
+DEBUG 2017-02-22 09:59:20,400 - Index was outside the bounds of the array.+ -------------------------------- +    at UnionMall.Models.UserModels.AddUser(UserProfileViewModel model) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\UserModels.cs:line 37
+DEBUG 2017-02-22 18:11:41,945 - Input string was not in a correct format.+ -------------------------------- +    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt64(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.String.System.IConvertible.ToInt64(IFormatProvider provider)
+   at System.Convert.ToInt64(Object value)
+   at OracleInternal.ServiceObjects.OracleParameterImpl.SetInt32DataInBytes(Object paramValue, Byte[]& int32ByteArray)
+   at OracleInternal.ServiceObjects.OracleParameterImpl.SetInt32DataInBytes(Object paramValue)
+   at Oracle.ManagedDataAccess.Client.OracleParameter.PreBind_Int32()
+   at Oracle.ManagedDataAccess.Client.OracleParameter.PreBind(OracleConnectionImpl connImpl, ColumnDescribeInfo cachedParamMetadata, Boolean& bMetadataModified, Int32 arrayBindCount, ColumnDescribeInfo& paramMetaData, Object& paramValue, Boolean isEFSelectStatement, SqlStatementType stmtType)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.InitializeParamInfo(ICollection paramColl, OracleConnectionImpl connectionImpl, ColumnDescribeInfo[] cachedParamMetadata, Boolean& bMetadataModified, Boolean isEFSelectStatement, MarshalBindParameterValueHelper& marshalBindValuesHelper)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ProcessParameters(OracleParameterCollection paramColl, OracleConnectionImpl connectionImpl, ColumnDescribeInfo[] cachedParamMetadata, Boolean& bBindMetadataModified, Boolean isEFSelectStatement, MarshalBindParameterValueHelper& marshalBindValuesHelper, Boolean& bAllInputBinds)
+   at OracleInternal.ServiceObjects.OracleCommandImpl.ExecuteNonQuery(String commandText, OracleParameterCollection paramColl, CommandType commandType, OracleConnectionImpl connectionImpl, Int32 longFetchSize, Int64 clientInitialLOBFS, OracleDependencyImpl orclDependencyImpl, Int64[]& scnFromExecution, OracleParameterCollection& bindByPositionParamColl, Boolean& bBindParamPresent, OracleException& exceptionForArrayBindDML, Boolean isFromEF)
+   at Oracle.ManagedDataAccess.Client.OracleCommand.ExecuteNonQuery()
+   at UnionMall.Models.HomeModels.LogoutLog(String logid) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\HomeModels.cs:line 115
+DEBUG 2017-02-22 20:10:34,635 - Index was outside the bounds of the array.+ -------------------------------- +    at UnionMall.Models.PendingOrdersModel.selectAllOrders(String startdate, String enddate) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\PendingOrdersModel.cs:line 180
+DEBUG 2017-02-22 20:11:41,962 - Index was outside the bounds of the array.+ -------------------------------- +    at UnionMall.Models.PendingOrdersModel.selectAllOrders(String startdate, String enddate) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\PendingOrdersModel.cs:line 180
+DEBUG 2017-02-22 20:13:35,191 - Index was outside the bounds of the array.+ -------------------------------- +    at UnionMall.Models.PendingOrdersModel.selectAllOrders(String startdate, String enddate) in c:\Users\scezeala\Documents\Visual Studio 2013\Projects\UnionMall\UnionMall\Models\PendingOrdersModel.cs:line 180

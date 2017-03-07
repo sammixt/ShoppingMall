@@ -1,0 +1,79 @@
+﻿@model UnionMall.ViewModels.LoginViewModel
+
+@{
+    Layout = null;
+    ViewBag.Title = "Log in";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Booklet Manager</title>
+    <link rel="shortcut icon" href="~/favicon.ico" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="body-with-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">
+                    <div class="panel-heading text-center">
+                        <h2 class="panel-title">Union Mall</h2>
+                    </div>
+                    <div class="panel-body">
+                        @using (Html.BeginForm("Login", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "loginForm", role = "form" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <p class="text-center">Use your OWA account to log in.</p>
+                            <div class="form-group">
+
+                                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder = "Enter your username." })
+                                @Html.ValidationMessageFor(m => m.UserName)
+                            </div>
+                            <div class="form-group">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Enter your password." })
+                                @Html.ValidationMessageFor(m => m.Password)
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Log in" class="btn btn-lg btn-success btn-block" onclick="Disable(this)" />
+                            </div>
+
+                            if (ViewBag.ErrorMessage != null)
+                            {
+                                <div class="alert alert-danger">
+                                    <p><b>Login failed!</b> @ViewBag.ErrorMessage</p>
+                                </div>
+                            }
+                        }
+                    </div>
+                    @*<div class="panel-footer text-center">
+                            @DateTime.Now.Year &copy; Union Bank of Nigeria. Powered by PSM.
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+
+        function Disable(btn) {
+            var $form = $("#loginForm");
+
+            if ($form.valid()) {
+                setTimeout(function () {
+                    $(btn).attr('disabled', 'disabled');
+                    $(btn).val("Please wait...");
+                }, 100);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+﻿@model IEnumerable<UnionMall.ViewModels.ProductViewModel>
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.ImagePath = "~/UploadedFiles/";
+    string sep = "/";
+}
+
+<!--content-->
+<div class="product">
+    <div class="container">
+        <div class="col-md-9">
+            <div class="mid-popular">
+@if (Model != null) {
+    var count = 0;
+                            foreach (var item in Model)
+                            {
+                                count++;
+                <div class="col-md-4 item-grid1 simpleCart_shelfItem">
+                    <div class=" mid-pop">
+                        <div class="pro-img">
+                            <img src="@Url.Content(ViewBag.ImagePath + item.ProductName + sep + item.MainImage)" class="img-responsive" alt="" />
+                            <div class="zoom-icon ">
+                                <a class="picture" href="@Url.Content(ViewBag.ImagePath + item.ProductName + sep + item.MainImage)" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                <a href="@Url.Action("SingleItem","Shop" ,new {product = item.ProductId})"><i class="glyphicon glyphicon-menu-right icon"></i></a>
+                            </div>
+                        </div>
+                        <div class="mid-1">
+                            <div class="women">
+                                <div class="women-top">
+                                    <span>@item.Category</span>
+                                    <h6><a href="single.html">@item.ProductName</a></h6>
+                                </div>
+                                <div class="img item_add">
+                                    @CheckActive(item.IsActive,@item.ProductId, @item.ProductName, @item.Price, @item.MainImage)
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="mid-2">
+                                <p><Strong>Price </Strong>NGN <em class="item_price">@item.Price</em></p>
+                                <div class="clearfix"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    if ((count % 3) == 0)
+    {
+        <div class="clearfix"></div>
+    }
+}
+}
+else{
+    <div class="col-md-4 item-grid1 simpleCart_shelfItem">
+                    <div class=" mid-pop">
+                        <div class="pro-img">
+                            <img src="~/Content/Template/images/pc1.jpg" class="img-responsive" alt="" />
+                            <div class="zoom-icon ">
+                                <a class="picture" href="~/Content/Template/images/pc1.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox"><i class="glyphicon glyphicon-search icon "></i></a>
+                                <a href="single.html"><i class="glyphicon glyphicon-menu-right icon"></i></a>
+                            </div>
+                        </div>
+                        <div class="mid-1">
+                            <div class="women">
+                                <div class="women-top">
+                                    <span>Women</span>
+                                    <h6><a href="single.html">At vero eos</a></h6>
+                                </div>
+                                <div class="img item_add">
+                                    <a href="#"><img src="~/Content/Template/images/ca.png" alt=""></a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="mid-2">
+                                <p><label>$100.00</label><em class="item_price">$70.00</em></p>
+                                <div class="clearfix"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+}
+               
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="col-md-3 product-bottom">
+            <!--categories-->
+            <div class=" rsidebar span_1_of_left">
+                <h4 class="cate">Categories</h4>
+                <ul class="list list-unstyled ">
+                    <li class="list">
+                        <a href="@Url.Action("Index", "Shop")">ALL </a>
+                    </li>
+                    @foreach (var item in ViewBag.Category)
+                    {
+                        <li class="item1">
+                        <a href="@Url.Action("Index", "Shop", new { category = item.CategoryId})">@item.CategoryName </a>
+                    </li>
+                    }
+                   
+                </ul>
+            </div>
+            <!--initiate accordion-->
+            <script type="text/javascript">
+                $(function () {
+                    var menu_ul = $('.menu-drop > li > ul'),
+                           menu_a = $('.menu-drop > li > a');
+                    menu_ul.hide();
+                    menu_a.click(function (e) {
+                        e.preventDefault();
+                        if (!$(this).hasClass('active')) {
+                            menu_a.removeClass('active');
+                            menu_ul.filter(':visible').slideUp('normal');
+                            $(this).addClass('active').next().stop(true, true).slideDown('normal');
+                        } else {
+                            $(this).removeClass('active');
+                            $(this).next().stop(true, true).slideUp('normal');
+                        }
+                    });
+
+                });
+            </script>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!--products-->
+    <!--//products-->
+    <!--brand-->
+    <div class="container">
+        <div class="brand">
+            <div class="col-md-3 brand-grid">
+                <img src="~/Content/Template/images/ic.png" class="img-responsive" alt="" />
+            </div>
+            <div class="col-md-3 brand-grid">
+                <img src="~/Content/Template/images/ic1.png" class="img-responsive" alt="" />
+            </div>
+            <div class="col-md-3 brand-grid">
+                <img src="~/Content/Template/images/ic2.png" class="img-responsive" alt="" />
+             </div>
+            <div class="col-md-3 brand-grid">
+                <img src="~/Content/Template/images/ic3.png" class="img-responsive" alt="" />
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!--//brand-->
+
+
+</div>
+<!--//content-->
+@section scripts
+    {
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="~/Content/Template/js/simpleCart.min.js"></script>
+<!-- slide -->
+<!-- <script src="~/Content/Template/js/bootstrap.min.js"></script> -->
+<!--light-box-files -->
+<script src="~/Content/Template/js/jquery.chocolat.js"></script>
+<link href="~/Content/Template/css/chocolat.css" rel="stylesheet" media="screen" charset="utf-8" />
+<!--light-box-files -->
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        $('a.picture').Chocolat();
+    });
+
+
+    function AddToCart(id, ProductName, Price, MainImage) {
+        var CartViewModel = {
+            ProductId: id,
+            ProductName: ProductName,
+            UnitPrice: Price,
+            Quantity: '1',
+            MainImage: MainImage
+        }
+
+        $.ajax({
+            url: '/Cart/AddToCart',
+            contentType: 'application/json; charset=utf-8',
+            type: 'POST',
+            data: JSON.stringify(CartViewModel)
+
+        })
+            .success(function (result) {
+                if (result == true) {
+                    window.location.reload();
+                } else {
+                    $("#ErrorMsg").text("An Error Occured")
+                }
+            })
+            .error(function (xhr, status) {
+                $('#count').text('0');
+            })
+    }
+</script>
+}
+
+@helper CheckActive(bool Active, int id, string name, decimal? price, string mainimage)
+{
+    if (Active == false)
+    {
+        <strong><small>Out of Stock</small></strong>
+    }
+    else
+    {
+       <a href="#" onclick="AddToCart('@id','@name','@price','@mainimage')"><img src="~/Content/Template/images/ca.png" alt=""></a> 
+    }
+}

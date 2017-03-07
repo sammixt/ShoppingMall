@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WL5G3N0:definitions xmlns:WL5G3N2="http://www.unionbank.com.ng/utilities/Header/v1_0/UBNHeader" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:WL5G3N1="http://service.unionbank.com/" name="EnquiryServiceService" targetNamespace="http://service.unionbank.com/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.unionbank.com/" xmlns:ubn="http://www.unionbank.com.ng/utilities/Header/v1_0/UBNHeader" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="http://osbdev1:8001/CentralOperations/AccountEnquiry?SCHEMA%2FOperations+IT+And+Services%2FCentral+Operations%2FWSDLs%2FEnquiryServiceService_schema1" namespace="http://service.unionbank.com/" />
+      <xsd:import schemaLocation="http://osbdev1:8001/CentralOperations/AccountEnquiry?SCHEMA%2FOperations+IT+And+Services%2FInformation+Technology%2FUtilities%2FCommon%2FHeader%2Fv1_0%2FArtifacts%2FUBNHeader" namespace="http://www.unionbank.com.ng/utilities/Header/v1_0/UBNHeader" />
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="getAccountSummary">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccountSummary" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAccountSummaryResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccountSummaryResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAccountSummaryByCustomerID">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccountSummaryByCustomerID" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAccountSummaryByCustomerIDResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccountSummaryByCustomerIDResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCustomerDetails">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getCustomerDetails" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCustomerDetailsResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getCustomerDetailsResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCustomerDetailswithFirstandLast">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getCustomerDetailswithFirstandLast" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCustomerDetailswithFirstandLastResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getCustomerDetailswithFirstandLastResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCustomerDetailsbyShortName">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getCustomerDetailsbyShortName" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCustomerDetailsbyShortNameResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getCustomerDetailsbyShortNameResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCustomerDetailsbyPhoneNumber">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getCustomerDetailsbyPhoneNumber" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCustomerDetailsbyPhoneNumberResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getCustomerDetailsbyPhoneNumberResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCustomerAcctsDetail">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getCustomerAcctsDetail" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCustomerAcctsDetailResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getCustomerAcctsDetailResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCustomerDetailsWithAcctNumber">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getCustomerDetailsWithAcctNumber" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getCustomerDetailsWithAcctNumberResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getCustomerDetailsWithAcctNumberResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="NameEnquiry">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:NameEnquiry" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="NameEnquiryResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:NameEnquiryResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getMangersChequeStatusInfo">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getMangersChequeStatusInfo" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getMangersChequeStatusInfoResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getMangersChequeStatusInfoResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getMangersChequeStatus">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getMangersChequeStatus" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getMangersChequeStatusResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getMangersChequeStatusResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getChequeNumberInquiry">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getChequeNumberInquiry" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getChequeNumberInquiryResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getChequeNumberInquiryResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAccountSummaryANDTransactions">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccountSummaryANDTransactions" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAccountSummaryANDTransactionsResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccountSummaryANDTransactionsResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAccountSummaryANDTxnGeneric">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccountSummaryANDTxnGeneric" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAccountSummaryANDTxnGenericResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccountSummaryANDTxnGenericResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAccounMemoInfo">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccounMemoInfo" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAccounMemoInfoResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccounMemoInfoResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAccountSerachByAccountNumber">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccountSerachByAccountNumber" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAccountSerachByAccountNumberResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccountSerachByAccountNumberResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAccountSerachByAccountTitle">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccountSerachByAccountTitle" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getAccountSerachByAccountTitleResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getAccountSerachByAccountTitleResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="AccountSearchByAcctTitleAndBranchCode">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:AccountSearchByAcctTitleAndBranchCode" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="AccountSearchByAcctTitleAndBranchCodeResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:AccountSearchByAcctTitleAndBranchCodeResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getSingleTransactionDetails">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getSingleTransactionDetails" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getSingleTransactionDetailsResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getSingleTransactionDetailsResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="createLog">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:createLog" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="createLogResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:createLogResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getActivityLogSpecific">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getActivityLogSpecific" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getActivityLogSpecificResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getActivityLogSpecificResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getActivityLog">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getActivityLog" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getActivityLogResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getActivityLogResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getBranchList">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getBranchList" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getBranchListResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getBranchListResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getLoanList">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getLoanList" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getLoanListResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getLoanListResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getOverDraftList">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getOverDraftList" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getOverDraftListResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getOverDraftListResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getcicRecord">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getcicRecord" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getcicRecordResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getcicRecordResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getGlForTerminal">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getGlForTerminal" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="getGlForTerminalResponse">
+    <WL5G3N0:part name="parameters" element="WL5G3N1:getGlForTerminalResponse" />
+  </WL5G3N0:message>
+  <WL5G3N0:message name="UBNHeaderMessage">
+    <WL5G3N0:part name="UBNHeader" element="WL5G3N2:UBNHeader" />
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="EnquiryService">
+    <WL5G3N0:operation name="getAccountSummary">
+      <WL5G3N0:input message="WL5G3N1:getAccountSummary" />
+      <WL5G3N0:output message="WL5G3N1:getAccountSummaryResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAccountSummaryByCustomerID">
+      <WL5G3N0:input message="WL5G3N1:getAccountSummaryByCustomerID" />
+      <WL5G3N0:output message="WL5G3N1:getAccountSummaryByCustomerIDResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getCustomerDetails">
+      <WL5G3N0:input message="WL5G3N1:getCustomerDetails" />
+      <WL5G3N0:output message="WL5G3N1:getCustomerDetailsResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getCustomerDetailswithFirstandLast">
+      <WL5G3N0:input message="WL5G3N1:getCustomerDetailswithFirstandLast" />
+      <WL5G3N0:output message="WL5G3N1:getCustomerDetailswithFirstandLastResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getCustomerDetailsbyShortName">
+      <WL5G3N0:input message="WL5G3N1:getCustomerDetailsbyShortName" />
+      <WL5G3N0:output message="WL5G3N1:getCustomerDetailsbyShortNameResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getCustomerDetailsbyPhoneNumber">
+      <WL5G3N0:input message="WL5G3N1:getCustomerDetailsbyPhoneNumber" />
+      <WL5G3N0:output message="WL5G3N1:getCustomerDetailsbyPhoneNumberResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getCustomerAcctsDetail">
+      <WL5G3N0:input message="WL5G3N1:getCustomerAcctsDetail" />
+      <WL5G3N0:output message="WL5G3N1:getCustomerAcctsDetailResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getCustomerDetailsWithAcctNumber">
+      <WL5G3N0:input message="WL5G3N1:getCustomerDetailsWithAcctNumber" />
+      <WL5G3N0:output message="WL5G3N1:getCustomerDetailsWithAcctNumberResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="NameEnquiry">
+      <WL5G3N0:input message="WL5G3N1:NameEnquiry" />
+      <WL5G3N0:output message="WL5G3N1:NameEnquiryResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getMangersChequeStatusInfo">
+      <WL5G3N0:input message="WL5G3N1:getMangersChequeStatusInfo" />
+      <WL5G3N0:output message="WL5G3N1:getMangersChequeStatusInfoResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getMangersChequeStatus">
+      <WL5G3N0:input message="WL5G3N1:getMangersChequeStatus" />
+      <WL5G3N0:output message="WL5G3N1:getMangersChequeStatusResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getChequeNumberInquiry">
+      <WL5G3N0:input message="WL5G3N1:getChequeNumberInquiry" />
+      <WL5G3N0:output message="WL5G3N1:getChequeNumberInquiryResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAccountSummaryANDTransactions">
+      <WL5G3N0:input message="WL5G3N1:getAccountSummaryANDTransactions" />
+      <WL5G3N0:output message="WL5G3N1:getAccountSummaryANDTransactionsResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAccountSummaryANDTxnGeneric">
+      <WL5G3N0:input message="WL5G3N1:getAccountSummaryANDTxnGeneric" />
+      <WL5G3N0:output message="WL5G3N1:getAccountSummaryANDTxnGenericResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAccounMemoInfo">
+      <WL5G3N0:input message="WL5G3N1:getAccounMemoInfo" />
+      <WL5G3N0:output message="WL5G3N1:getAccounMemoInfoResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAccountSerachByAccountNumber">
+      <WL5G3N0:input message="WL5G3N1:getAccountSerachByAccountNumber" />
+      <WL5G3N0:output message="WL5G3N1:getAccountSerachByAccountNumberResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAccountSerachByAccountTitle">
+      <WL5G3N0:input message="WL5G3N1:getAccountSerachByAccountTitle" />
+      <WL5G3N0:output message="WL5G3N1:getAccountSerachByAccountTitleResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="AccountSearchByAcctTitleAndBranchCode">
+      <WL5G3N0:input message="WL5G3N1:AccountSearchByAcctTitleAndBranchCode" />
+      <WL5G3N0:output message="WL5G3N1:AccountSearchByAcctTitleAndBranchCodeResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getSingleTransactionDetails">
+      <WL5G3N0:input message="WL5G3N1:getSingleTransactionDetails" />
+      <WL5G3N0:output message="WL5G3N1:getSingleTransactionDetailsResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="createLog">
+      <WL5G3N0:input message="WL5G3N1:createLog" />
+      <WL5G3N0:output message="WL5G3N1:createLogResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getActivityLogSpecific">
+      <WL5G3N0:input message="WL5G3N1:getActivityLogSpecific" />
+      <WL5G3N0:output message="WL5G3N1:getActivityLogSpecificResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getActivityLog">
+      <WL5G3N0:input message="WL5G3N1:getActivityLog" />
+      <WL5G3N0:output message="WL5G3N1:getActivityLogResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getBranchList">
+      <WL5G3N0:input message="WL5G3N1:getBranchList" />
+      <WL5G3N0:output message="WL5G3N1:getBranchListResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getLoanList">
+      <WL5G3N0:input message="WL5G3N1:getLoanList" />
+      <WL5G3N0:output message="WL5G3N1:getLoanListResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getOverDraftList">
+      <WL5G3N0:input message="WL5G3N1:getOverDraftList" />
+      <WL5G3N0:output message="WL5G3N1:getOverDraftListResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getcicRecord">
+      <WL5G3N0:input message="WL5G3N1:getcicRecord" />
+      <WL5G3N0:output message="WL5G3N1:getcicRecordResponse" />
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getGlForTerminal">
+      <WL5G3N0:input message="WL5G3N1:getGlForTerminal" />
+      <WL5G3N0:output message="WL5G3N1:getGlForTerminalResponse" />
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="EnquiryServicePortBinding" type="WL5G3N1:EnquiryService">
+    <WL5G3N3:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WL5G3N0:operation name="getAccountSummary">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAccountSummaryByCustomerID">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getCustomerDetails">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getCustomerDetailsWithAcctNumber">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getCustomerDetailswithFirstandLast">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getCustomerDetailsbyShortName">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getCustomerDetailsbyPhoneNumber">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="NameEnquiry">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getCustomerAcctsDetail">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getMangersChequeStatusInfo">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getMangersChequeStatus">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getChequeNumberInquiry">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAccountSummaryANDTransactions">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAccountSummaryANDTxnGeneric">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAccounMemoInfo">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAccountSerachByAccountNumber">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getAccountSerachByAccountTitle">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="AccountSearchByAcctTitleAndBranchCode">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getSingleTransactionDetails">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="createLog">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getActivityLogSpecific">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getActivityLog">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getBranchList">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getLoanList">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getOverDraftList">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getcicRecord">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="getGlForTerminal">
+      <WL5G3N3:operation soapAction="" />
+      <WL5G3N0:input>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:header message="WL5G3N1:UBNHeaderMessage" part="UBNHeader" use="literal" />
+        <WL5G3N3:body use="literal" />
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="EnquiryServiceService">
+    <WL5G3N0:port name="EnquiryServicePort" binding="WL5G3N1:EnquiryServicePortBinding">
+      <WL5G3N3:address location="http://OSBDEV1:8001/CentralOperations/AccountEnquiry" />
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>

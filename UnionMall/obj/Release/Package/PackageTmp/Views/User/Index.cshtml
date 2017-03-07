@@ -1,0 +1,241 @@
+﻿@model IEnumerable<UnionMall.ViewModels.UserProfileViewModel>
+
+@{
+    ViewBag.Title = "Users";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <a href="#" id="addCat" data-toggle="modal" data-target="#addCatModal" class="pull-left btn btn-md btn-success">Add User</a>
+        <div class="clearfix"></div>
+    </div>
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title ubn-color">Catgories</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FullName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.EmployeeNumber)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.UserName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Title)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Branch)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Department)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IsActive)
+                        </th>
+                        <td>&nbsp;</td>                      
+                    </tr>
+                    @if (Model != null) { 
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FullName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EmployeeNumber)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UserName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Branch)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Department)
+                            </td>
+                            <td>
+                                @ShowActiveState(item.IsActive, item.UserId)
+                            </td>
+                            <td>
+                                @CheckDeleteState(item.IsActive, item.UserId)
+                            </td>
+                        </tr>
+                         }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6">No Data to Display</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+
+<div class="modal fade" id="addCatModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header ubn-color-bg text-center">
+                <h4 class="modal-title ubn-color-bg"><strong>Add New User enter AD Username</strong></h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group col-md-6 col-md-offset-3">
+                    <input id="UserValue" type="text" class="form-control" name="UserName" />
+                    <span id="ErrorMsg" class="text-danger"></span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-footer">
+                <button id="submit" class="btn btn-md btn-success">Add</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style type="text/css">
+    #addCat {
+        margin-bottom: 1%;
+    }
+    .catName, .activeName, .deleteName {
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: inherit;
+        border: none;
+    }
+</style>
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#submit").click(function () {
+
+                var username = $("#UserValue").val();
+
+                if (username != "") {
+                    var UserProfileViewModel = {
+                        UserName: username
+                    }
+                    $.ajax({
+                        url: '/User/AddUser',
+                        contentType: 'application/json; charset=utf-8',
+                        type: 'POST',
+                        data: JSON.stringify(UserProfileViewModel)
+
+                    })
+                    .success(function (result) {
+                        if (result == "inserted") {
+                            window.location.reload();
+                        } else if (result == "exist") {
+                            $("#ErrorMsg").text("The User Already Exist")
+                        } else if (result == "no record") {
+                            $("#ErrorMsg").text("User Does Not Exist on AD")
+                        }else {
+                            $("#ErrorMsg").text("An Error Occured")
+                        }
+                    })
+                    .error(function (xhr, status) {
+                        $('#count').text('0');
+                    })
+                } else {
+                    $("#ErrorMsg").text("Please Enter a Valid UserName")
+                }
+
+            })
+        })
+
+        function delUser(id) {
+            var UserProfileViewModel = {
+                UserId: id,
+                IsActive : '0'
+            }
+            $.ajax({
+                url: '/User/UpdateUser',
+                contentType: 'application/json; charset=utf-8',
+                type: 'POST',
+                data: JSON.stringify(UserProfileViewModel)
+
+            })
+                .success(function (result) {
+                    if (result == true) {
+                        window.location.reload();
+                    } else {
+                        $("#ErrorMsg").text("An Error Occured")
+                    }
+                })
+                .error(function (xhr, status) {
+                    $('#count').text('0');
+                })
+        }
+
+        function reAddUser(id) {
+            var UserProfileViewModel = {
+                UserId: id,
+                IsActive: '1'
+            }
+            $.ajax({
+                url: '/User/UpdateUser',
+                contentType: 'application/json; charset=utf-8',
+                type: 'POST',
+                data: JSON.stringify(UserProfileViewModel)
+
+            })
+                .success(function (result) {
+                    if (result == true) {
+                        window.location.reload();
+                    } else {
+                        $("#ErrorMsg").text("An Error Occured")
+                    }
+                })
+                .error(function (xhr, status) {
+                    $('#count').text('0');
+                })
+        }
+    </script>
+
+    }
+@helper ShowActiveState(string activestate, int id)
+{
+    if (String.Equals(activestate, "1"))
+    {
+        <input id="activeVal_@id" class="activeName" type="text" value="true" disabled /><br />
+        <span id="activeValerrormsg_@id" class="text-danger"></span>
+    }
+    else
+    {
+        <input id="activeVal_@id" class="activeName" type="text" value="false" disabled /><br />
+        <span id="activeValerrormsg_@id" class="text-danger"></span>
+    }
+}
+
+@helper CheckDeleteState(string activestate, int id)
+{
+    if (String.Equals(activestate, "1"))
+    {
+      <a href="#" onclick="delUser('@id')" class="pull-left btn btn-md btn-danger" title="Deactive User"><i class="fa fa-trash-o"></i></a>  
+    }
+    else
+    {
+        <a href="#" onclick="reAddUser('@id')" class="pull-left btn btn-md btn-success" title="Activate User"><i class="fa fa-plus-square-o"></i></a>
+    }
+
+
+}
+

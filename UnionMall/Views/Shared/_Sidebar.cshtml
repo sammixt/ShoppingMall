@@ -1,0 +1,44 @@
+﻿@using UnionMall.Controllers
+<aside class="main-sidebar">
+    <section class="sidebar">
+        
+        @* BEGIN Menu *@
+        <ul class="sidebar-menu">
+            <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == ("Home") ? "active" : "")">
+                <a href="@Url.Action("Admin", "Home")"><i class="fa fa-cart-arrow-down"></i> <strong>Orders</strong></a>
+            </li>
+            <li class="@(ViewContext.RouteData.Values["Action"].ToString() == ("AllOrders") ||
+             ViewContext.RouteData.Values["Action"].ToString() == ("AllOrder") ? "active" : "")">
+                <a href="@Url.Action("AllOrder", "Home")"><i class="fa fa-link"></i> <strong>All Orders</strong></a>
+            </li>
+            <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == ("Category") ? "active" : "")">
+                <a href="@Url.Action("Index", "Category")"><i class="fa fa-link"></i> <strong>Category</strong></a>
+            </li>
+
+            <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == ("Product") ? "active" : "")">
+                <a href="@Url.Action("Index", "Product")"><i class="fa fa-link"></i> <strong>Products</strong></a>
+            </li>
+
+            <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == ("User") ? "active" : "")">
+                <a href="@Url.Action("Index", "User")"><i class="fa fa-user-circle" ></i> <strong>Users</strong></a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-folder"></i><span>Audit Log</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i> 
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == ("LoginLog") ? "active" : "")">
+                        <a href="@Url.Action("LoginLog", "AuditLog")"><i class="fa fa-user-o"></i> <strong>Login Log</strong></a>
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == ("LoginLog") ? "active" : "")">
+                        <a href="@Url.Action("PostingLog", "AuditLog")"><i class="fa fa-bank"></i> <strong>Posting Log</strong></a>
+                    </li>
+                </ul> 
+            </li>
+        </ul>
+        @* END Menu *@
+    </section>
+</aside>

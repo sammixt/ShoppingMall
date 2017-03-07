@@ -1,0 +1,194 @@
+﻿@model IEnumerable<UnionMall.ViewModels.ProductViewModel>
+
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    var count = 0;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <a href="@Url.Action("AddProduct","Product")" id="addProduct" class="pull-left btn btn-md btn-success">Add Product</a>
+        <div class="clearfix"></div>
+    </div>
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title ubn-color">Catgories</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table class="table">
+                    <tr>
+                        <th>
+                            S/N  @*@Html.DisplayNameFor(model => model.ProductId)*@
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ProductName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Category)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IsActive)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Quantity)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Price)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IsFeatured)
+                        </th>
+                        <th></th>
+                    </tr>
+                @if (Model != null) {
+                    foreach (var item in Model)
+                    {
+                        count++;
+                        <tr>
+                            <td>
+                                @count
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ProductName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Category)
+                            </td>
+                            <td>
+                                @checkCheckBox(item.IsActive)   
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Quantity)
+                            </td>
+                           <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            <td>
+                                @checkCheckBox(item.IsFeatured)
+                            </td>                           
+                            <td>
+                                <a href="@Url.Action("Edit", "Product", new { id = item.ProductId })" class="pull-left btn btn-md btn-primary" title="ReActivate Category"><i class="fa fa-edit"></i></a>
+                            </td>
+                            <td>
+                                <a href="#" onclick="delProduct('@item.ProductId')" class="pull-left btn btn-md btn-danger" title="ReActivate Category"><i class="fa fa-trash-o"></i></a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="9" class="text-center"><strong>No Data To Display</strong></td>
+                    </tr>
+                }
+
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+
+<style type="text/css">
+    #addProduct {
+        margin-bottom: 1%;
+    }
+
+    .catName, .activeName, .deleteName {
+        height: 40px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: inherit;
+        border: none;
+    }
+</style>
+<link href="~/Content/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/sweetalert-min.js"></script>
+@section scripts {
+    <script type="text/javascript">
+            
+        function delProduct(ids) {
+            swal({
+                title: "Are you sure?",
+                text: "You want to delete this product!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonClass: 'btn-danger',
+                confirmButtonText: 'Yes, delete Product!',
+                cancelButtonText: "No, Keep Product!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            },
+      function (isConfirm) {
+          if (isConfirm) {
+              var ProductViewModel = {
+                  ProductId: ids,
+              }
+              $.ajax({
+                  url: '/Product/Delete',
+                  contentType: 'application/json; charset=utf-8',
+                  type: 'POST',
+                  data: JSON.stringify(ProductViewModel)
+
+              })
+                  .success(function (result) {
+                      if (result == true) {
+                          
+                          window.location.reload();
+                      } else {
+                          swal("Not Deleted!", "An Error Occured", "error");
+                      }
+                  })
+                  .error(function (xhr, status) {
+                      swal("Not Deleted!", "An Error Occured", "error");
+                  })
+              
+             } else {
+              swal("Cancelled", "Your Product is still intact)", "error");
+          }
+      });
+           
+    }
+
+        function reAddUser(id) {
+            var UserProfileViewModel = {
+                UserId: id,
+                IsActive: '1'
+            }
+            $.ajax({
+                url: '/User/UpdateUser',
+                contentType: 'application/json; charset=utf-8',
+                type: 'POST',
+                data: JSON.stringify(UserProfileViewModel)
+
+            })
+                .success(function (result) {
+                    if (result == true) {
+                        window.location.reload();
+                    } else {
+                        $("#ErrorMsg").text("An Error Occured")
+                    }
+                })
+                .error(function (xhr, status) {
+                    $('#count').text('0');
+                })
+        }
+    </script>
+
+}
+
+@helper checkCheckBox(bool checkstate)
+{
+    if (checkstate == true)
+    {
+        <strong>True</strong>
+    }
+    else 
+    { 
+        <strong>False</strong>
+    }
+}

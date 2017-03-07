@@ -1,0 +1,276 @@
+﻿@model IEnumerable<UnionMall.ViewModels.CartViewModel>
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.ImagePath = "~/UploadedFiles/";
+    string sep = "/";
+}
+
+<div class="check-out">
+    <div class="container">
+
+        <div class="bs-example4" data-example-id="simple-responsive-table">
+            <div class="table-responsive">
+                <table class="table-heading simpleCart_shelfItem table-bordered">
+                    <tr>
+                        <th class="table-grid">Item</th>
+
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Subtotal</th>
+                    </tr>
+                    @if(Model != null)
+                    {
+                        foreach (var item in Model)
+                        {
+                      
+                    <tr class="cart-header">
+
+                        <td class="ring-in">
+                            <a href="@Url.Action("SingleItem", "Shop", new {product = item.ProductId })" class="at-in"><img src="@Url.Content("~/UploadedFiles/")@item.ProductName/@item.MainImage" class="img-responsive" alt="" style="width:120px;height:120px"></a>
+                            <div class="sed">
+                                <h5><a href="single.html">@item.ProductName</a></h5>
+                                <p>(@item.ProductName.ToLower() ) </p>
+                                <p><a href="#" class="btn btn-sm btn-success"  onclick="RemoveItem('@item.ProductId')">Remove</a></p>
+                            </div>
+                            <div class="clearfix"> </div>
+                            
+                        </td>
+                        <td>
+                            <select name="productId_@item.ProductId" class="form-control" onchange="UpdateCart('@item.ProductId')" >
+                            <option value="@item.Quantity">@item.Quantity</option>
+                            @selection()
+                            </select>
+                        </td>
+                        <td>NGN @item.UnitPrice</td>
+                        <td class="item_price">NGN @item.ItemTotal</td>
+                        
+                    </tr>     
+                        }
+                        <tr class="cart-header">
+                            <td colspan="3" align="right"><strong>ToTal</strong></td>
+                            <td>NGN <span class="totals"></span></td>
+                            </tr>
+                    }
+                    else { 
+                    <tr class="cart-header1">
+                        <td class="ring-in" colspan="4"align="center" >
+                            <strong class="text-center text-uppercase">The are no items in your cart</strong>
+                        </td>                     
+                    </tr>
+                    }
+                </table>
+            </div>
+        </div>
+        @if(Model != null)
+                    {
+        <div class="produced">
+            <a href="#" data-toggle="modal" data-target="#myModal" class="hvr-skew-backward">Produced To Buy</a>
+        </div>
+                    }
+        else
+        {
+           <div class="produced">
+            <a href="@Url.Action("Index","Shop")" class="hvr-skew-backward">Back To Shop</a>
+        </div> 
+        }
+    </div>
+</div>
+
+<!--brand-->
+<div class="container">
+    <div class="brand">
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic1.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic2.png" class="img-responsive" alt="" />
+        </div>
+        <div class="col-md-3 brand-grid">
+            <img src="~/Content/Template/images/ic3.png" class="img-responsive" alt="" />
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center"><strong>Damage return policy</strong></h4>
+            </div>
+            <div class="modal-body">
+                <p>Please note that all purchase are final.</p>
+                <p>In the vary rare event that an item purchased is damaged, it can be returned and a full re fund made or exchange for another one. Refunds attract credit to account debited only</p>
+                <p>A product can be returned within 5 working days from the date of purchase.</p>
+                <p>All returned products must be in the same condition that it was received and in the original package. please keep the receipt signed at the time of delivery.</p>
+            </div>
+            <div class="text-center" style="margin-bottom:3%">
+                <button type="button" data-toggle="modal" data-target="#pickUpLocation" data-dismiss="modal" class="btn btn-primary">Continue</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Pick Up Location modal-->
+<div class="modal fade" id="pickUpLocation" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-center"><strong>Preferred Pick Up Location</strong></h4>
+            </div>
+@using (Html.BeginForm("PickUpBranch", "Cart", FormMethod.Post, new { @class = "" }))
+{
+    @Html.AntiForgeryToken()
+            
+            <div class="modal-body">
+               
+                    <div class="form-group">
+                        <label class="control-label">Select pickup branch</label>
+                        <input type="text" list="branches" id="branch" class="form-control"/>
+                        <datalist id="branches">
+                            @foreach (var branch in ViewBag.Branches)
+                            {
+                            <option value="@branch.BranchLocationName" data-branch="@branch.BranchLocationName" />
+                            }
+                        </datalist>
+                    </div>
+                </div>
+            <div class="text-center" style="margin-bottom:3%">
+                <button id="continue" type="button"  class="btn btn-primary">Continue</button>
+            </div>
+}
+        </div>
+
+    </div>
+</div>
+<!--//brand-->
+<link href="~/Content/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/sweetalert-min.js"></script>
+<script type="text/javascript">
+    function UpdateCart(id)
+    {
+        var qty = $("select[name=productId_" + id + "]").val();
+        //alert(id);
+        //alert(qty);
+        var CartViewModel = {
+            ProductId: id,
+            Quantity: qty
+        }
+
+        $.ajax({
+            url: '/Cart/UpdateCart',
+            contentType: 'application/json; charset=utf-8',
+            type: 'POST',
+            data: JSON.stringify(CartViewModel)
+
+        })
+            .success(function (result) {
+                if (result == "Updated") {
+                    window.location.reload();
+                } else {
+                    $("#ErrorMsg").text("An Error Occured")
+                }
+            })
+            .error(function (xhr, status) {
+                $('#count').text('0');
+            })
+    }
+
+    function RemoveItem(id) {
+        var CartViewModel = {
+            ProductId: id,
+            }
+
+        $.ajax({
+            url: '/Cart/RemoveCart',
+            contentType: 'application/json; charset=utf-8',
+            type: 'POST',
+            data: JSON.stringify(CartViewModel)
+
+        })
+            .success(function (result) {
+                if (result == "Removed") {
+                    window.location.reload();
+                } else {
+                    alert("Item Not Removed")
+                }
+            })
+            .error(function (xhr, status) {
+                alert("Item Not Removed")
+            })
+    }
+
+    $(document).ready(function () {
+        $.ajax({
+            url: '/Cart/SumTotal',
+            contentType: 'application/json; charset=utf-8',
+            type: 'GET'
+        })
+                 .success(function (result) {
+                     if (result != '') {
+                         $('.totals').text(result);
+                     } else {
+                         $('.totals').text('0');
+                     }
+                 })
+                 .error(function (xhr, status) {
+                     $('.totals').text('0');
+                 });
+    });
+
+    $(function () {
+
+        $("#continue").click(function () {
+            var val = $('#branch').val()
+            var branch = $('#branches option').filter(function () {
+                return this.value == val;
+            }).data('branch');
+            var msg = branch ? branch : 'No Match';
+            if (msg != 'No Match') {
+                var BranchViewModel = {
+                    BranchLocationName: msg
+                }
+                $.ajax({
+                    url: '/Cart/PickUpBranch',
+                    contentType: 'application/json; charset=utf-8',
+                    type: 'POST',
+                    data: JSON.stringify(BranchViewModel)
+
+                })
+            .success(function (result) {
+                if (result == true) {
+                    window.location.href = "/Payment/Index";
+                } else {
+                    alert("Select a valid branch")
+                }
+            })
+            .error(function (xhr, status) {
+                alert("Select a valid branch")
+            })
+            }
+
+        })
+
+    });
+</script>
+
+
+@helper selection() 
+{ 
+     int i = 11;
+     for (int j = 1; j < i; j++) 
+     {
+     <option value="@j">@j</option>
+     }
+}
+
+
